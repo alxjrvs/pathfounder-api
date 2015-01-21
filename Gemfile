@@ -10,6 +10,10 @@ gem 'spring', group: :development
 gem 'rspec-rails', group: :test
 
 gem 'pg'
+gem 'awesome_print'
+
+gem 'pry-byebug', group: :test
+gem 'pry-remote', group: :test
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

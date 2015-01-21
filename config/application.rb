@@ -13,6 +13,9 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/services)
+ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/services/mods_dsl)
+ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/pf_classes)
 module Pathfounder
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
