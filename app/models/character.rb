@@ -29,6 +29,20 @@ class Character < ActiveRecord::Base
     favored_class.skills
   end
 
+  def feat_count
+    total_mod_for(:feat_count)
+  end
+
+  private
+
+  def mods_for(trait)
+    mods.where(trait: trait)
+  end
+
+  def total_mod_for(trait)
+    mods_for(trait)
+  end
+
   def alignment_filter
     @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment)
   end
