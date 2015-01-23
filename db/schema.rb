@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123060912) do
+ActiveRecord::Schema.define(version: 20150123065145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,5 +48,17 @@ ActiveRecord::Schema.define(version: 20150123060912) do
   end
 
   add_index "mods", ["character_id"], name: "index_mods_on_character_id", using: :btree
+
+  create_table "stat_blocks", force: true do |t|
+    t.integer "wisdom"
+    t.integer "charisma"
+    t.integer "constitution"
+    t.integer "intelligence"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "character_id"
+  end
+
+  add_index "stat_blocks", ["character_id"], name: "index_stat_blocks_on_character_id", using: :btree
 
 end
