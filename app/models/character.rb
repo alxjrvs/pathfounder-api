@@ -2,6 +2,8 @@ class Character < ActiveRecord::Base
   has_many :mods, dependent: :destroy
   has_one :level, dependent: :destroy
   has_one :stat_block, dependent: :destroy
+  has_one :skill_list, dependent: :destroy
+
   belongs_to :race, polymorphic: true
 
   CLASS_DELEGATES = :hit_die, :base_attack_bonus

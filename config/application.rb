@@ -13,6 +13,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/rules)
 ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/services)
 ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/services/mods_dsl)
 ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/races)

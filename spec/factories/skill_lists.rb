@@ -1,0 +1,44 @@
+FactoryGirl.define do
+  factory :skill_list do
+    acrobatics 1
+    appraise 1
+    bluff 1
+    climb 1
+    craft_1 1
+    craft_2 1
+    craft_3 1
+    diplomancy 1
+    disable_device 1
+    disguise 1
+    escape_artist 1
+    fly 1
+    handle_animal 1
+    heal 1
+    intimidate 1
+    knowledge_arcana 1
+    knowledge_dungeoneering 1
+    knowledge_engineering 1
+    knowledge_geography 1
+    knowledge_history 1
+    knowledge_local 1
+    knowledge_nature 1
+    knowledge_nobility 1
+    knowledge_planes 1
+    knowledge_religion 1
+    linguistics 1
+    perception 1
+    perform_1 1
+    perform_2 1
+    perform_3 1
+    profession 1
+    profession_name 1
+    ride 1
+    sense_motive 1
+    sleight_of_hand 1
+    spellcraft 1
+    stealth 1
+    survival 1
+    swim 1
+    use_magic_device 1
+  end
+end
