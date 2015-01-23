@@ -1,8 +1,8 @@
 class Character < ActiveRecord::Base
   has_many :mods
-  has_many :levels
+  has_one :level
 
-  CLASS_DELEGATES = :hit_die, :alignment
+  CLASS_DELEGATES = :hit_die, :base_attack_bonus
 
   CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
@@ -13,15 +13,11 @@ class Character < ActiveRecord::Base
   end
 
   def favored_class
-    if first_level.present?
-      first_level.pf_class
+    if level.present?
+      level.pf_class
     else
       NullFavoredClass.new
     end
-  end
-
-  def first_level
-    levels.first
   end
 
   def class_skill_ranks_per_level
@@ -33,6 +29,6 @@ class Character < ActiveRecord::Base
   end
 
   def alignment_filter
-    @_alignment_filter ||= AlignmentFilter.new(alignment)
+    @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment)
   end
 end
