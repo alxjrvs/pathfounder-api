@@ -1,12 +1,16 @@
 class Character < ActiveRecord::Base
   has_many :mods, dependent: :destroy
   has_one :level, dependent: :destroy
+  has_one :stat_block, dependent: :destroy
   belongs_to :race, polymorphic: true
 
   CLASS_DELEGATES = :hit_die, :base_attack_bonus
-
   CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
+  end
+
+  StatBlock::STATS.each do |s|
+    delegate "#{s}_mod", to: :stats
   end
 
   def allowed_alignments
@@ -19,6 +23,10 @@ class Character < ActiveRecord::Base
     else
       NullFavoredClass.new
     end
+  end
+
+  def stats
+    stat_block || NullStatBlock.new
   end
 
   def class_skill_ranks_per_level

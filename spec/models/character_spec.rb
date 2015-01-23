@@ -5,7 +5,25 @@ describe Character do
     @character = create :character
   end
 
-  describe "favored_class" do
+  describe ".stats" do
+    describe "with a stat block" do
+      before do
+        @stat_block = create :stat_block, character: @character
+      end
+
+      it "returns the stat block" do
+        expect(@character.stats).to eq @stat_block
+      end
+    end
+
+    describe "without a stat block" do
+      it "should return nil" do
+        expect(@character.stats).to be_nil
+      end
+    end
+  end
+
+  describe ".favored_class" do
     describe "with a class" do
       before do
         @level = create :level, character: @character
