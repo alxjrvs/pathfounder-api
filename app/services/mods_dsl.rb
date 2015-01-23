@@ -9,6 +9,10 @@ module ModsDsl
     end
   end
 
+  def normalized?
+    Mod.where(source: self).any?
+  end
+
   def alignment
     self.class.alignment_val
   end
