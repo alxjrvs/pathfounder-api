@@ -114,6 +114,7 @@ describe ModsDsl do
         @class.normalized = false
         @class.reload
       end
+
       it 'normalizes the modifiables' do
         expect{@class.normalize}.to change{Mod.count}.by 4
       end
