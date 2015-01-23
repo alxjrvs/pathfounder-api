@@ -30,7 +30,7 @@ class Character < ActiveRecord::Base
   end
 
   def feat_count
-    total_mod_for(:feat_count)
+    sum_of_mods_for :feat_count + 1
   end
 
   private
@@ -39,8 +39,8 @@ class Character < ActiveRecord::Base
     mods.where(trait: trait)
   end
 
-  def total_mod_for(trait)
-    mods_for(trait)
+  def sum_of_mods_for(trait)
+    mods_for(trait).sum :modifier
   end
 
   def alignment_filter
