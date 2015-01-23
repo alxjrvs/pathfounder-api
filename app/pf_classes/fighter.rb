@@ -1,6 +1,6 @@
 class Fighter < ActiveRecord::Base
   include ModsDsl
-  has_one :level, as: :pf_class
+  has_one :level, as: :pf_class, dependent: :destroy
   has_one :character, through: :level
 
   role :class
