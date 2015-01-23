@@ -1,5 +1,5 @@
 module ModsDsl::ModsDslClassMethods
-  cattr_accessor :role_val, :hit_die_val,
+  attr_accessor :role_val, :hit_die_val,
     :skill_ranks_per_level_val, :alignment_val,
     :base_attack_bonus_val
 
