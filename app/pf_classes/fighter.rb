@@ -1,6 +1,5 @@
 class Fighter < ActiveRecord::Base
   include ModsDsl
-  belongs_to :character
   has_one :level, as: :pf_class
   has_one :character, through: :level
 
