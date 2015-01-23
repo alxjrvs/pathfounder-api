@@ -13,8 +13,8 @@ gem 'rspec-rails', group: :test
 gem 'pg'
 gem 'awesome_print'
 
-gem 'pry-byebug', group: :test
-gem 'pry-remote', group: :test
+gem 'pry-byebug', group: [:test, :development]
+gem 'pry-remote', group: [:test, :development]
 gem 'factory_girl_rails', group: :test
 
 # To use ActiveModel has_secure_password
