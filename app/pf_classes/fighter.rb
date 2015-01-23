@@ -1,4 +1,5 @@
-class Fighter < PfClass
+class Fighter < ActiveRecord::Base
+  include ModsDsl
 
   role :class
   hit_die 10

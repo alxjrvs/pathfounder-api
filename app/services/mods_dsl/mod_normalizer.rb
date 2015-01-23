@@ -1,8 +1,9 @@
 class ModsDsl::ModNormalizer
-  attr_reader :mods
+  attr_reader :mods, :source
 
-  def initialize(mods)
+  def initialize(mods, source: source)
     @mods = mods
+    @source = source
   end
 
   def normalize
@@ -15,6 +16,7 @@ class ModsDsl::ModNormalizer
 
   def create_mod(mod)
     Mod.create(
+      source: mod[:source] || source,
       role: mod[:role],
       trait: mod[:trait],
       modifier: mod[:modifier]

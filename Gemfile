@@ -14,6 +14,7 @@ gem 'awesome_print'
 
 gem 'pry-byebug', group: :test
 gem 'pry-remote', group: :test
+gem 'factory_girl_rails', group: :test
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -17,10 +17,6 @@ module ModsDsl
     self.class.base_attack_bonus_val
   end
 
-  def mods
-    self.class.mods_array
-  end
-
   def additions
     self.class.additions_array
   end
@@ -41,10 +37,14 @@ module ModsDsl
     self.class.role_val
   end
 
+  def mods_array
+    self.class.mods_array
+  end
+
   private
 
   def normalize_mods
-    ModsDsl::ModNormalizer.new(mods).normalize
+    ModsDsl::ModNormalizer.new(mods_array, source: self).normalize
   end
 
 end

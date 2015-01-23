@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-class DummyClass
+class Fighter < ActiveRecord::Base
   include ModsDsl
   attr_accessor :normalized
 
@@ -28,7 +28,7 @@ end
 
 describe ModsDsl do
   before do
-    @class = DummyClass.new
+    @class = Fighter.new
   end
 
   describe ".mods" do
@@ -44,7 +44,7 @@ describe ModsDsl do
     end
 
     it 'contains the correct array of modified values' do
-      expect(@class.mods).to contain_exactly @expected_will,
+      expect(@class.mods_array).to contain_exactly @expected_will,
         @expected_fort,
         @expected_reflex,
         @expected_feat
