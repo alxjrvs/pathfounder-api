@@ -5,4 +5,8 @@ class NullFavoredClass
     end
   end
 
+  def nil?
+    true
+  end
+
 end

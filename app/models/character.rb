@@ -1,6 +1,7 @@
 class Character < ActiveRecord::Base
   has_many :mods
   has_one :level
+  belongs_to :race, polymorphic: true
 
   CLASS_DELEGATES = :hit_die, :base_attack_bonus
 
