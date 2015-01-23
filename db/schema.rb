@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123002241) do
+ActiveRecord::Schema.define(version: 20150123011906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20150123002241) do
   create_table "fighters", force: true do |t|
   end
 
+  create_table "levels", force: true do |t|
+    t.integer "character_id"
+    t.integer "pf_class_id"
+    t.string  "pf_class_type"
+  end
+
+  add_index "levels", ["character_id"], name: "index_levels_on_character_id", using: :btree
+
   create_table "mods", force: true do |t|
     t.string  "role"
     t.string  "trait"
@@ -33,11 +41,5 @@ ActiveRecord::Schema.define(version: 20150123002241) do
   end
 
   add_index "mods", ["character_id"], name: "index_mods_on_character_id", using: :btree
-
-  create_table "pf_classes", force: true do |t|
-    t.integer "character_id"
-  end
-
-  add_index "pf_classes", ["character_id"], name: "index_pf_classes_on_character_id", using: :btree
 
 end

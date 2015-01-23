@@ -44,7 +44,8 @@ module ModsDsl
   private
 
   def normalize_mods
-    ModsDsl::ModNormalizer.new(mods_array, source: self).normalize
+    return unless character.present?
+    ModsDsl::ModNormalizer.new(mods_array, source: self, character: character).normalize
   end
 
 end

@@ -2,6 +2,8 @@ require 'rails_helper'
 
 class Fighter < ActiveRecord::Base
   include ModsDsl
+  has_one :level, as: :pf_class
+  has_one :character, through: :level
   attr_accessor :normalized
 
   role :dummy
@@ -28,7 +30,7 @@ end
 
 describe ModsDsl do
   before do
-    @class = Fighter.new
+    @class = Fighter.create
   end
 
   describe ".mods" do
@@ -108,7 +110,9 @@ describe ModsDsl do
 
     describe "when not yet normalized" do
       before do
+        @level = create :level, pf_class: @class
         @class.normalized = false
+        @class.reload
       end
       it 'normalizes the modifiables' do
         expect{@class.normalize}.to change{Mod.count}.by 4
