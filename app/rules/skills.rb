@@ -1,6 +1,5 @@
 module Skills
   #http://www.d20pfsrd.com/skills#TOC-Skills-List
-
   DETAILS = {
     acrobatics: {
       name: :acrobatics,
@@ -30,19 +29,22 @@ module Skills
       name: :craft_1,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     craft_2: {
       name: :craft_2,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     craft_3: {
       name: :craft_3,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     diplomancy: {
       name: :diplomancy,
@@ -165,30 +167,27 @@ module Skills
       key_ability: :intelligence
     },
     perform_1: {
-      name: :disable_device,
+      name: :perform_1,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     perform_2: {
-      name: :disable_device,
+      name: :perform_2,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     perform_3: {
-      name: :disable_device,
+      name: :perform_3,
       untrained: true,
       armor_check_penalty: false,
-      key_ability: :intelligence
+      key_ability: :intelligence,
+      custom: true
     },
     profession: {
-      name: :disable_device,
-      untrained: true,
-      armor_check_penalty: false,
-      key_ability: :intelligence
-    },
-    profession_name: {
       name: :disable_device,
       untrained: true,
       armor_check_penalty: false,
@@ -243,4 +242,6 @@ module Skills
       key_ability: :intelligence
     },
   }
+
+  ALL = DETAILS.keys
 end
