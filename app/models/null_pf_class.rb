@@ -5,8 +5,11 @@ class NullPfClass
     end
   end
 
+  def class_skills
+    []
+  end
+
   def nil?
     true
   end
-
 end

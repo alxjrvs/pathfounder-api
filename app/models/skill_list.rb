@@ -6,12 +6,6 @@ class SkillList < ActiveRecord::Base
       options = Skills::DETAILS[sk]
       Skill.new(options, self)
     end
-
-    define_method "#{sk}=(val)" do
-      skill = self.send(sk)
-      skill.update_value(val)
-    end
-
   end
 
 end
