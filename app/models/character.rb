@@ -22,7 +22,7 @@ class Character < ActiveRecord::Base
     if level.present?
       level.pf_class
     else
-      NullFavoredClass.new
+      NullPfClass.new
     end
   end
 
