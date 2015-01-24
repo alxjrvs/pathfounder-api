@@ -6,11 +6,7 @@ class NullStatBlock
 
   StatBlock::STATS.each do |s|
     define_method s do
-      nil
-    end
-
-    define_method "#{s}_mod" do
-      nil
+      NullStat.new
     end
   end
 end

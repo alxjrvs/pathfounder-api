@@ -11,13 +11,8 @@ describe NullStatBlock do
 
   StatBlock::STATS.each do |s|
     describe ".#{s}" do
-      it 'reports null' do
-        expect(@class.send(s)).to be_nil
-      end
-    end
-    describe ".#{s}_mod" do
-      it 'reports null' do
-        expect(@class.send("#{s}_mod")).to be_nil
+      it 'reports a null stat' do
+        expect(@class.send(s).class).to eq NullStat
       end
     end
   end
