@@ -10,8 +10,8 @@ class StatBlock < ActiveRecord::Base
     :dexterity
 
   STATS.each do |stat|
-    define_method "#{stat}_mod" do
-      (self.send(stat) / 10) / 2
+    define_method "#{stat}" do
+      Stat.new(stat, self.send("#{stat}_val"))
     end
   end
 

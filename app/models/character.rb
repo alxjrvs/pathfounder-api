@@ -11,7 +11,7 @@ class Character < ActiveRecord::Base
   end
 
   StatBlock::STATS.each do |s|
-    delegate "#{s}_mod", to: :stats
+    delegate "#{s}", to: :stats
   end
 
   def allowed_alignments

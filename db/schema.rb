@@ -89,12 +89,12 @@ ActiveRecord::Schema.define(version: 20150124165143) do
   end
 
   create_table "stat_blocks", force: true do |t|
-    t.integer "wisdom"
-    t.integer "charisma"
-    t.integer "constitution"
-    t.integer "intelligence"
-    t.integer "strength"
-    t.integer "dexterity"
+    t.integer "wisdom_val"
+    t.integer "charisma_val"
+    t.integer "constitution_val"
+    t.integer "intelligence_val"
+    t.integer "strength_val"
+    t.integer "dexterity_val"
     t.integer "character_id"
   end
 
