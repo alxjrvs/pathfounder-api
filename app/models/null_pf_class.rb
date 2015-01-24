@@ -1,4 +1,4 @@
-class NullFavoredClass
+class NullPfClass
   Character::CLASS_DELEGATES.each do |m|
     define_method m do
       nil
