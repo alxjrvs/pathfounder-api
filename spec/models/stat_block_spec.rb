@@ -6,9 +6,9 @@ describe StatBlock do
   end
 
   StatBlock::STATS.each do |s|
-    describe ".#{s}_mod" do
+    describe s do
       it "reports the modifier" do
-        expect(@stat_block.send("#{s}_mod")).to_not be_nil
+        expect(@stat_block.send(s).class).to eq Stat
       end
     end
   end
