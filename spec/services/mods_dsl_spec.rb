@@ -4,8 +4,6 @@ class Fighter < ActiveRecord::Base
   include ModsDsl
   has_one :level, as: :pf_class
   has_one :character, through: :level
-  attr_accessor :normalized
-
   role :dummy
   hit_die 10
   alignment :any
@@ -23,33 +21,23 @@ class Fighter < ActiveRecord::Base
   adds armor_proficiency: [:all]
   adds shield_proficiency: [:all]
 
-  def normalized?
-    normalized
-  end
 end
 
 describe ModsDsl do
   before do
-    @class = Fighter.create
+    @class = Fighter.new
   end
 
   describe ".mods" do
     before do
-      @expected_will =
-        {role: :dummy, trait: :will_save, modifier: 0}
-      @expected_reflex =
-        {role: :dummy, trait: :reflex_save, modifier: 0}
-      @expected_fort =
-        {role: :dummy, trait: :fortitude_save, modifier: -2}
-      @expected_feat =
-        {role: :dummy, trait: :feat_count, modifier: +1}
+      @will = :will_save
+      @fort = :fortitude_save
+      @reflex = :reflex_save
+      @feat = :feat_count
     end
 
     it 'contains the correct array of modified values' do
-      expect(@class.mods_array).to contain_exactly @expected_will,
-        @expected_fort,
-        @expected_reflex,
-        @expected_feat
+      expect(@class.mods.map(&:trait)).to contain_exactly @will, @fort, @reflex, @feat
     end
   end
 
@@ -94,30 +82,6 @@ describe ModsDsl do
   describe ".role" do
     it 'reports role' do
       expect(@class.role).to eq :dummy
-    end
-  end
-
-  describe ".normalize" do
-    describe 'when already normalized' do
-      before do
-        @class.normalized = true
-      end
-
-      it 'skips noramlizing' do
-        expect{@class.normalize}.to change{Mod.count}.by 0
-      end
-    end
-
-    describe "when not yet normalized" do
-      before do
-        @level = create :level, pf_class: @class
-        @class.normalized = false
-        @class.reload
-      end
-
-      it 'normalizes the modifiables' do
-        expect{@class.normalize}.to change{Mod.count}.by 4
-      end
     end
   end
 end

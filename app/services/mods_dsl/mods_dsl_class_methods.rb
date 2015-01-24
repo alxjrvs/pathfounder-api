@@ -36,8 +36,13 @@ module ModsDsl::ModsDslClassMethods
   def mods(hash)
     trait = hash.keys.first
     modifier = hash.values.first
-    mod_hash = {role: role_val, trait: trait, modifier: modifier}
-    mods_array.push mod_hash
+    init = {role: role_val, trait: trait, modifier: modifier}
+    mod = ModsDsl::Mod.new(init, source)
+    mods_array.push mod
+  end
+
+  def source
+    @_source ||= ModsDsl::Source.new(self, self.role_val)
   end
 
   def mods_array

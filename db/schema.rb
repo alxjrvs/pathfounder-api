@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123073617) do
+ActiveRecord::Schema.define(version: 20150124165143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,17 +37,6 @@ ActiveRecord::Schema.define(version: 20150123073617) do
   end
 
   add_index "levels", ["character_id"], name: "index_levels_on_character_id", using: :btree
-
-  create_table "mods", force: true do |t|
-    t.string  "role"
-    t.string  "trait"
-    t.integer "modifier"
-    t.integer "source_id"
-    t.string  "source_type"
-    t.integer "character_id"
-  end
-
-  add_index "mods", ["character_id"], name: "index_mods_on_character_id", using: :btree
 
   create_table "skill_lists", force: true do |t|
     t.integer "character_id"

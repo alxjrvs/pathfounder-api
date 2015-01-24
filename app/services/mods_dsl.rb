@@ -3,16 +3,6 @@ module ModsDsl
     base.extend(ModsDslClassMethods)
   end
 
-  def normalize
-    unless normalized?
-      normalize_mods
-    end
-  end
-
-  def normalized?
-    Mod.where(source: self).any?
-  end
-
   def alignment
     self.class.alignment_val
   end
@@ -41,15 +31,7 @@ module ModsDsl
     self.class.role_val
   end
 
-  def mods_array
+  def mods
     self.class.mods_array
   end
-
-  private
-
-  def normalize_mods
-    return unless character.present?
-    ModsDsl::ModNormalizer.new(mods_array, source: self, character: character).normalize
-  end
-
 end
