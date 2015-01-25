@@ -5,14 +5,14 @@ class NullStat
   end
 
   def name
-    nil
+    ""
   end
 
   def value
-    nil
+    0
   end
 
   def modifier
-    nil
+    0
   end
 end

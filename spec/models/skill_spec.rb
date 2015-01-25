@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe Skill do
-  before do 
+  before do
     @list = create :skill_list
   end
   describe 'Custom Skills' do
@@ -13,6 +13,12 @@ describe Skill do
     describe ".name" do
       it "returns the custom name for the skill" do
         expect(@skill.name).to eq @list.craft_1_name
+      end
+    end
+
+    describe ".calculated_value" do
+      it "it returns an integer" do
+        expect(@skill.calculated_value.class).to eql Fixnum
       end
     end
 

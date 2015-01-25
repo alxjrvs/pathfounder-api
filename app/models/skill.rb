@@ -1,5 +1,6 @@
 class Skill
   attr_reader :skill_name, :untrained, :armor_check_penalty, :key_stat, :custom, :list
+
   def initialize(options, list)
     @skill_name = options[:name]
     @untrained = options[:untrained]
@@ -18,7 +19,7 @@ class Skill
   end
 
   def calculated_value
-    @_calculated_value ||= value + class_skill_bonus + modifier
+    @_calculated_value ||= modifier_calculator.total
   end
 
   def value
@@ -26,14 +27,6 @@ class Skill
   end
 
   private
-
-  def class_skill?
-    character.class_skills.include? skill_name.to_sym
-  end
-
-  def modifier
-    character.send(key_stat).modifier
-  end
 
   def character
     @_character ||= begin
@@ -45,6 +38,17 @@ class Skill
     end
   end
 
+  def modifier_calculator
+    SkillModifierCalculator.new name: skill_name,
+      class_skills: character.class_skills,
+      value: value,
+      modifier: modifier
+  end
+
+  def modifier
+    character.send(key_stat).modifier
+  end
+
   def value_column
     "#{skill_name}_val"
   end
@@ -52,5 +56,4 @@ class Skill
   def name_column
     "#{skill_name}_name"
   end
-
 end

@@ -12,20 +12,20 @@ describe NullStat do
   end
 
   describe ".name" do
-    it "returns nil" do
-      expect(@stat.name).to be_nil
+    it "returns an empty string" do
+      expect(@stat.name).to eq ""
     end
   end
 
   describe ".value" do
-    it "returns nil" do
-      expect(@stat.name).to be_nil
+    it "returns 0" do
+      expect(@stat.value).to eq 0
     end
   end
 
   describe ".modifier" do
-    it "returns nil" do
-      expect(@stat.name).to be_nil
+    it "returns 0" do
+      expect(@stat.modifier).to eq 0
     end
   end
 end

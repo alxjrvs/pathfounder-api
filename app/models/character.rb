@@ -9,6 +9,9 @@ class Character < ActiveRecord::Base
   CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
   end
+  Skills::ALL.each do |sk|
+    delegate sk, to: :skills
+  end
 
   StatBlock::STATS.each do |s|
     delegate "#{s}", to: :stats
@@ -26,8 +29,15 @@ class Character < ActiveRecord::Base
     end
   end
 
+  def skills
+    skill_list || NullSkillList.new
+  end
+
   def stats
     stat_block || NullStatBlock.new
+  end
+
+  def all_skills
   end
 
   def class_skill_ranks_per_level
