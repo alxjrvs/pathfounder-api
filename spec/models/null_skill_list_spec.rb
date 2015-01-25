@@ -5,6 +5,12 @@ describe NullSkillList do
     @list = NullSkillList.new
   end
 
+  describe ".all_skills" do
+    it "returns an empty array" do
+      expect(@list.all_skills).to eq []
+    end
+  end
+
   Skills::ALL.each do |sk|
     describe ".#{sk}" do
       it "returns a NullSkill" do

@@ -25,8 +25,7 @@ describe Skill do
 
     describe ".value" do
       it "returns the value on the list for the given skill" do
-        column = "#{@skill.skill_name}_val"
-        expect(@skill.value).to eq @list.send(column)
+        expect(@skill.value).to eq @list.craft_1_val
       end
     end
   end

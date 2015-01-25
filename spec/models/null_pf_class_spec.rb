@@ -15,6 +15,12 @@ describe NullPfClass do
     end
   end
 
+  describe "skills" do
+    it 'returns an empty array' do
+      expect(@class.class_skills).to eq []
+    end
+  end
+
   Character::CLASS_DELEGATES.each do |cd|
     describe ".#{cd}" do
       it 'reports null' do

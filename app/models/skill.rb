@@ -22,7 +22,7 @@ class Skill
   end
 
   def value
-    list.send(value_column)
+    list.send(value_column).to_i
   end
 
   private

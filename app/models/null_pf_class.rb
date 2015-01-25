@@ -9,6 +9,10 @@ class NullPfClass
     []
   end
 
+  def skills
+    []
+  end
+
   def nil?
     true
   end
