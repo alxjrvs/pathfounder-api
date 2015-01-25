@@ -1,7 +1,9 @@
 module ModsDsl::ModsDslClassMethods
   attr_accessor :role_val, :hit_die_val,
     :skill_ranks_per_level_val, :alignment_val,
-    :base_attack_bonus_val
+    :base_attack_bonus_val, :size_val, :speed_val, 
+    :starting_languages_val, :high_intelligence_languages_val
+
 
   def base_attack_bonus(val)
     self.base_attack_bonus_val = val
@@ -11,8 +13,21 @@ module ModsDsl::ModsDslClassMethods
     self.alignment_val = val
   end
 
+  def size(val)
+    self.size_val = val
+  end
+
+  def speed(val)
+    self.speed_val = val
+  end
+
   def role(val)
     self.role_val= val
+  end
+
+  def languages(start, high: high)
+    self.starting_languages_val = start
+    self.high_intelligence_languages_val = high
   end
 
   def hit_die(val)

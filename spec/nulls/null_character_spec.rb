@@ -29,6 +29,11 @@ describe NullCharacter do
     end
   end
 
+  describe ".mods" do
+    it "returns an empty array" do
+      expect(@character.mods).to eq []
+    end
+  end
   describe ".allowed_alignments" do
     it "returns an empty array" do
       expect(@character.allowed_alignments).to eq []

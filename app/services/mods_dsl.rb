@@ -3,8 +3,24 @@ module ModsDsl
     base.extend(ModsDslClassMethods)
   end
 
+  def speed
+    self.class.speed_val
+  end
+
+  def size
+    self.class.size_val
+  end
+
   def alignment
     self.class.alignment_val
+  end
+
+  def starting_languages
+    self.class.starting_languages_val
+  end
+
+  def high_intelligence_language_options
+    self.class.high_intelligence_languages_val
   end
 
   def base_attack_bonus

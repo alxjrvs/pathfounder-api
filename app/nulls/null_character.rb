@@ -22,6 +22,10 @@ class NullCharacter
     0
   end
 
+  def mods
+    []
+  end
+
   def skill_list
     NullSkillList.new
   end

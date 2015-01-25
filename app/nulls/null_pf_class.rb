@@ -9,6 +9,10 @@ class NullPfClass
     []
   end
 
+  def mods
+    []
+  end
+
   def skills
     []
   end

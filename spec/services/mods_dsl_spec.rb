@@ -11,6 +11,11 @@ class Fighter < ActiveRecord::Base
   skills :climb, :craft, :handle_animal
   skill_ranks_per_level 2
 
+  languages [:common], high: [:all_regular]
+
+  size :medium
+  speed :normal
+
   base_attack_bonus      1
   mods feat_count:       1
   mods fortitude_save:  -2
@@ -53,9 +58,33 @@ describe ModsDsl do
     end
   end
 
+  describe ".speed" do
+    it "returns the speed" do
+      expect(@class.speed).to eq :normal
+    end
+  end
+
+  describe ".size" do
+    it "returns the size" do
+      expect(@class.size).to eq :medium
+    end
+  end
+
   describe ".skills" do
     it 'reports skills' do
       expect(@class.skills).to contain_exactly :climb, :handle_animal, :craft
+    end
+  end
+
+  describe ".high_intelligence_language_options" do
+    it 'returns the high intelligence language options' do
+      expect(@class.high_intelligence_language_options).to eq [:all_regular]
+    end
+  end
+
+  describe ".starting_languages" do
+    it 'returns the starting languages' do
+      expect(@class.starting_languages).to eq [:common]
     end
   end
 

@@ -22,11 +22,23 @@ class Character < ActiveRecord::Base
     alignment_filter.remaining_options
   end
 
+  def mods
+    class_mods + race_mods
+  end
+
   def favored_class
     if level.present?
       level.pf_class
     else
       NullPfClass.new
+    end
+  end
+
+  def char_race
+    if race.present?
+      race
+    else
+      NullRace.new
     end
   end
 
@@ -58,7 +70,27 @@ class Character < ActiveRecord::Base
     0
   end
 
+  def find_mods_by_trait(trait)
+    mod_indexer.find_by_trait trait
+  end
+
+  def total_modifier_for(trait)
+    mod_indexer.total_bonus_for trait
+  end
+
   private
+
+  def class_mods
+    favored_class.mods
+  end
+
+  def race_mods
+    char_race.mods
+  end
+
+  def mod_indexer
+    @_mod_indexer ||= ModIndexer.new mods
+  end
 
   def alignment_filter
     @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment)
