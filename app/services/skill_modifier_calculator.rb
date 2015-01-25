@@ -27,7 +27,14 @@ class SkillModifierCalculator
     end
   end
 
+  def search_name
+    return :craft if name.to_s.match "craft"
+    return :perform if name.to_s.match "perform"
+    return :profession if name.to_s.match "profession"
+    return name
+  end
+
   def class_skill?
-    class_skills.include? name
+    class_skills.include? search_name
   end
 end

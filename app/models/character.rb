@@ -10,6 +10,7 @@ class Character < ActiveRecord::Base
     delegate cd, to: :favored_class
   end
   delegate :all_skills, to: :skills
+
   Skills::ALL.each do |sk|
     delegate sk, to: :skills
   end
@@ -20,10 +21,6 @@ class Character < ActiveRecord::Base
 
   def allowed_alignments
     alignment_filter.remaining_options
-  end
-
-  def mods
-    class_mods + race_mods
   end
 
   def favored_class
@@ -71,6 +68,10 @@ class Character < ActiveRecord::Base
     0
   end
 
+  def feat_count
+    1 + total_modifier_for(:feat_count)
+  end
+
   def find_mods_by_trait(trait)
     mod_indexer.find_by_trait trait
   end
@@ -79,7 +80,12 @@ class Character < ActiveRecord::Base
     mod_indexer.total_bonus_for trait
   end
 
+  def mods
+    class_mods + race_mods
+  end
+
   private
+
   def class_skill_ranks_per_level
     favored_class.skill_ranks_per_level
   end

@@ -4,7 +4,7 @@ module Skills
     acrobatics: {
       name: :acrobatics,
       untrained: true,
-      armor_check_penalty: true,
+      armlor_check_penalty: true,
       key_stat: :dexterity
    },
     appraise: {
@@ -23,7 +23,7 @@ module Skills
       name: :climb,
       untrained: true,
       armor_check_penalty: false,
-      key_stat: :intelligence
+      key_stat: :dexterity
     },
     craft_1: {
       name: :craft_1,

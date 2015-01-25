@@ -17,11 +17,11 @@ class Skill
     end
   end
 
-  def calculated_value
-    @_calculated_value ||= modifier_calculator.total
+  def value
+    @_value ||= modifier_calculator.total
   end
 
-  def value
+  def point_value
     list.send(value_column).to_i
   end
 
@@ -38,11 +38,13 @@ class Skill
   end
 
   def modifier_calculator
-    SkillModifierCalculator.new name: skill_name,
-      class_skills: character.class_skills,
-      value: value,
-      penalty: penalty,
-      modifier: modifier
+    @_modifier_calculator ||= begin
+      SkillModifierCalculator.new name: skill_name,
+        class_skills: character.class_skills,
+        value: point_value,
+        penalty: penalty,
+        modifier: modifier
+    end
   end
 
   def penalty

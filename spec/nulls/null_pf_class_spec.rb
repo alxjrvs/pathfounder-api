@@ -23,8 +23,8 @@ describe NullPfClass do
 
   Character::CLASS_DELEGATES.each do |cd|
     describe ".#{cd}" do
-      it 'reports null' do
-        expect(@class.send(cd)).to be_nil
+      it 'returns 1' do
+        expect(@class.send(cd)).to eq 0
       end
     end
   end

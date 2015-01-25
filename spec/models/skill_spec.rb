@@ -17,15 +17,15 @@ describe Skill do
       end
     end
 
-    describe ".calculated_value" do
+    describe ".value" do
       it "it returns an integer" do
-        expect(@skill.calculated_value.class).to eql Fixnum
+        expect(@skill.value.class).to eql Fixnum
       end
     end
 
-    describe ".value" do
+    describe ".point_value" do
       it "returns the value on the list for the given skill" do
-        expect(@skill.value).to eq @list.craft_1_val
+        expect(@skill.point_value).to eq @list.craft_1_val
       end
     end
   end

@@ -10,7 +10,7 @@ class ModIndexer
   end
 
   def find_by_trait(trait)
-    indexed_mods_by_trait[trait].to_a
+    indexed_mods_by_trait[trait.to_sym].to_a
   end
 
   private

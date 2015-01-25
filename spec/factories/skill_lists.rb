@@ -1,42 +1,9 @@
 FactoryGirl.define do
   factory :skill_list do
+    character
+
     acrobatics_val 1
-    appraise_val 1
-    bluff_val 1
-    climb_val 1
     craft_1_val 1
     craft_1_name "woodworking"
-    diplomancy_val 1
-    disable_device_val 1
-    disguise_val 1
-    escape_artist_val 1
-    fly_val 1
-    handle_animal_val 1
-    heal_val 1
-    intimidate_val 1
-    knowledge_arcana_val 1
-    knowledge_dungeoneering_val 1
-    knowledge_engineering_val 1
-    knowledge_geography_val 1
-    knowledge_history_val 1
-    knowledge_local_val 1
-    knowledge_nature_val 1
-    knowledge_nobility_val 1
-    knowledge_planes_val 1
-    knowledge_religion_val 1
-    linguistics_val 1
-    perception_val 1
-    perform_1_val 1
-    perform_1_name "Breakdancing"
-    profession_val 1
-    profession_name_val 1
-    ride_val 1
-    sense_motive_val 1
-    sleight_of_hand_val 1
-    spellcraft_val 1
-    stealth_val 1
-    survival_val 1
-    swim_val 1
-    use_magic_device_val 1
   end
 end

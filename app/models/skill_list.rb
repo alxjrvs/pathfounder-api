@@ -18,6 +18,10 @@ class SkillList < ActiveRecord::Base
     end
   end
 
+  def total_points
+    all_skills.sum(&:point_value)
+  end
+
   private
 
   #TODO

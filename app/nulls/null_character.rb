@@ -58,6 +58,10 @@ class NullCharacter
     NullPfClass.new
   end
 
+  def feat_count
+    0
+  end
+
   def class_skills
     []
   end
