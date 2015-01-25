@@ -58,12 +58,13 @@ class Character < ActiveRecord::Base
     stats.all_stats
   end
 
-  def class_skill_ranks_per_level
-    favored_class.skill_ranks_per_level
-  end
-
   def class_skills
     favored_class.skills
+  end
+
+  def calculated_skill_ranks
+    class_skill_ranks_per_level.to_i +
+      intelligence.modifier
   end
 
   def armor_check_penalty
@@ -79,6 +80,9 @@ class Character < ActiveRecord::Base
   end
 
   private
+  def class_skill_ranks_per_level
+    favored_class.skill_ranks_per_level
+  end
 
   def class_mods
     favored_class.mods

@@ -14,6 +14,10 @@ class NullCharacter
     true
   end
 
+  def calculated_skill_ranks
+    0
+  end
+
   def allowed_alignments
     []
   end
