@@ -23,5 +23,8 @@ describe ModIndexer do
       expect(@indexer.find_by_trait(:strength).count).to eq 2
 
     end
+    it "returns an empty array if no mods" do
+      expect(@indexer.find_by_trait(:foo)).to eq []
+    end
   end
 end

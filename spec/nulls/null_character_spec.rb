@@ -34,6 +34,19 @@ describe NullCharacter do
       expect(@character.mods).to eq []
     end
   end
+
+  describe ".total_modifer_for" do
+    it "returns a zero" do
+      expect(@character.total_modifer_for(:foo)).to eq 0
+    end
+  end
+
+  describe ".find_mods_by_trait" do
+    it "returns an empty array" do
+      expect(@character.find_mods_by_trait(:foo)).to eq []
+    end
+  end
+
   describe ".allowed_alignments" do
     it "returns an empty array" do
       expect(@character.allowed_alignments).to eq []

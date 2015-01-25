@@ -32,16 +32,6 @@ class StatBlock < ActiveRecord::Base
   private
 
   def calculated_value(stat)
-    normalized_cal(stat) + character_modifiers(stat)
+    StatCalculator.value(self, stat)
   end
-
-  def normalized_val(stat)
-    self.send("#{stat}_val").to_i
-  end
-
-  def character_modifiers(stat)
-    character_sheet.total_modifier_for(stat).to_i
-  end
-
-
 end

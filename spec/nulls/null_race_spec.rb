@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe NulLRace do
+describe NullRace do
   before do
     @race = NullRace.new
   end

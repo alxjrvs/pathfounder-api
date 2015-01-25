@@ -26,6 +26,14 @@ class NullCharacter
     []
   end
 
+  def total_modifer_for(trait)
+    0
+  end
+
+  def find_mods_by_trait(trait)
+    []
+  end
+
   def skill_list
     NullSkillList.new
   end
