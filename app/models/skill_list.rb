@@ -2,6 +2,7 @@ class SkillList < ActiveRecord::Base
   belongs_to :character
 
   def find(key)
+    find_hash[key]
   end
 
   Skills::ALL.each do |sk|
@@ -11,7 +12,10 @@ class SkillList < ActiveRecord::Base
     end
   end
 
-  def list
+  def all_skills
+    @_all_skills ||= Skills::ALL.map do |sk|
+      self.send(sk)
+    end
   end
 
   private
@@ -19,9 +23,11 @@ class SkillList < ActiveRecord::Base
   #TODO
   # There is a better way to do this.
   def find_hash
-    hash = 
+    hash = {}
     Skills::ALL.map do |sk|
-      self.send(sk)
+      keyed = { sk => self.send(sk) }
+      hash.merge!(keyed)
     end
+    hash
   end
 end

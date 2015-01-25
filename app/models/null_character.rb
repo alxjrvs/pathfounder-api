@@ -18,6 +18,10 @@ class NullCharacter
     []
   end
 
+  def armor_check_penalty
+    0
+  end
+
   def skill_list
     NullSkillList.new
   end

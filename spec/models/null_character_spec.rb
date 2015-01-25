@@ -5,6 +5,12 @@ describe NullCharacter do
     @character = NullCharacter.new
   end
 
+  describe ".armor_check_penalty" do
+    it "returns a zero" do
+      expect(@character.armor_check_penalty).to eq 0
+    end
+  end
+
   describe ".stat_block" do
     it "returns a NullStatBlock" do
       expect(@character.stat_block.class).to eq NullStatBlock

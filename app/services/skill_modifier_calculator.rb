@@ -2,19 +2,22 @@ class SkillModifierCalculator
   def initialize(name: name,
                  value: value,
                  class_skills: class_skills,
-                 modifier: modifier)
+                 modifier: modifier,
+                 penalty: penalty)
     @name = name
     @value = value
     @class_skills = class_skills
     @modifier = modifier
+    @penalty = penalty
   end
 
   def total
-    value + class_skill_bonus + modifier
+    value + class_skill_bonus + modifier + penalty
   end
 
   private
-  attr_reader :name, :value, :class_skills, :modifier
+
+  attr_reader :name, :value, :class_skills, :modifier, :penalty
 
   def class_skill_bonus
     if class_skill?

@@ -1,10 +1,9 @@
 class Skill
-  attr_reader :skill_name, :untrained, :armor_check_penalty, :key_stat, :custom, :list
+  attr_reader :skill_name, :untrained, :key_stat, :custom, :list
 
   def initialize(options, list)
     @skill_name = options[:name]
     @untrained = options[:untrained]
-    @armor_check_penalty = options[:armor_check_penalty]
     @key_stat= options[:key_stat]
     @custom = options[:custom]
     @list = list
@@ -42,7 +41,20 @@ class Skill
     SkillModifierCalculator.new name: skill_name,
       class_skills: character.class_skills,
       value: value,
+      penalty: penalty,
       modifier: modifier
+  end
+
+  def penalty
+    if penalty_applies
+      character.armor_check_penalty
+    else
+      0
+    end
+  end
+
+  def penalty_applies
+    key_stat == :dexterity || key_stat == :strength
   end
 
   def modifier

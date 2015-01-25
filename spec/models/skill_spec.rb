@@ -4,6 +4,7 @@ describe Skill do
   before do
     @list = create :skill_list
   end
+
   describe 'Custom Skills' do
     before do
       options = Skills::DETAILS[:craft_1]

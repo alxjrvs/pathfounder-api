@@ -9,6 +9,7 @@ class Character < ActiveRecord::Base
   CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
   end
+  delegate :all_skills, to: :skills
   Skills::ALL.each do |sk|
     delegate sk, to: :skills
   end
@@ -38,6 +39,11 @@ class Character < ActiveRecord::Base
   end
 
   def all_skills
+    skills.all_skills
+  end
+
+  def all_stats
+    stats.all_stats
   end
 
   def class_skill_ranks_per_level
@@ -48,19 +54,11 @@ class Character < ActiveRecord::Base
     favored_class.skills
   end
 
-  def feat_count
-    sum_of_mods_for :feat_count + 1
+  def armor_check_penalty
+    0
   end
 
   private
-
-  def mods_for(trait)
-    mods.where(trait: trait)
-  end
-
-  def sum_of_mods_for(trait)
-    mods_for(trait).sum :modifier
-  end
 
   def alignment_filter
     @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment)

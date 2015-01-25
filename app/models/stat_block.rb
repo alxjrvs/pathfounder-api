@@ -15,4 +15,10 @@ class StatBlock < ActiveRecord::Base
     end
   end
 
+  def all_stats
+    STATS.map do |stat|
+      self.send(stat)
+    end
+  end
+
 end
