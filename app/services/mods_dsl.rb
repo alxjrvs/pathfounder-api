@@ -15,6 +15,10 @@ module ModsDsl
     self.class.alignment_val
   end
 
+  def size_modifier
+    SizeModifiers::MOD[size]
+  end
+
   def starting_languages
     self.class.starting_languages_val
   end

@@ -70,6 +70,12 @@ describe ModsDsl do
     end
   end
 
+  describe ".size_modifier" do
+    it "returns the size_modifier" do
+      expect(@class.size_modifier).to eq SizeModifiers::MOD[@class.size]
+    end
+  end
+
   describe ".skills" do
     it 'reports skills' do
       expect(@class.skills).to contain_exactly :climb, :handle_animal, :craft

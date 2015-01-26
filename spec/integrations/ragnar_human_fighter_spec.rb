@@ -57,7 +57,20 @@ describe "Stuart Porrel's" do
     it "has armor proficiencies"
     it "has weapon proficiencies"
     it "has languages"
-    it "has a speed"
-    it "has a size"
+
+    it "has an AC"
+    it "has a ranged attack bonus"
+    it "has a melee attack bonus"
+    it "has a speed" do
+      expect(@ragnar.speed).to eq :normal
+    end
+
+    it "has a size" do
+      expect(@rangar.size_modifier).to eq 0
+    end
+
+    it "has a size" do
+      expect(@rangar.size).to eq :medium
+    end
   end
 end

@@ -9,8 +9,17 @@ class Character < ActiveRecord::Base
   CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
   end
-  delegate :all_skills, to: :skills
 
+  RACE_DELEGATES = :size_modifier, :size, :speed
+  RACE_DELEGATES.each do |rd|
+    delegate rd, to: :char_race
+  end
+
+  CLASS_DELEGATES.each do |cd|
+    delegate cd, to: :favored_class
+  end
+
+  delegate :all_skills, to: :skills
   Skills::ALL.each do |sk|
     delegate sk, to: :skills
   end
@@ -76,12 +85,32 @@ class Character < ActiveRecord::Base
     mod_indexer.find_by_trait trait
   end
 
+  def reflex_save_bonus
+    total_modifier_for(:reflex_save) + dexterity.modifier
+  end
+
+  def fortitude_save_bonus
+    total_modifier_for(:fortitude_save) + constitution.modifier
+  end
+
+  def will_save_bonus
+    total_modifier_for(:will_save) + wisdom.modifier
+  end
+
   def total_modifier_for(trait)
     mod_indexer.total_bonus_for trait
   end
 
   def mods
     class_mods + race_mods
+  end
+
+  def armor_bonus
+    0
+  end
+
+  def shield_bonus
+    0
   end
 
   private
