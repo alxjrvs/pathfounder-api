@@ -1,4 +1,7 @@
-== README
+== Pathfounder
+= A Character Generator for the Pathfinder RPG system
+
+{<img src="https://codeclimate.com/github/alxjrvs/Pathfounder/badges/gpa.svg" />}[https://codeclimate.com/github/alxjrvs/Pathfounder]
 
 == The Architecture
 Pathfounder weaves two sets of data together in a contextual and accessible way in Ruby
