@@ -71,6 +71,10 @@ class Character < ActiveRecord::Base
     0
   end
 
+  def initiative_bonus
+    dexterity.modifier
+  end
+
   def feat_count
     1 + total_modifier_for(:feat_count)
   end
@@ -91,10 +95,6 @@ class Character < ActiveRecord::Base
     total_modifier_for(:will_save) + wisdom.modifier
   end
 
-  def total_modifier_for(trait)
-    mod_indexer.total_bonus_for trait
-  end
-
   def armor_bonus
     0
   end
@@ -112,11 +112,20 @@ class Character < ActiveRecord::Base
     )
   end
 
+  def flat_footed
+    CharacterCombatMathCalculator.flat_footed(
+      mods_bonus: total_modifier_for(:flat_footed),
+      armor_bonus: armor_bonus,
+      shield_bonus: shield_bonus
+    )
+  end
+
   def ranged_attack_bonus
     CharacterCombatMathCalculator.ranged_attack_bonus(
+    range_penalty: total_modifier_for(:range_penalty),
     base_attack_bonus: base_attack_bonus,
     size_modifier: size_modifier,
-    dex_mod: dexterity.modifier
+    dex_mod: dexterity.modifier,
     )
   end
 
@@ -127,6 +136,35 @@ class Character < ActiveRecord::Base
       str_mod: strength.modifier
     )
   end
+
+  def weapon_proficiencies
+    total_additions_for :weapon_proficiency
+  end
+
+  def shield_proficiencies
+    total_additions_for :shield_proficiency
+  end
+
+  def armor_proficiencies
+    total_additions_for :armor_proficiency
+  end
+
+  def starting_language_options
+    total_additions_for :starting_languages
+  end
+
+  def high_intelligence_language_options
+    total_additions_for :high_intelligence_languages
+  end
+
+  def total_additions_for(category)
+    addition_indexer.total_values_for category
+  end
+
+  def total_modifier_for(trait)
+    mod_indexer.total_bonus_for trait
+  end
+
 
   private
 
@@ -159,7 +197,7 @@ class Character < ActiveRecord::Base
   end
 
   def addition_indexer
-    @_addition_indexer ||= AdditionIndexer.new addition
+    @_addition_indexer ||= AdditionIndexer.new additions
   end
 
   def mod_indexer

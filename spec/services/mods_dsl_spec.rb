@@ -94,14 +94,6 @@ describe ModsDsl do
     end
   end
 
-  describe ".additions" do
-    it "reports the additoions" do
-      expect(@class.additions[0][:weapon_proficiency]).to contain_exactly(:simple, :martial)
-      expect(@class.additions[1][:armor_proficiency]).to contain_exactly :all
-      expect(@class.additions[2][:shield_proficiency]).to contain_exactly :all
-    end
-  end
-
   describe ".role" do
     it 'reports role' do
       expect(@class.role).to eq :dummy

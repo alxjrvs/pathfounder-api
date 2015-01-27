@@ -54,9 +54,26 @@ describe "Stuart Porrel's" do
       expect(@ragnar.allowed_alignments.count).to eq AlignmentFilter::ALIGNMENTS.count
     end
 
-    it "has armor proficiencies"
-    it "has weapon proficiencies"
-    it "has languages"
+    it "has an initiative bonus" do
+      expect(@ragnar.initiative_bonus).to eq 1
+    end
+
+    it "has armor proficiencies" do
+      expect(@ragnar.armor_proficiencies).to contain_exactly :all
+    end
+
+    it "has shielf proficiencies" do
+      expect(@ragnar.shield_proficiencies).to contain_exactly :all
+    end
+
+    it "has weapon proficiencies" do
+      expect(@ragnar.weapon_proficiencies).to contain_exactly :simple, :martial
+    end
+
+    it "has language options" do
+      expect(@ragnar.starting_language_options).to contain_exactly :common
+      expect(@ragnar.high_intelligence_language_options).to contain_exactly :all_regular
+    end
 
     it "has an AC" do
       expect(@ragnar.armor_class).to eq 11

@@ -25,8 +25,8 @@ module ModsDsl::ModsDslClassMethods
   end
 
   def languages(start, high: high)
-    ModsDsl::Addition.new category: :starting_languages, values: start if start.present?
-    ModsDsl::Addition.new category: :high_intelligence_languages, values: high if high.present?
+    additions_array.push ModsDsl::Addition.new category: :starting_languages, values: start if start.present?
+    additions_array.push ModsDsl::Addition.new category: :high_intelligence_languages, values: high if high.present?
   end
 
   def hit_die(val)
@@ -40,8 +40,8 @@ module ModsDsl::ModsDslClassMethods
   def adds(hash)
     category = hash.keys.first
     values = hash.values.first
-    ModsDsl::Addition.new category: category, values: values, source: source
-    additions_array.push(hash)
+    add = ModsDsl::Addition.new category: category, values: values, source: source
+    additions_array.push(add)
   end
 
   def class_skills(*args)

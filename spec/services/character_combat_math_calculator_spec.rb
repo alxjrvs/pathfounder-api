@@ -13,6 +13,7 @@ describe CharacterCombatMathCalculator do
     it "calculates the ranged_attack_bonus correctly" do
       rab = CharacterCombatMathCalculator.ranged_attack_bonus base_attack_bonus: 1,
         size_modifier: +1,
+        range_penalty: 0,
         dex_mod: 1
       expect(rab).to eq 3
     end
