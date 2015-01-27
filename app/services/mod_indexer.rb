@@ -20,8 +20,8 @@ class ModIndexer
     @_indexed_mods_by_trait ||= begin
       index = {}
       mods.each do |mod|
-        current_value = index[mod.trait].to_a
-        index[mod.trait] = current_value + [mod]
+        index[mod.trait] ||= []
+        index[mod.trait] += [mod]
       end
       index
     end

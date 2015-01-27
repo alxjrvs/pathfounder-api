@@ -5,19 +5,6 @@ describe Character do
     @character = create :character
   end
 
-  describe ".mods" do
-    before do
-      @race = create :human, character: @character
-      @class = create :fighter, character: @character
-      @character.save
-    end
-
-    it 'reports the mods from both race and class' do
-      length = @race.mods.length + @class.mods.length
-      expect(@character.mods.length).to eq length
-    end
-  end
-
   describe ".skill_list" do
     describe "with a skill list" do
       before do

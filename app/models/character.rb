@@ -95,10 +95,6 @@ class Character < ActiveRecord::Base
     mod_indexer.total_bonus_for trait
   end
 
-  def mods
-    class_mods + race_mods
-  end
-
   def armor_bonus
     0
   end
@@ -144,6 +140,26 @@ class Character < ActiveRecord::Base
 
   def race_mods
     race.mods
+  end
+
+  def mods
+    class_mods + race_mods
+  end
+
+  def race_adds
+    race.additions
+  end
+
+  def class_adds
+    favored_class.additions
+  end
+
+  def additions
+    race_adds + class_adds
+  end
+
+  def addition_indexer
+    @_addition_indexer ||= AdditionIndexer.new addition
   end
 
   def mod_indexer
