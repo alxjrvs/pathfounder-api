@@ -79,10 +79,6 @@ class Character < ActiveRecord::Base
     1 + total_modifier_for(:feat_count)
   end
 
-  def find_mods_by_trait(trait)
-    mod_indexer.find_by_trait trait
-  end
-
   def reflex_save_bonus
     total_modifier_for(:reflex_save) + dexterity.modifier
   end
@@ -165,6 +161,9 @@ class Character < ActiveRecord::Base
     mod_indexer.total_bonus_for trait
   end
 
+  def find_mods_by_trait(trait)
+    mod_indexer.find_by_trait trait
+  end
 
   private
 

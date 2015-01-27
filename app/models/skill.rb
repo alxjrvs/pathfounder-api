@@ -41,6 +41,7 @@ class Skill
     @_modifier_calculator ||= begin
       SkillModifierCalculator.new name: skill_name,
         class_skills: character.class_skills,
+        bonuses: bonuses,
         value: point_value,
         penalty: penalty,
         modifier: modifier
@@ -53,6 +54,10 @@ class Skill
     else
       0
     end
+  end
+
+  def bonuses
+    character.total_modifier_for skill_name
   end
 
   def penalty_applies
