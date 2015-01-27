@@ -1,9 +1,8 @@
 module ModsDsl::ModsDslClassMethods
   attr_accessor :role_val, :hit_die_val,
     :skill_ranks_per_level_val, :alignment_val,
-    :base_attack_bonus_val, :size_val, :speed_val, 
+    :base_attack_bonus_val, :size_val, :speed_val,
     :starting_languages_val, :high_intelligence_languages_val
-
 
   def base_attack_bonus(val)
     self.base_attack_bonus_val = val
@@ -39,12 +38,15 @@ module ModsDsl::ModsDslClassMethods
   end
 
   def adds(hash)
+    category = hash.keys.first
+    values = hash.values.first
+    ModsDsl::Addition.new category: category, values: values, source: source
     additions_array.push(hash)
   end
 
-  def skills(*args)
+  def class_skills(*args)
     args.each do |arg|
-      skills_array.push(arg)
+      class_skills_array.push(arg)
     end
   end
 
@@ -64,8 +66,8 @@ module ModsDsl::ModsDslClassMethods
     @_mods_array ||= []
   end
 
-  def skills_array
-    @_skills_array ||= []
+  def class_skills_array
+    @_class_skills_array ||= []
   end
 
   def additions_array
