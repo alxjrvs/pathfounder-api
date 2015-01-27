@@ -17,13 +17,6 @@ class ModIndexer
   attr_accessor :mods
 
   def indexed_mods_by_trait
-    @_indexed_mods_by_trait ||= begin
-      index = {}
-      mods.each do |mod|
-        index[mod.trait] ||= []
-        index[mod.trait] += [mod]
-      end
-      index
-    end
+    @_indexed_mods_by_trait ||= Indexer.index(mods, :trait)
   end
 end

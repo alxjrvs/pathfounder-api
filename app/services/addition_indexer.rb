@@ -20,14 +20,7 @@ class AdditionIndexer
   attr_reader :additions
 
   def indexed_adds_by_category
-    @_indexed_adds_by_category ||= begin
-      index = {}
-      additions.map do |add|
-        index[add.category] ||= []
-        index[add.category] += [add]
-      end
-      index
-    end
+    @_indexed_adds_by_category ||= Indexer.index(additions, :category)
   end
 
 end
