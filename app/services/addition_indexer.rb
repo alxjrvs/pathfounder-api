@@ -24,8 +24,9 @@ class AdditionIndexer
       index = {}
       additions.map do |add|
         index[add.category] ||= []
-        index[add.category].to_a += [add]
+        index[add.category] += [add]
       end
+      index
     end
   end
 
