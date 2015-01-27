@@ -24,9 +24,12 @@ class Human < ActiveRecord::Base
 
   def ability_bonus_mod
     @_human_ability_score_mod ||= begin
-      options = { trait: ability_bonus,
-        modifier: +2}
-      Mod.new options, self.class.source
+      Mod.new(
+        source: self.class.source,
+        trait: ability_bonus,
+        modifier: +2,
+        name: "Human Ability Bonus"
+             )
     end
   end
 

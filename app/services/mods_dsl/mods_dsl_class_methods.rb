@@ -40,7 +40,11 @@ module ModsDsl::ModsDslClassMethods
   def adds(hash)
     category = hash.keys.first
     values = hash.values.first
-    add = ModsDsl::Addition.new category: category, values: values, source: source
+    add = ModsDsl::Addition.new(
+      category: category,
+      values: values,
+      source: source
+    )
     additions_array.push(add)
   end
 
@@ -51,10 +55,14 @@ module ModsDsl::ModsDslClassMethods
   end
 
   def mods(hash)
-    trait = hash.keys.first
-    modifier = hash.values.first
-    init = {role: role_val, trait: trait, modifier: modifier}
-    mod = ModsDsl::Mod.new(init, source)
+    name = nil
+    mod = ModsDsl::Mod.new(
+      trait: hash.keys.first,
+      modifier: hash.values.first,
+      name: name,
+      source: source
+    )
+
     mods_array.push mod
   end
 
