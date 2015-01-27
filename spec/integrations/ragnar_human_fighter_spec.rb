@@ -58,19 +58,28 @@ describe "Stuart Porrel's" do
     it "has weapon proficiencies"
     it "has languages"
 
-    it "has an AC"
-    it "has a ranged attack bonus"
-    it "has a melee attack bonus"
+    it "has an AC" do
+      expect(@ragnar.armor_class).to eq 11
+    end
+
+    it "has a ranged attack bonus" do
+      expect(@ragnar.ranged_attack_bonus).to eq 2
+    end
+
+    it "has a melee attack bonus" do
+      expect(@ragnar.melee_attack_bonus).to eq 5
+    end
+
     it "has a speed" do
       expect(@ragnar.speed).to eq :normal
     end
 
     it "has a size" do
-      expect(@rangar.size_modifier).to eq 0
+      expect(@ragnar.size_modifier).to eq 0
     end
 
     it "has a size" do
-      expect(@rangar.size).to eq :medium
+      expect(@ragnar.size).to eq :medium
     end
   end
 end

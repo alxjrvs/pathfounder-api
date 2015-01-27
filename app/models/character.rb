@@ -113,6 +113,31 @@ class Character < ActiveRecord::Base
     0
   end
 
+  def armor_class
+    CharacterCombatMathCalculator.armor_class(
+      mods_bonus: total_modifier_for(:armor_class),
+      dex_mod: dexterity.modifier,
+      armor_bonus: armor_bonus,
+      shield_bonus: shield_bonus
+    )
+  end
+
+  def ranged_attack_bonus
+    CharacterCombatMathCalculator.ranged_attack_bonus(
+    base_attack_bonus: base_attack_bonus,
+    size_modifier: size_modifier,
+    dex_mod: dexterity.modifier
+    )
+  end
+
+  def melee_attack_bonus
+    CharacterCombatMathCalculator.melee_attack_bonus(
+      base_attack_bonus: base_attack_bonus,
+      size_modifier: size_modifier,
+      str_mod: strength.modifier
+    )
+  end
+
   private
 
   def class_skill_ranks_per_level
