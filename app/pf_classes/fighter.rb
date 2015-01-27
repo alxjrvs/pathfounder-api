@@ -7,7 +7,7 @@ class Fighter < ActiveRecord::Base
   hit_die 10
   alignment :any
 
-  skills :climb, :craft, :handle_animal
+  class_skills :climb, :craft, :handle_animal
   skill_ranks_per_level 2
 
   base_attack_bonus      1

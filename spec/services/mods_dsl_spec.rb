@@ -8,7 +8,7 @@ class Fighter < ActiveRecord::Base
   hit_die 10
   alignment :any
 
-  skills :climb, :craft, :handle_animal
+  class_skills :climb, :craft, :handle_animal
   skill_ranks_per_level 2
 
   languages [:common], high: [:all_regular]
@@ -76,9 +76,9 @@ describe ModsDsl do
     end
   end
 
-  describe ".skills" do
-    it 'reports skills' do
-      expect(@class.skills).to contain_exactly :climb, :handle_animal, :craft
+  describe ".class_skills" do
+    it 'reports class_skills' do
+      expect(@class.class_skills).to contain_exactly :climb, :handle_animal, :craft
     end
   end
 

@@ -59,7 +59,7 @@ class Character < ActiveRecord::Base
   end
 
   def class_skills
-    favored_class.skills
+    favored_class.class_skills
   end
 
   def calculated_skill_ranks

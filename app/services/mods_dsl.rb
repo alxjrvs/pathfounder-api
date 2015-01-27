@@ -39,8 +39,8 @@ module ModsDsl
     self.class.hit_die_val
   end
 
-  def skills
-     self.class.skills_array
+  def class_skills
+     self.class.class_skills_array
   end
 
   def skill_ranks_per_level
