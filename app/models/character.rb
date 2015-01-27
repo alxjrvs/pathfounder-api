@@ -12,20 +12,15 @@ class Character < ActiveRecord::Base
 
   RACE_DELEGATES = :size_modifier, :size, :speed
   RACE_DELEGATES.each do |rd|
-    delegate rd, to: :char_race
+    delegate rd, to: :race
   end
 
-  CLASS_DELEGATES.each do |cd|
-    delegate cd, to: :favored_class
-  end
-
-  delegate :all_skills, to: :skills
   Skills::ALL.each do |sk|
-    delegate sk, to: :skills
+    delegate sk, to: :skill_list
   end
 
   StatBlock::STATS.each do |s|
-    delegate "#{s}", to: :stats
+    delegate "#{s}", to: :stat_block
   end
 
   def allowed_alignments
@@ -40,28 +35,27 @@ class Character < ActiveRecord::Base
     end
   end
 
-  def char_race
-    if race.present?
-      race
-    else
-      NullRace.new
-    end
+  alias_method :race_attr, :race
+  def race
+    race_attr || NullRace.new
+  end
+
+  alias_method :skill_list_attr, :skill_list
+  def skill_list
+    skill_list_attr || NullSkillList.new
+  end
+
+  alias_method :stat_block_attr, :stat_block
+  def stat_block
+    stat_block_attr || NullStatBlock.new
   end
 
   def skills
-    skill_list || NullSkillList.new
+    skill_list.all_skills
   end
 
   def stats
-    stat_block || NullStatBlock.new
-  end
-
-  def all_skills
-    skills.all_skills
-  end
-
-  def all_stats
-    stats.all_stats
+    stat_block.all_stats
   end
 
   def class_skills
@@ -149,7 +143,7 @@ class Character < ActiveRecord::Base
   end
 
   def race_mods
-    char_race.mods
+    race.mods
   end
 
   def mod_indexer

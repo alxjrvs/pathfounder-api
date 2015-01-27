@@ -38,12 +38,16 @@ class NullCharacter
     []
   end
 
+  def race
+    NullRace.new
+  end
+
   def skill_list
     NullSkillList.new
   end
 
   def skills
-    skill_list.skills
+    skill_list.all_skills
   end
 
   def stat_block
@@ -51,7 +55,7 @@ class NullCharacter
   end
 
   def stats
-    stat_block
+    stat_block.all_stats
   end
 
   def favored_class

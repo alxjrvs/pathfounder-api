@@ -12,6 +12,11 @@ class SkillList < ActiveRecord::Base
     end
   end
 
+  alias_method :character_attr, :character
+  def character
+      character_attr || NullCharacter.new
+  end
+
   def all_skills
     @_all_skills ||= Skills::ALL.map do |sk|
       self.send(sk)

@@ -18,20 +18,37 @@ describe Character do
     end
   end
 
-  describe ".stats" do
+  describe ".skill_list" do
+    describe "with a skill list" do
+      before do
+        @skill_list = create :skill_list, character: @character
+      end
+
+      it "returns the skill list" do
+        expect(@character.skill_list).to eq @skill_list
+      end
+    end
+
+    describe "without a skill_list" do
+      it "should return nil" do
+        expect(@character.skill_list).to be_nil
+      end
+    end
+  end
+  describe ".stat_block" do
     describe "with a stat block" do
       before do
         @stat_block = create :stat_block, character: @character
       end
 
       it "returns the stat block" do
-        expect(@character.stats).to eq @stat_block
+        expect(@character.stat_block).to eq @stat_block
       end
     end
 
     describe "without a stat block" do
       it "should return nil" do
-        expect(@character.stats).to be_nil
+        expect(@character.stat_block).to be_nil
       end
     end
   end

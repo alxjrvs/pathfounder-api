@@ -21,12 +21,9 @@ class StatBlock < ActiveRecord::Base
     end
   end
 
-  def character_sheet
-    if character.present?
-      character
-    else
-      NullCharacter.new
-    end
+  alias_method :character_attr, :character
+  def character
+      character_attr || NullCharacter.new
   end
 
   private
