@@ -17,7 +17,7 @@ class Fighter < ActiveRecord::Base
   speed :normal
 
   base_attack_bonus      1
-  mods feat_count:       1
+  mods feat_count:       1, name: "Bonus Feat"
   mods fortitude_save:  -2
   mods will_save:        0
   mods reflex_save:      0

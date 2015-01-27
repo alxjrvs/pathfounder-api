@@ -55,14 +55,12 @@ module ModsDsl::ModsDslClassMethods
   end
 
   def mods(hash)
-    name = nil
     mod = ModsDsl::Mod.new(
       trait: hash.keys.first,
       modifier: hash.values.first,
-      name: name,
+      name: hash[:name],
       source: source
     )
-
     mods_array.push mod
   end
 
