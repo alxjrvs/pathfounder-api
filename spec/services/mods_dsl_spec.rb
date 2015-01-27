@@ -82,18 +82,6 @@ describe ModsDsl do
     end
   end
 
-  describe ".high_intelligence_language_options" do
-    it 'returns the high intelligence language options' do
-      expect(@class.high_intelligence_language_options).to eq [:all_regular]
-    end
-  end
-
-  describe ".starting_languages" do
-    it 'returns the starting languages' do
-      expect(@class.starting_languages).to eq [:common]
-    end
-  end
-
   describe ".hit_die" do
     it 'reports hit die' do
       expect(@class.hit_die).to eq 10

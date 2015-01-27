@@ -19,14 +19,6 @@ module ModsDsl
     SizeModifiers::MOD[size]
   end
 
-  def starting_languages
-    self.class.starting_languages_val
-  end
-
-  def high_intelligence_language_options
-    self.class.high_intelligence_languages_val
-  end
-
   def base_attack_bonus
     self.class.base_attack_bonus_val
   end

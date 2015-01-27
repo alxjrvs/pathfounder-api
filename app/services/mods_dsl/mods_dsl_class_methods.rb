@@ -25,8 +25,8 @@ module ModsDsl::ModsDslClassMethods
   end
 
   def languages(start, high: high)
-    self.starting_languages_val = start
-    self.high_intelligence_languages_val = high
+    ModsDsl::Addition.new category: :starting_languages, values: start if start.present?
+    ModsDsl::Addition.new category: :high_intelligence_languages, values: high if high.present?
   end
 
   def hit_die(val)
