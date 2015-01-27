@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== The Architecture
+Pathfounder weaves two sets of data together in a contextual and accessible way in Ruby
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There is Normalized data that is saved in the database. These are the result of specific Character choices - the specific ability bonus that a human gets, or how many points they have in strength.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+There is also static data that stays in the classes. This represents truths about the various roles and races that are unchanging regardless of the choices made by a character. A fighter will always give a +2 to reflex, a human will always be normal speed, etc. 
+
+The Two mix in the model layer, where they are calculated to specific values based on Algorithms in the Game System.
+
+
+==The ModsDsl
+
+
+
+
