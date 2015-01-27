@@ -4,10 +4,14 @@ class Human < ActiveRecord::Base
 
   role :race
   mods feat_count: 1
+  speed :normal
+  size :medium
 
+
+  alias_method :mods_attr, :mods
   def mods
     @_mods ||= begin
-       self.class.mods_array + [ability_bonus_mod]
+       self.mods_attr + [ability_bonus_mod]
     end
   end
 
