@@ -9,6 +9,7 @@ describe "Stuart Porrel's" do
       create :level, pf_class: @klass, character: @ragnar
       @stats = create :stat_block, character: @ragnar
       @skills = create :skill_list, character: @ragnar
+      @feats = create :feat_list, character: @ragnar
     end
 
     it "is named ragnar" do
@@ -34,7 +35,7 @@ describe "Stuart Porrel's" do
     end
 
     it "has skills" do
-      expect(@ragnar.acrobatics.value).to eq 2
+      expect(@ragnar.acrobatics.value).to eq 4
       expect(@ragnar.craft_1.value).to eq 4
     end
 
@@ -97,6 +98,10 @@ describe "Stuart Porrel's" do
 
     it "has a size" do
       expect(@ragnar.size).to eq :medium
+    end
+
+    it "has a feat" do
+      expect(@ragnar.feats.count).to eq 1
     end
   end
 end

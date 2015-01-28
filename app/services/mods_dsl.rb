@@ -3,6 +3,10 @@ module ModsDsl
     base.extend(ModsDslClassMethods)
   end
 
+  def feats
+    self.class.feat_array
+  end
+
   def speed
     self.class.speed_val
   end

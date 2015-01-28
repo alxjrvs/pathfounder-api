@@ -9,7 +9,7 @@ class AdditionIndexer
     adds.each do |a|
       array += a.values
     end
-    array
+    array.uniq
   end
 
   def find_by_category(category)

@@ -1,34 +1,34 @@
 require 'rails_helper'
 
-class Fighter < ActiveRecord::Base
-  include ModsDsl
-  has_one :level, as: :pf_class
-  has_one :character, through: :level
-  role :dummy
-  hit_die 10
-  alignment :any
-
-  class_skills :climb, :craft, :handle_animal
-  skill_ranks_per_level 2
-
-  languages [:common], high: [:all_regular]
-
-  size :medium
-  speed :normal
-
-  base_attack_bonus      1
-  mods feat_count:       1, name: "Bonus Feat"
-  mods fortitude_save:  -2
-  mods will_save:        0
-  mods reflex_save:      0
-
-  adds weapon_proficiency: [:simple, :martial]
-  adds armor_proficiency: [:all]
-  adds shield_proficiency: [:all]
-
-end
-
 describe ModsDsl do
+  class Fighter < ActiveRecord::Base
+    include ModsDsl
+    has_one :level, as: :pf_class
+    has_one :character, through: :level
+    role :dummy
+    hit_die 10
+    alignment :any
+
+    class_skills :climb, :craft, :handle_animal
+    skill_ranks_per_level 2
+
+    languages [:common], high: [:all_regular]
+
+    size :medium
+    speed :normal
+
+    base_attack_bonus      1
+    mods feat_count:       1, name: "Bonus Feat"
+    mods fortitude_save:  -2
+    mods will_save:        0
+    mods reflex_save:      0
+
+    adds weapon_proficiency: [:simple, :martial]
+    adds armor_proficiency: [:all]
+    adds shield_proficiency: [:all]
+
+  end
+
   before do
     @class = Fighter.new
   end

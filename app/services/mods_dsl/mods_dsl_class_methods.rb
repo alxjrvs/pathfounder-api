@@ -4,6 +4,12 @@ module ModsDsl::ModsDslClassMethods
     :base_attack_bonus_val, :size_val, :speed_val,
     :starting_languages_val, :high_intelligence_languages_val
 
+  def feat(name)
+    f = Feat.new(name)
+    yield f
+    feat_array.push f
+  end
+
   def base_attack_bonus(val)
     self.base_attack_bonus_val = val
   end
@@ -74,6 +80,10 @@ module ModsDsl::ModsDslClassMethods
 
   def class_skills_array
     @_class_skills_array ||= []
+  end
+
+  def feat_array
+    @_feat_array ||= []
   end
 
   def additions_array

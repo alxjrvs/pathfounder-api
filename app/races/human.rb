@@ -7,6 +7,8 @@ class Human < ActiveRecord::Base
   speed :normal
   size :medium
 
+  languages [:common], high: [:all_regular]
+
 
   alias_method :character_attr, :character
   def character

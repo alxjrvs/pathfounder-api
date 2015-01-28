@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125173755) do
+ActiveRecord::Schema.define(version: 20150128024432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20150125173755) do
   end
 
   add_index "characters", ["race_id", "race_type"], name: "index_characters_on_race_id_and_race_type", using: :btree
+
+  create_table "feat_lists", force: true do |t|
+    t.string  "feat_1"
+    t.string  "feat_2"
+    t.string  "feat_3"
+    t.integer "character_id"
+  end
+
+  add_index "feat_lists", ["character_id"], name: "index_feat_lists_on_character_id", using: :btree
 
   create_table "fighters", force: true do |t|
   end

@@ -2,6 +2,7 @@ class Character < ActiveRecord::Base
   has_one :level, dependent: :destroy
   has_one :stat_block, dependent: :destroy
   has_one :skill_list, dependent: :destroy
+  has_one :feat_list, dependent: :destroy
 
   belongs_to :race, polymorphic: true
 
@@ -50,12 +51,21 @@ class Character < ActiveRecord::Base
     stat_block_attr || NullStatBlock.new
   end
 
+  alias_method :feat_list_attr, :feat_list
+  def feat_list
+    feat_list_attr || NullFeatList.new
+  end
+
   def skills
     skill_list.all_skills
   end
 
   def stats
     stat_block.all_stats
+  end
+
+  def feats
+    feat_list.chosen_feats
   end
 
   def class_skills
@@ -175,12 +185,16 @@ class Character < ActiveRecord::Base
     favored_class.mods
   end
 
+  def feat_mods
+    feat_list.mods
+  end
+
   def race_mods
     race.mods
   end
 
   def mods
-    class_mods + race_mods
+    class_mods + race_mods + feat_mods
   end
 
   def race_adds
