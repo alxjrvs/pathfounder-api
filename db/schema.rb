@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128024432) do
+ActiveRecord::Schema.define(version: 20150128045422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "armories", force: true do |t|
+    t.integer "character_id"
+    t.string  "melee_weapon"
+    t.string  "ranged_weapon"
+    t.string  "shield"
+    t.string  "armor"
+  end
+
+  add_index "armories", ["character_id"], name: "index_armories_on_character_id", using: :btree
 
   create_table "characters", force: true do |t|
     t.string  "name"

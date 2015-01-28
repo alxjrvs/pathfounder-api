@@ -3,6 +3,7 @@ class Character < ActiveRecord::Base
   has_one :stat_block, dependent: :destroy
   has_one :skill_list, dependent: :destroy
   has_one :feat_list, dependent: :destroy
+  has_one :armory, dependent: :destroy
 
   belongs_to :race, polymorphic: true
 
@@ -54,6 +55,11 @@ class Character < ActiveRecord::Base
   alias_method :feat_list_attr, :feat_list
   def feat_list
     feat_list_attr || NullFeatList.new
+  end
+
+  alias_method :armory_attr, :armory
+  def armory
+    armory_attr || NullArmory.new
   end
 
   def skills

@@ -10,6 +10,7 @@ describe "Stuart Porrel's" do
       @stats = create :stat_block, character: @ragnar
       @skills = create :skill_list, character: @ragnar
       @feats = create :feat_list, character: @ragnar
+      @armory = create :armory, character: @ragnar
     end
 
     it "is named ragnar" do
@@ -102,6 +103,12 @@ describe "Stuart Porrel's" do
 
     it "has a feat" do
       expect(@ragnar.feats.count).to eq 1
+    end
+
+    it "has weapons and armor" do
+      expect(@ragnar.armory.melee_weapon).to eq "dogslicer"
+      expect(@ragnar.armory.ranged_weapon).to eq "sling"
+      expect(@ragnar.armory.armor).to eq "padded"
     end
   end
 end
