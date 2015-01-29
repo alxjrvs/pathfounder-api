@@ -3,19 +3,19 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'rails', '4.1.1'
-
 gem 'rails-api'
-
 gem 'spring', group: :development
 
-gem 'rspec-rails', group: :test
-
 gem 'pg'
+
+gem 'active_model_serializers'
 gem 'awesome_print'
 
+
+gem 'rspec-rails', group: :test
+gem 'factory_girl_rails', group: :test
 gem 'pry-byebug', group: [:test, :development]
 gem 'pry-remote', group: [:test, :development]
-gem 'factory_girl_rails', group: :test
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
