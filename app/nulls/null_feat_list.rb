@@ -1,7 +1,5 @@
 class NullFeatList
-  def nil?
-    true
-  end
+  include Null
 
   def mods
     []

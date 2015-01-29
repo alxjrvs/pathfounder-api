@@ -1,4 +1,5 @@
 class NullCharacter
+  include Null
 
   Character::CLASS_DELEGATES.each do |cd|
     delegate cd, to: :favored_class
@@ -8,10 +9,6 @@ class NullCharacter
   end
   Skills::ALL.each do |sk|
     delegate sk, to: :skill_list
-  end
-
-  def nil?
-    true
   end
 
   def calculated_skill_ranks

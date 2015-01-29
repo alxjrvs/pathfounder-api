@@ -1,4 +1,5 @@
 class NullSkillList
+  include Null
   Skills::ALL.each do |sk|
     define_method sk do
       NullSkill.new
@@ -11,9 +12,5 @@ class NullSkillList
 
   def all_skills
     []
-  end
-
-  def nil?
-    true
   end
 end

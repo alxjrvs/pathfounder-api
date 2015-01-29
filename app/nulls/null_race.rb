@@ -1,4 +1,5 @@
 class NullRace
+  include Null
   def mods
     []
   end

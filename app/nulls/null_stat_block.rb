@@ -1,8 +1,5 @@
 class NullStatBlock
-
-  def nil?
-    true
-  end
+  include Null
 
   def all_stats
     []

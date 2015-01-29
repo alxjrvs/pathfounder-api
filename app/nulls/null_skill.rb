@@ -1,4 +1,6 @@
 class NullSkill
+  include Null
+
   def name
     ""
   end
@@ -33,9 +35,5 @@ class NullSkill
 
   def untrained
     nil
-  end
-
-  def nil?
-    true
   end
 end

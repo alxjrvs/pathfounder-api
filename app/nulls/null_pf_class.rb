@@ -1,4 +1,6 @@
 class NullPfClass
+  include Null
+
   Character::CLASS_DELEGATES.each do |m|
     define_method m do
       0
@@ -27,9 +29,5 @@ class NullPfClass
 
   def skills
     []
-  end
-
-  def nil?
-    true
   end
 end

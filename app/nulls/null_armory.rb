@@ -1,4 +1,5 @@
 class NullArmory
+  include Null
 
   def melee_weapon
     ""

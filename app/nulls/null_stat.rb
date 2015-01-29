@@ -1,8 +1,5 @@
 class NullStat
-
-  def nil?
-    true
-  end
+  include Null
 
   def name
     ""
