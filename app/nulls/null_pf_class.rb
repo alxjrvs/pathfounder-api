@@ -11,6 +11,10 @@ class NullPfClass
     :any
   end
 
+  def additions
+    []
+  end
+
   def skill_ranks_per_level
     0
   end

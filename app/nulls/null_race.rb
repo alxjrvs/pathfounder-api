@@ -4,6 +4,10 @@ class NullRace
     []
   end
 
+  def additions
+    []
+  end
+
   def size_modifier
     0
   end
@@ -15,5 +19,4 @@ class NullRace
   def speed
     ""
   end
-
 end
