@@ -5,6 +5,14 @@ class NullPfClass
     end
   end
 
+  def alignment
+    :any
+  end
+
+  def skill_ranks_per_level
+    0
+  end
+
   def base_attack_bonus
     0
   end

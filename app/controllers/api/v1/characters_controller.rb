@@ -3,7 +3,7 @@ class Api::V1::CharactersController < ApplicationController
   def create
     character = Character.new character_params
     if character.save!
-      render nothing: true, status: 200
+      render json: character
     else
       render nothing: true, status: 422
     end

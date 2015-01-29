@@ -8,7 +8,7 @@ gem 'spring', group: :development
 
 gem 'pg'
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '~> 0.8.0'
 gem 'awesome_print'
 
 
