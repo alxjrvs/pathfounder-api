@@ -17,6 +17,8 @@ gem 'factory_girl_rails', group: :test
 gem 'pry-byebug', group: [:test, :development]
 gem 'pry-remote', group: [:test, :development]
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

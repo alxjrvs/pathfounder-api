@@ -1,0 +1,8 @@
+machine:
+
+  timezone:
+    America/New_York # Set the timezone
+
+  environment:
+    CODECLIMATE_REPO_TOKEN: d47528598e15f1fec9c43088da53622eacb632044a070c18e6a063435f73bd47
+
