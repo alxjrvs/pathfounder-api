@@ -5,6 +5,22 @@ module Null
     end
   end
 
+  def create(*args)
+    false
+  end
+
+  def save
+    false
+  end
+
+  def save!
+    false
+  end
+
+  def present?
+    false
+  end
+
   def nil?
     true
   end

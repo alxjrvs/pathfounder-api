@@ -18,7 +18,7 @@ class Human < ActiveRecord::Base
   alias_method :mods_attr, :mods
   def mods
     @_mods ||= begin
-       self.mods_attr + [ability_bonus_mod]
+     (self.mods_attr + [ability_bonus_mod]).compact
     end
   end
 
@@ -26,6 +26,7 @@ class Human < ActiveRecord::Base
 
   def ability_bonus_mod
     @_human_ability_score_mod ||= begin
+      return nil unless ability_bonus
       Mod.new(
         source: self.class.source,
         trait: ability_bonus,
