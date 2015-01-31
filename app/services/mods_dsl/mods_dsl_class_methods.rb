@@ -4,12 +4,6 @@ module ModsDsl::ModsDslClassMethods
     :base_attack_bonus_val, :size_val, :speed_val,
     :starting_languages_val, :high_intelligence_languages_val
 
-  def feat(name)
-    f = Feat.new(name)
-    yield f
-    feat_array.push f
-  end
-
   def base_attack_bonus(val)
     self.base_attack_bonus_val = val
   end
@@ -30,63 +24,11 @@ module ModsDsl::ModsDslClassMethods
     self.role_val= val
   end
 
-  def languages(start, high: high)
-    additions_array.push ModsDsl::Addition.new category: :starting_languages, values: start if start.present?
-    additions_array.push ModsDsl::Addition.new category: :high_intelligence_languages, values: high if high.present?
-  end
-
   def hit_die(val)
     self.hit_die_val = val
   end
 
   def skill_ranks_per_level(val)
     self.skill_ranks_per_level_val = val
-  end
-
-  def adds(hash)
-    category = hash.keys.first
-    values = hash.values.first
-    add = ModsDsl::Addition.new(
-      category: category,
-      values: values,
-      source: source
-    )
-    additions_array.push(add)
-  end
-
-  def class_skills(*args)
-    args.each do |arg|
-      class_skills_array.push(arg)
-    end
-  end
-
-  def mods(hash)
-    mod = ModsDsl::Mod.new(
-      trait: hash.keys.first,
-      modifier: hash.values.first,
-      name: hash[:name],
-      source: source
-    )
-    mods_array.push mod
-  end
-
-  def source
-    @_source ||= ModsDsl::Source.new(self, self.role_val)
-  end
-
-  def mods_array
-    @_mods_array ||= []
-  end
-
-  def class_skills_array
-    @_class_skills_array ||= []
-  end
-
-  def feat_array
-    @_feat_array ||= []
-  end
-
-  def additions_array
-    @_additions_array ||= []
   end
 end

@@ -1,6 +1,11 @@
 module ModsDsl
   def self.included(base)
     base.extend(ModsDslClassMethods)
+    base.extend(SourceMethods)
+    base.extend(ModsMethods)
+    base.extend(FeatMethods)
+    base.extend(AddsMethods)
+    base.extend(ClassSkillsMethods)
   end
 
   def feats
