@@ -1,3 +1,4 @@
 class StatSerializer < ActiveModel::Serializer
-  attributes :name, :value, :modifier
+  self.root = false
+  attributes :value, :modifier
 end
