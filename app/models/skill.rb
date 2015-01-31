@@ -1,4 +1,5 @@
 class Skill
+  include ActiveModel::SerializerSupport
   attr_reader :skill_name, :untrained, :key_stat, :custom, :list
 
   def initialize(options, list)
