@@ -1,12 +1,10 @@
-class Api::V1::SkillListsController < ApplicationController
+class Api::V1::SkillListsController < Api::V1::CharacterRequiredController
 
   def create
-    render nothing: true, status: 422 unless character.present?
     render json: skill_list if skill_list.save!
   end
 
   def update
-    render nothing: true, status: 422 unless character.present?
     render json: character if skill_list.update_attributes(skill_list_params)
   end
 
@@ -19,10 +17,6 @@ class Api::V1::SkillListsController < ApplicationController
         SkillList.new(skill_list_params.merge(character: character))
       end
     end
-  end
-
-  def character
-    @_character ||= Character.find(params[:character_id])
   end
 
   def skill_list_params

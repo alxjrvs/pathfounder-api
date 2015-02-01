@@ -1,11 +1,9 @@
-class Api::V1::StatBlocksController < ApplicationController
+class Api::V1::StatBlocksController < Api::V1::CharacterRequiredController
   def create
-    render nothing: true, status: 422 unless character.present?
     render json: stat_block if stat_block.save!
   end
 
   def update
-    render nothing: true, status: 422 unless character.present?
     render json: character if stat_block.update_attributes(stat_block_params)
   end
 
@@ -19,10 +17,6 @@ class Api::V1::StatBlocksController < ApplicationController
        StatBlock.new(stat_block_params.merge(character: character))
      end
    end
-  end
-
-  def character
-    @_character ||= Character.find(params[:character_id])
   end
 
   def stat_block_params
