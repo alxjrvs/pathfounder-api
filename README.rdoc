@@ -1,21 +1,14 @@
 == Pathfounder
+= A Character Generator for the Pathfinder RPG system
 {<img src="https://codeclimate.com/github/alxjrvs/Pathfounder/badges/gpa.svg" />}[https://codeclimate.com/github/alxjrvs/Pathfounder]
 {<img src="https://codeclimate.com/github/alxjrvs/Pathfounder/badges/coverage.svg" />}[https://codeclimate.com/github/alxjrvs/Pathfounder]
-= A Character Generator for the Pathfinder RPG system
+{<img src="https://circleci.com/gh/alxjrvs/Pathfounder.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/alxjrvs/Pathfounder]
 
 == The Architecture
 Pathfounder weaves two sets of data together in a contextual and accessible way in Ruby
 
 There is Normalized data that is saved in the database. These are the result of specific Character choices - the specific ability bonus that a human gets, or how many points they have in strength.
 
-
-There is also static data that stays in the classes. This represents truths about the various roles and races that are unchanging regardless of the choices made by a character. A fighter will always give a +2 to reflex, a human will always be normal speed, etc. 
+There is also static data that stays in the classes. This represents truths about the various roles and races that are unchanging regardless of the choices made by a character. A fighter will always give a +2 to reflex, a human will always be normal speed, etc.
 
 The Two mix in the model layer, where they are calculated to specific values based on Algorithms in the Game System.
-
-
-==The ModsDsl
-
-
-
-
