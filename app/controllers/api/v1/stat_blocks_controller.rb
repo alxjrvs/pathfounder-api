@@ -4,6 +4,11 @@ class Api::V1::StatBlocksController < ApplicationController
     render json: stat_block if stat_block.save!
   end
 
+  def update
+    render nothing: true, status: 422 unless character.present?
+    render json: character if stat_block.update_attributes(stat_block_params)
+  end
+
   private
 
   def stat_block
@@ -21,6 +26,13 @@ class Api::V1::StatBlocksController < ApplicationController
   end
 
   def stat_block_params
-    params.require(:stat_block).permit(:wisdom_val, :charisma_val, :constitution_val, :intelligence_val, :strength_val, :dexterity_val, :character)
+    params.require(:stat_block).permit(
+      :wisdom_val,
+      :charisma_val,
+      :constitution_val,
+      :intelligence_val,
+      :strength_val,
+      :dexterity_val,
+      )
   end
 end
