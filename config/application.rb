@@ -22,6 +22,19 @@ ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/pf_classes)
 ActiveSupport::Dependencies.autoload_paths << %W(#{Rails.root}/app/nulls)
 module Pathfounder
   class Application < Rails::Application
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '/api/v1/',
+          headers: :any,
+          methods: [:post, :get],
+          credentials: true
+        resource '*',
+          :headers => :any,
+          :methods => [:get, :post, :delete, :put, :options, :head],
+          :max_age => 0
+      end
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

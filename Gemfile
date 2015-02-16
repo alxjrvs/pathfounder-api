@@ -10,7 +10,7 @@ gem 'pg'
 
 gem 'active_model_serializers', '~> 0.8.0'
 gem 'awesome_print'
-
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'rspec-rails', group: :test
 gem 'factory_girl_rails', group: :test

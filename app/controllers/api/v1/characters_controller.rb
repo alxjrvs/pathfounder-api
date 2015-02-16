@@ -1,11 +1,14 @@
 class Api::V1::CharactersController < ApplicationController
-
   def create
     render json: character if character.save!
   end
 
   def show
     render json: character
+  end
+
+  def update
+    render json: character if character.update_attributes(character_params)
   end
 
   private
