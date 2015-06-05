@@ -1,6 +1,8 @@
 class FeatList < ActiveRecord::Base
-  belongs_to :character
   include ModsDsl
+
+  belongs_to :character
+  validates :character, presence: true
 
   feat :acrobatics do |f|
     f.mods fly: +2

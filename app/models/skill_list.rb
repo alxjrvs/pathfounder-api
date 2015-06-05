@@ -1,5 +1,6 @@
 class SkillList < ActiveRecord::Base
   belongs_to :character
+  validates :character, presence: true
 
   def find(key)
     find_hash[key]
@@ -10,11 +11,6 @@ class SkillList < ActiveRecord::Base
       options = Skills::DETAILS[sk]
       Skill.new(options, self)
     end
-  end
-
-  alias_method :character_attr, :character
-  def character
-      character_attr || NullCharacter.new
   end
 
   def all_skills

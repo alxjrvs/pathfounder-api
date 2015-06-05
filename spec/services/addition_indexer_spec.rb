@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe AdditionIndexer do
   before do
-    @add_1 = ModsDsl::Addition.new(category: :foo, values: [:three])
-    @add_2 = ModsDsl::Addition.new(category: :foo, values: [:one, :two])
-    @add_3 = ModsDsl::Addition.new(category: :bar, values: [:a])
+    @add_1 = ModsDsl::Addition.new(category: :foo, values: [:three], source: nil)
+    @add_2 = ModsDsl::Addition.new(category: :foo, values: [:one, :two], source: nil)
+    @add_3 = ModsDsl::Addition.new(category: :bar, values: [:a], source: nil)
     @adds = [@add_1, @add_2, @add_3]
     @indexer = AdditionIndexer.new @adds
   end

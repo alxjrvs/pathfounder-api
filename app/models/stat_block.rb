@@ -1,5 +1,6 @@
 class StatBlock < ActiveRecord::Base
   belongs_to :character
+  validates :character, presence: true
 
   STATS =
     :constitution,
@@ -19,11 +20,6 @@ class StatBlock < ActiveRecord::Base
     STATS.map do |stat|
       self.send(stat)
     end
-  end
-
-  alias_method :character_attr, :character
-  def character
-      character_attr || NullCharacter.new
   end
 
   private
