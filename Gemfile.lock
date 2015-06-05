@@ -151,3 +151,6 @@ DEPENDENCIES
   rails-api
   rspec-rails
   spring
+
+BUNDLED WITH
+   1.10.3
