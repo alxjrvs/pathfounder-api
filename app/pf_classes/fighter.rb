@@ -10,7 +10,7 @@ class Fighter < ActiveRecord::Base
   class_skills :climb, :craft, :handle_animal
   skill_ranks_per_level 2
 
-  base_attack_bonus      1
+  base_attack_bonus      2
   mods feat_count:       1
   mods fortitude_save:  -2
   mods will_save:        0
