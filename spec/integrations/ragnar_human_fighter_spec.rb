@@ -64,7 +64,7 @@ describe "Stuart Porrel's" do
       expect(@ragnar.armor_proficiencies).to contain_exactly :all
     end
 
-    it "has shielf proficiencies" do
+    it "has shield proficiencies" do
       expect(@ragnar.shield_proficiencies).to contain_exactly :all
     end
 

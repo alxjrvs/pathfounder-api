@@ -40,6 +40,10 @@ module ModsDsl
     self.class.hit_die_val
   end
 
+  def specials
+    self.class.specials_array
+  end
+
   def class_skills
      self.class.class_skills_array
   end

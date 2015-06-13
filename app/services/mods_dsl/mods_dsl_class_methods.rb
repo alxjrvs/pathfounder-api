@@ -2,7 +2,8 @@ module ModsDsl::ModsDslClassMethods
   attr_accessor :role_val, :hit_die_val,
     :skill_ranks_per_level_val, :alignment_val,
     :base_attack_bonus_val, :size_val, :speed_val,
-    :starting_languages_val, :high_intelligence_languages_val
+    :starting_languages_val, :high_intelligence_languages_val,
+    :specials_array
 
   def base_attack_bonus(val)
     self.base_attack_bonus_val = val

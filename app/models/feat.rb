@@ -16,5 +16,4 @@ class Feat
   def source
     @_source ||= ModsDsl::Source.new(self, name)
   end
-
 end

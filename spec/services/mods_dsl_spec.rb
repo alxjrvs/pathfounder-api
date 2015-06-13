@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 describe ModsDsl do
-  class Fighter < ActiveRecord::Base
+  class Unicorn
     include ModsDsl
-    has_one :level, as: :pf_class
-    has_one :character, through: :level
     role :dummy
     hit_die 10
     alignment :any
@@ -27,10 +25,13 @@ describe ModsDsl do
     adds armor_proficiency: [:all]
     adds shield_proficiency: [:all]
 
+    special :favored_enemy_gazeebo
+    special :special_eyes
+
   end
 
   before do
-    @class = Fighter.new
+    @class = Unicorn.new
   end
 
   describe ".mods" do
@@ -43,6 +44,12 @@ describe ModsDsl do
 
     it 'contains the correct array of modified values' do
       expect(@class.mods.map(&:trait)).to contain_exactly @will, @fort, @reflex, @feat
+    end
+  end
+
+  describe ".specials" do
+    it "reports all the specials" do
+      expect(@class.specials).to contain_exactly :favored_enemy_gazeebo, :special_eyes
     end
   end
 
