@@ -9,12 +9,6 @@ class Human < ActiveRecord::Base
 
   languages [:common], high: [:all_regular]
 
-
-  alias_method :character_attr, :character
-  def character
-    character_attr || NullCharacter.new
-  end
-
   alias_method :mods_attr, :mods
   def mods
     @_mods ||= begin

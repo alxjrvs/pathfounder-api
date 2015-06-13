@@ -19,9 +19,4 @@ class Fighter < ActiveRecord::Base
   adds weapon_proficiency: [:simple, :martial]
   adds armor_proficiency: [:all]
   adds shield_proficiency: [:all]
-
-  alias_method :character_attr, :character
-  def character
-    character_attr || NullCharacter.new
-  end
 end
