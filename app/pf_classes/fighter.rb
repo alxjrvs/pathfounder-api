@@ -11,7 +11,6 @@ class Fighter < ActiveRecord::Base
   skill_ranks_per_level 2
 
   base_attack_bonus      1
-  mods feat_count:       1
   mods fortitude_save:  -2
   mods will_save:        0
   mods reflex_save:      0
