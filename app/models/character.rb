@@ -116,37 +116,19 @@ class Character < ActiveRecord::Base
   end
 
   def armor_class
-    CharacterCombatMathCalculator.armor_class(
-      mods_bonus: total_modifier_for(:armor_class),
-      dex_mod: dexterity.modifier,
-      armor_bonus: armor_bonus,
-      shield_bonus: shield_bonus
-    )
+    combat.armor_class
   end
 
   def flat_footed
-    CharacterCombatMathCalculator.flat_footed(
-      mods_bonus: total_modifier_for(:flat_footed),
-      armor_bonus: armor_bonus,
-      shield_bonus: shield_bonus
-    )
+    combat.flat_footed
   end
 
   def ranged_attack_bonus
-    CharacterCombatMathCalculator.ranged_attack_bonus(
-    range_penalty: total_modifier_for(:range_penalty),
-    base_attack_bonus: base_attack_bonus,
-    size_modifier: size_modifier,
-    dex_mod: dexterity.modifier,
-    )
+    combat.ranged_attack_bonus
   end
 
   def melee_attack_bonus
-    CharacterCombatMathCalculator.melee_attack_bonus(
-      base_attack_bonus: base_attack_bonus,
-      size_modifier: size_modifier,
-      str_mod: strength.modifier
-    )
+    combat.melee_attack_bonus
   end
 
   def weapon_proficiencies
@@ -213,6 +195,10 @@ class Character < ActiveRecord::Base
 
   def additions
     race_adds + class_adds
+  end
+
+  def combat
+    @_combat ||= CharacterCombatMathCalculator.new self
   end
 
   def addition_indexer
