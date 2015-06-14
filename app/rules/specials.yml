@@ -1,0 +1,5 @@
+specials:
+  extra_feat:
+    description: "Your character gets an additional Feat."
+    mods:
+      feat_count: 1
