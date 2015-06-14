@@ -12,7 +12,7 @@ describe SkillList do
 
     it 'returns a specific skill' do
       expect(@skill.class).to eq Skill
-      expect(@skill.name).to eq :acrobatics
+      expect(@skill.name).to eq "acrobatics"
     end
   end
 
