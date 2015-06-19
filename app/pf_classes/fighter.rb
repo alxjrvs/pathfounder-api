@@ -4,7 +4,7 @@ class Fighter < ActiveRecord::Base
   has_one :character, through: :level
 
   role :class
-  hit_die 10
+  hit_die 20
   alignment :any
 
   class_skills :climb, :craft, :handle_animal
@@ -14,7 +14,7 @@ class Fighter < ActiveRecord::Base
   mods feat_count:       1
   mods fortitude_save:  -2
   mods will_save:        0
-  mods reflex_save:      0
+  mods reflex_save:      1
 
   adds weapon_proficiency: [:simple, :martial]
   adds armor_proficiency: [:all]
