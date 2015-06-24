@@ -29,9 +29,9 @@ class AlignmentFilter
   def filtered_alignments
     alignments = ALIGNMENTS.dup
     alignment_options.each do |option|
-      if option.to_s.include?("not")
-        not_option = option.to_s.split("_").last
-        alignments.select! { |a| !a.to_s.include? not_option }
+      reg = /not_(?<not_option>\w+)/.match(option.to_s)
+      if reg
+        alignments.select! { |a| !a.to_s.include? reg[:not_option] }
       else
         alignments.select! { |a| a.to_s.include? option.to_s }
       end
@@ -40,9 +40,7 @@ class AlignmentFilter
   end
 
   def alignment_options
-    options = []
-    options << alignment
-    options.flatten
+    [alignment].flatten
   end
 
   def allow_all?
