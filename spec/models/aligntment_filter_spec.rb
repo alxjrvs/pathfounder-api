@@ -66,14 +66,18 @@ describe AlignmentFilter do
                                                        :true_neutral, :neutral_good, :neutral_evil)
         end
       end
+    end
 
-      describe "chaotic and not good" do
+    describe "for cleric" do
+      describe "with a chaotic_evil deity" do
         before do
-          @filter = AlignmentFilter.new([:not_good, :chaotic])
+          @deity = create(:deity)
+          @filter = AlignmentFilter.new(:matches_deity, @deity)
         end
 
-        it "returns chaotic but not good alignments" do
-          expect(@filter.remaining_options).to contain_exactly(:chaotic_neutral, :chaotic_evil)
+        it "should return correct alignments" do
+          expect(@filter.remaining_options).to contain_exactly(:chaotic_good, :chaotic_neutral,
+                                                               :chaotic_evil, :true_neutral)
         end
       end
     end

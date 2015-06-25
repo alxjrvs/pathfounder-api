@@ -5,8 +5,8 @@ class Cleric < ActiveRecord::Base
 
   role :class
   hit_die 8
-  # alignment :A cleric's alignment must be within one step of her deity's,
-  # along either the law/chaos axis or the good/evil axis
+
+  alignment :matches_deity
 
   class_skills :craft, :appraise, :diplomacy, :heal
   skill_ranks_per_level 2

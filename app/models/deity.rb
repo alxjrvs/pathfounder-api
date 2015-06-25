@@ -1,4 +1,5 @@
 class Deity < ActiveRecord::Base
+  has_many :characters
 
   ALIGNMENT_MATRIX = [
     [:lawful_good, :lawful_neutral, :lawful_evil],
@@ -7,8 +8,8 @@ class Deity < ActiveRecord::Base
   ]
 
   def allowed_alignments
-    first_index = ALIGNMENT_MATRIX.map { |a| a.include?(alignment) }.find_index(true)
-    second_index = ALIGNMENT_MATRIX[first_index].find_index(alignment)
+    first_index = ALIGNMENT_MATRIX.map { |a| a.include?(alignment.to_sym) }.find_index(true)
+    second_index = ALIGNMENT_MATRIX[first_index].find_index(alignment.to_sym)
     neighboring_alignments(first_index, second_index)
   end
 

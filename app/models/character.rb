@@ -5,6 +5,7 @@ class Character < ActiveRecord::Base
   has_one :feat_list, dependent: :destroy
   has_one :armory, dependent: :destroy
 
+  belongs_to :deity
   belongs_to :race, polymorphic: true
 
   CLASS_DELEGATES = :hit_die, :base_attack_bonus
@@ -210,6 +211,6 @@ class Character < ActiveRecord::Base
   end
 
   def alignment_filter
-    @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment)
+    @_alignment_filter ||= AlignmentFilter.new(favored_class.alignment, deity)
   end
 end
