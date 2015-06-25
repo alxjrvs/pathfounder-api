@@ -51,7 +51,7 @@ describe AlignmentFilter do
         end
 
         it "doesn't return evil alignments" do
-          expect(@filter.remaining_options).to include(:lawful_good, :lawful_neutral, :chaotic_good,
+          expect(@filter.remaining_options).to contain_exactly(:lawful_good, :lawful_neutral, :chaotic_good,
                                                        :chaotic_neutral, :true_neutral, :neutral_good)
         end
       end
