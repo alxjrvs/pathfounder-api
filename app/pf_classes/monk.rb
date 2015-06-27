@@ -5,7 +5,7 @@ class Monk < ActiveRecord::Base
 
   role :class
   hit_die 8
-  alignment :any_lawful
+  alignment :lawful
 
   class_skills :climb, :craft, :acrobatics
   skill_ranks_per_level 4
