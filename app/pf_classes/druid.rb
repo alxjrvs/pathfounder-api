@@ -5,7 +5,7 @@ class Druid < ActiveRecord::Base
 
   role :class
   hit_die 8
-  alignment :any_neutral
+  alignment :neutral
 
   class_skills :craft, :climb, :fly, :handle_animals
   skill_ranks_per_level 4
