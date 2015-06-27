@@ -5,7 +5,7 @@ class Barbarian < ActiveRecord::Base
 
   role :class
   hit_die 12
-  alignment :any_nonlawful
+  alignment :not_lawful
 
   class_skills :climb, :craft, :handle_animal
   skill_ranks_per_level 4
