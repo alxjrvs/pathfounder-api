@@ -27,9 +27,20 @@ class AlignmentFilter
   private
 
   def filtered_alignments
-    ALIGNMENTS.select do |a|
-      a if a.to_s.include? alignment.to_s
+    alignments = ALIGNMENTS.dup
+    alignment_options.each do |option|
+      reg = /not_(?<not_option>\w+)/.match(option.to_s)
+      if reg
+        alignments.select! { |a| !a.to_s.include? reg[:not_option] }
+      else
+        alignments.select! { |a| a.to_s.include? option.to_s }
+      end
     end
+    alignments
+  end
+
+  def alignment_options
+    [alignment].flatten
   end
 
   def allow_all?
