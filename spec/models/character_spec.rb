@@ -57,4 +57,18 @@ describe Character do
       end
     end
   end
+
+  describe ".allowed_alignments" do
+    describe "for clerics" do
+      before do
+        @deity = create :deity
+        @cleric = create :character, deity: @deity
+        @level = create :level, character: @cleric, pf_class: create(:cleric)
+      end
+
+      it "should match deity's alignments" do
+        expect(@cleric.allowed_alignments).to eq @deity.allowed_alignments
+      end
+    end
+  end
 end
