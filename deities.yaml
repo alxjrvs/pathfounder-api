@@ -64,6 +64,22 @@
     - resole
     - revelry
   favored_weapon: Rapier
+- name: Daikitsu
+  alignment: neutral
+  domains:
+    - animal
+    - artifice
+    - community
+    - plant
+    - weather
+  subdomains:
+    - construct
+    - family
+    - fur
+    - growth
+    - home
+    - seasons
+  favored_weapon: Flail
 - name: Desna
   alignment: chaotic_good
   domains:
@@ -98,6 +114,38 @@
     - growth
     - home
   favored_weapon: Longbow
+- name: Fumeiyoshi
+  alignment: neutral_evil
+  domains:
+    - death
+    - destruction
+    - evil
+    - repose
+    - war
+  subdomains:
+    - blood
+    - daemon
+    - souls
+    - rage
+    - tactics
+    - undead
+  favored_weapon: Naginata
+- name: General Susumu
+  alignment: lawful_evil
+  domains:
+    - evil
+    - glory
+    - law
+    - nobility
+    - war
+  subdomains:
+    - blood
+    - devil
+    - heroism
+    - honor
+    - leadership
+    - tactics
+  favored_weapon: Longbow
 - name: Gorum
   alignment: chaotic_neutral
   domains:
@@ -130,6 +178,22 @@
     - seasons
     - wind
   favored_weapon: Trident
+- name: Hei Feng
+  alignment: chaotic_neutral
+  domains:
+    - air
+    - chaos
+    - destruction
+    - water
+    - weather
+  subdomains:
+    - catastrophe
+    - cloud
+    - ocean
+    - protean
+    - storms
+    - wind
+  favored_weapon: Nine-ring Broadsword
 - name: Iomedae
   alignment: lawful_good
   domains:
@@ -165,6 +229,40 @@
     - resolve
     - thought
   favored_weapon: Unarmed
+- name: Kofusachi
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - charm
+    - good
+    - luck
+    - travel
+  subdomains:
+    - azata
+    - exploration
+    - fate
+    - imagination
+    - love
+    - lust
+    - revelry
+    - trade
+  favored_weapon: Bo Staff
+- name: Lady Nabyo
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - destruction
+    - evil
+    - fire
+    - plant
+  subdomains:
+    - ash
+    - catastrophe
+    - decay
+    - demon
+    - rage
+    - smoke
+  favored_weapon: Warhammer
 - name: Lamashtu
   alignment: chaotic_evil
   domains:
@@ -181,6 +279,38 @@
     - nightmare
     - thievery
   favored_weapon: Falchion
+- name: Lao Shu Po
+  alignment: neutral_evil
+  domains:
+    - animal
+    - darkness
+    - evil
+    - luck
+    - trickery
+  subdomains:
+    - curse
+    - daemon
+    - fur
+    - loss
+    - night
+    - thievery
+  favored_weapon: Dagger
+- name: Nalinivati
+  alignment: neutral
+  domains:
+    - charm
+    - magic
+    - nobility
+    - rune
+    - scalykind
+  subdomains:
+    - arcane
+    - divine
+    - leadership
+    - love
+    - lust
+    - wards
+  favored_weapon: Urumi
 - name: Nethys
   alignment: neutral
   domains:
@@ -229,6 +359,22 @@
     - souls
     - thought
   favored_weapon: Dagger
+- name: Qi Zhong
+  alignment: neutral_good
+  domains:
+    - good
+    - healing
+    - knowledge
+    - magic
+    - protection
+  subdomains:
+    - agathion
+    - divine
+    - memory
+    - purity
+    - restoration
+    - resurrection
+  favored_weapon: Heavy Mace
 - name: Rovagug
   alignment: chaotic_evil
   domains:
@@ -280,6 +426,39 @@
     - love
     - purity
   favored_weapon: Glaive
+- name: Shizuru
+  alignment: lawful_good
+  domains:
+    - glory
+    - good
+    - law
+    - repose
+    - sun
+  subdomains:
+    - ancestors
+    - archon
+    - day
+    - heroism
+    - honor
+    - light
+    - revelation
+  favored_weapon: Katana
+- name: Sun Wukong
+  alignment: chaotic_neutral
+  domains:
+    - animal
+    - chaos
+    - liberation
+    - travel
+    - trickery
+  subdomains:
+    - deception
+    - exploration
+    - freedom
+    - protean
+    - revolution
+    - thievery
+  favored_weapon: Quarterstaff
 - name: Torag
   alignment: lawful_good
   domains:
@@ -297,6 +476,22 @@
     - metal
     - toil
   favored_weapon: Warhammer
+- name: Tsukiyo
+  alignment: lawful_good
+  domains:
+    - darkness
+    - good
+    - law
+    - madness
+    - repose
+  subdomains:
+    - ancestors
+    - archon
+    - insanity
+    - moon
+    - night
+    - souls
+  favored_weapon: Longspear
 - name: Urgathoa
   alignment: neutral_evil
   domains:
@@ -313,6 +508,38 @@
     - murder
     - undead
   favored_weapon: Scythe
+- name: Yarzhing
+  alignment: lawful_evil
+  domains:
+    - artifice
+    - death
+    - evil
+    - law
+    - trickery
+  subdomains:
+    - construct
+    - deception
+    - devil
+    - murder
+    - toil
+    - undead
+  favored_weapon: Shuriken
+- name: Yamatsumi
+  alignment: neutral
+  domains:
+    - earth
+    - fire
+    - protection
+    - strength
+    - water
+  subdomains:
+    - ash
+    - caves
+    - defense
+    - ice
+    - resolve
+    - smoke
+  favored_weapon: Tetsubo
 - name: Zon-Kuthon
   alignment: lawful_evil
   domains:
