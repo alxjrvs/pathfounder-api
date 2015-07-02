@@ -1,0 +1,133 @@
+---
+- name: Abadar
+  alignment: lawful_neutral
+  domains:
+    - earth
+    - law
+    - nobility
+    - protection
+    - travel
+  subdomains:
+    - defense
+    - inevitable
+    - leadership
+    - martyr
+    - metal
+    - trade
+  favored_weapon: Light Crossbow
+- name: Asmodius
+  alignment: lawful_evil
+  domains:
+    - evil
+    - fire
+    - law
+    - magic
+    - trickery
+  subdomains:
+    - arcane
+    - ash
+    - deception
+    - devil
+    - divine
+    - smoke
+  favored_weapon: Mace
+- name: Calistria
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - charm
+    - knowledge
+    - luck
+    - trickery
+  subdomains:
+    - azata
+    - curse
+    - deception
+    - lust
+    - memory
+    - thievery
+  favored_weapon: Whip
+- name: Cayden Cailean
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - charm
+    - good
+    - strength
+    - travel
+  subdomains:
+    - azata
+    - exploration
+    - ferocity
+    - love
+    - lust
+    - resole
+    - revelry
+  favored_weapon: Rapier
+- name: Desna
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - liberation
+    - luck
+    - travel
+  subdomains:
+    - azata
+    - curse
+    - exploration
+    - fate
+    - freedom
+    - imagination
+    - revelry
+    - revolution
+- name: Erastil
+  alignment: lawful_good
+  domains:
+    - animal
+    - community
+    - good
+    - law
+    - plant
+  subdomains:
+    - archon
+    - cooperation
+    - family
+    - feather
+    - fur
+    - growth
+    - home
+  favored_weapon: Longbow
+- name: Gorum
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - glory
+    - strength
+    - war
+  subdomains:
+    - blood
+    - ferocity
+    - protean
+    - rage
+    - resolve
+    - tactics
+  favored_weapon: Greatsword
+- name: Gozreh
+  alignment: neutral
+  domains:
+    - air
+    - animal
+    - plant
+    - water
+    - weather
+  subdomains:
+    - cloud
+    - decay
+    - growth
+    - oceans
+    - seasons
+    - wind
+  favored_weapon: Trident
+
