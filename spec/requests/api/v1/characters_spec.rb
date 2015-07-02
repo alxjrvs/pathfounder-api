@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe "Characters API" do
+describe Api::V1::CharactersController, type: :controller do
   context "create" do
     before do
       @name = "Ragnar"
-      post '/api/v1/characters', {character: {name: @name }}
+      post :create, {character: {name: @name }}
     end
 
     it "returns successful" do
@@ -21,17 +21,16 @@ describe "Characters API" do
   context "get" do
     before do
       @character = create :character
-      get "api/v1/characters/#{@character.id}"
-      @json = JSON.parse(response.body)["character"]
+      get :show, { id: @character.id }
     end
 
     it 'returns the correct character' do
-      expect(@json["name"]).to eql @character.name
-      expect(@json["id"]).to eql @character.id
+      expect(json["character"]["name"]).to eql @character.name
+      expect(json["character"]["id"]).to eql @character.id
     end
 
     it "includes the character's deity" do
-      expect(@json["deity"]["id"]).to eq @character.deity.id
+      expect(json["character"]["deity"]["id"]).to eq @character.deity.id
     end
 
   end
