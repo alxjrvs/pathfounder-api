@@ -130,4 +130,203 @@
     - seasons
     - wind
   favored_weapon: Trident
+- name: Iomedae
+  alignment: lawful_good
+  domains:
+    - glory
+    - good
+    - law
+    - sun
+    - war
+  subdomains:
+    - archon
+    - day
+    - heroism
+    - honor
+    - judgment
+    - light
+    - redemption
+    - revelation
+    - tactics
+  favored_weapon: Longsword
+- name: Irori
+  alignment: lawful_neutral
+  domains:
+    - healing
+    - knowledge
+    - law
+    - rune
+    - strength
+  subdomains:
+    - inevitable
+    - language
+    - memory
+    - restoration
+    - resolve
+    - thought
+  favored_weapon: Unarmed
+- name: Lamashtu
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - madness
+    - strength
+    - trickery
+  subdomains:
+    - deception
+    - demon
+    - ferocity
+    - insanity
+    - nightmare
+    - thievery
+  favored_weapon: Falchion
+- name: Nethys
+  alignment: neutral
+  domains:
+    - destruction
+    - knowledge
+    - magic
+    - protection
+    - rune
+  subdomains:
+    - arcane
+    - catastrophe
+    - divine
+    - defense
+    - thought
+    - wards
+  favored_weapon: Quarterstaff
+- name: Norgorber
+  alignment: neutral_evil
+  domains:
+    - charm
+    - death
+    - evil
+    - knowledge
+    - trickery
+  subdomains:
+    - daemon
+    - deception
+    - memory
+    - murder
+    - thievery
+    - thought
+  favored_weapon: Short Sword
+- name: Pharasma
+  alignment: neutral
+  domains:
+    - death
+    - healing
+    - knowledge
+    - repose
+    - water
+  subdomains:
+    - ancestors
+    - ice
+    - memory
+    - resurrection
+    - souls
+    - thought
+  favored_weapon: Dagger
+- name: Rovagug
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - destruction
+    - weather
+    - war
+  subdomains:
+    - blood
+    - catastrophe
+    - demon
+    - protean
+    - rage
+    - storms
+  favored_weapon: Greataxe
+- name: Sarenrae
+  alignment: neutral_good
+  domains:
+    - fire
+    - glory
+    - good
+    - healing
+    - sun
+  subdomains:
+    - agathion
+    - day
+    - heroism
+    - light
+    - redemption
+    - restoration
+    - resurrection
+    - revelation
+  favored_weapon: Scimitar
+- name: Shelyn
+  alignment: neutral_good
+  domains:
+    - air
+    - charm
+    - good
+    - luck
+    - protection
+  subdomains:
+    - agathion
+    - cloud
+    - defense
+    - fate
+    - imagination
+    - love
+    - purity
+  favored_weapon: Glaive
+- name: Torag
+  alignment: lawful_good
+  domains:
+    - artifice
+    - earth
+    - good
+    - law
+    - protection
+  subdomains:
+    - archon
+    - caves
+    - construct
+    - defense
+    - judgment
+    - metal
+    - toil
+  favored_weapon: Warhammer
+- name: Urgathoa
+  alignment: neutral_evil
+  domains:
+    - death
+    - evil
+    - magic
+    - strength
+    - war
+  subdomains:
+    - blood
+    - daemon
+    - divine
+    - ferocity
+    - murder
+    - undead
+  favored_weapon: Scythe
+- name: Zon-Kuthon
+  alignment: lawful_evil
+  domains:
+    - darkness
+    - death
+    - destruction
+    - evil
+    - law
+  subdomains:
+    - catastrophe
+    - devil
+    - loss
+    - murder
+    - night
+    - undead
+  favored_weapon: Spiked Chain
 
