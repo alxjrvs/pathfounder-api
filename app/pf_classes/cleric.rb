@@ -16,7 +16,6 @@ class Cleric < ActiveRecord::Base
   mods will_save:        2
   mods reflex_save:      0
 
-  # Clerics are also proficient with the favored weapon of their deity.
   adds weapon_proficiency: [:simple]
   adds armor_proficiency: [:light, :medium]
   adds shield_proficiency: [:all] # except tower shields

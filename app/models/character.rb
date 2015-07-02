@@ -133,7 +133,9 @@ class Character < ActiveRecord::Base
   end
 
   def weapon_proficiencies
-    total_additions_for :weapon_proficiency
+    proficiencies = total_additions_for :weapon_proficiency
+    proficiencies << deity.favored_weapon if level.try(:pf_class_type) == "Cleric"
+    proficiencies
   end
 
   def shield_proficiencies
