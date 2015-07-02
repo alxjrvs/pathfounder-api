@@ -22,12 +22,16 @@ describe "Characters API" do
     before do
       @character = create :character
       get "api/v1/characters/#{@character.id}"
+      @json = JSON.parse(response.body)["character"]
     end
 
     it 'returns the correct character' do
-      character = JSON.parse(response.body)["character"]
-      expect(character["name"]).to eql @character.name
-      expect(character["id"]).to eql @character.id
+      expect(@json["name"]).to eql @character.name
+      expect(@json["id"]).to eql @character.id
+    end
+
+    it "includes the character's deity" do
+      expect(@json["deity"]["id"]).to eq @character.deity.id
     end
 
   end

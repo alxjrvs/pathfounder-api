@@ -4,6 +4,7 @@ class CharacterSerializer < ActiveModel::Serializer
   has_one :skill_list
   has_one :feat_list
   has_one :armory
+  has_one :deity
   attributes :id, :name,
     :favored_class, :race, :stat_block, :skill_list,
     :feat_list, :armory,
