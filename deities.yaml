@@ -15,6 +15,38 @@
     - metal
     - trade
   favored_weapon: Light Crossbow
+- name: Anubis
+  alignment: lawful_neutral
+  domains:
+    - death
+    - earth
+    - law
+    - protection
+    - repose
+  subdomains:
+    - ancestors
+    - defense
+    - inevitable
+    - metal
+    - purity
+    - souls
+  favored_weapon: Flail
+- name: Apep
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - darkness
+    - destruction
+    - evil
+    - scalykind
+  subdomains:
+    - catastrophe
+    - demon
+    - dragon
+    - entropy
+    - fear
+    - night
+  favored_weapon: Dagger
 - name: Asmodius
   alignment: lawful_evil
   domains:
@@ -31,6 +63,38 @@
     - divine
     - smoke
   favored_weapon: Mace
+- name: Bastet
+  alignment: chaotic_neutral
+  domains:
+    - animal
+    - chaos
+    - charm
+    - protection
+    - trickery
+  subdomains:
+    - deception
+    - defense
+    - fur
+    - lust
+    - protean
+    - thievery
+  favored_weapon: Cat's Claws
+- name: Bes
+  alignment: neutral_good
+  domains:
+    - community
+    - earth
+    - good
+    - luck
+    - protection
+  subdomains:
+    - agathion
+    - caves
+    - defense
+    - family
+    - home
+    - imagination
+  favored_weapon: Hunga Munga
 - name: Calistria
   alignment: chaotic_neutral
   domains:
@@ -178,6 +242,22 @@
     - seasons
     - wind
   favored_weapon: Trident
+- name: Hathor
+  alignment: chaotic_good
+  domains:
+    - air
+    - chaos
+    - charm
+    - good
+    - travel
+  subdomains:
+    - azata
+    - cloud
+    - exploration
+    - love
+    - revelry
+    - trade
+  favored_weapon: Short Sword
 - name: Hei Feng
   alignment: chaotic_neutral
   domains:
@@ -194,6 +274,22 @@
     - storms
     - wind
   favored_weapon: Nine-ring Broadsword
+- name: Horus
+  alignment: lawful_neutral
+  domains:
+    - air
+    - animal
+    - law
+    - nobility
+    - sun
+  subdomains:
+    - day
+    - feather
+    - inevitable
+    - leadership
+    - light
+    - wind
+  favored_weapon: Khopesh
 - name: Iomedae
   alignment: lawful_good
   domains:
@@ -229,6 +325,37 @@
     - resolve
     - thought
   favored_weapon: Unarmed
+- name: Isis
+  alignment: neutral_good
+  domains:
+    - charm
+    - community
+    - good
+    - healing
+    - magic
+  subdomains:
+    - agathion
+    - arcane
+    - divine
+    - family
+    - love
+    - resurrection
+  favored_weapon: Quarterstaff
+- name: Khepri
+  alignment: neutral_good
+  domains:
+    - artifice
+    - good
+    - liberation
+    - sun
+    - trickery
+  subdomains:
+    - agathion
+    - day
+    - deception
+    - freedom
+    - revolution
+  favored_weapon: Sling
 - name: Kofusachi
   alignment: chaotic_good
   domains:
@@ -295,8 +422,24 @@
     - night
     - thievery
   favored_weapon: Dagger
+- name: Maat
+  alignment: lawful_neutral
+  domains:
+    - knowledge
+    - law
+    - protection
+    - void
+    - weather
+  subdomains:
+    - inevitable
+    - judgment
+    - purity
+    - seasons
+    - stars
+    - thought
+  favored_weapon: Starknife
 - name: Nalinivati
-  alignment: neutral
+  alignment: true_neutral
   domains:
     - charm
     - magic
@@ -311,8 +454,40 @@
     - lust
     - wards
   favored_weapon: Urumi
+- name: Neith
+  alignment: neutral_good
+  domains:
+    - animal
+    - artifice
+    - good
+    - war
+    - water
+  subdomains:
+    - agathion
+    - construct
+    - feather
+    - fur
+    - oceans
+    - tactics
+  favored_weapon: Shortbow
+- name: Nephthys
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - charm
+    - community
+    - darkness
+    - protection
+  subdomains:
+    - cooperation
+    - defense
+    - lust
+    - night
+    - protean
+    - purity
+  favored_weapon: Light Mace
 - name: Nethys
-  alignment: neutral
+  alignment: true_neutral
   domains:
     - destruction
     - knowledge
@@ -343,8 +518,24 @@
     - thievery
     - thought
   favored_weapon: Short Sword
+- name: Osiris
+  alignment: lawful_good
+  domains:
+    - good
+    - healing
+    - law
+    - plant
+    - repose
+  subdomains:
+    - ancestors
+    - archon
+    - growth
+    - restoration
+    - resurrection
+    - souls
+  favored_weapon: Flail
 - name: Pharasma
-  alignment: neutral
+  alignment: true_neutral
   domains:
     - death
     - healing
@@ -359,6 +550,22 @@
     - souls
     - thought
   favored_weapon: Dagger
+- name: Ptah
+  alignment: true_neutral
+  domains:
+    - artifice
+    - earth
+    - fire
+    - knowledge
+    - travel
+  subdomains:
+    - ash
+    - construct
+    - metal
+    - smoke
+    - thought
+    - trade
+  favored_weapon: Quarterstaff
 - name: Qi Zhong
   alignment: neutral_good
   domains:
@@ -375,6 +582,22 @@
     - restoration
     - resurrection
   favored_weapon: Heavy Mace
+- name: Ra
+  alignment: lawful_neutral
+  domains:
+    - fire
+    - glory
+    - law
+    - nobility
+    - sun
+  subdomains:
+    - day
+    - heroism
+    - honor
+    - inevitable
+    - leadership
+    - light
+  favored_weapon: Spear
 - name: Rovagug
   alignment: chaotic_evil
   domains:
@@ -409,6 +632,54 @@
     - resurrection
     - revelation
   favored_weapon: Scimitar
+- name: Sekhmet
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - fire
+    - healing
+    - war
+  subdomains:
+    - ash
+    - blood
+    - protean
+    - rage
+    - restoration
+    - revelry
+  favored_weapon: Battleaxe
+- name: Selket
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - healing
+    - protection
+    - repose
+  subdomains:
+    - ancestors
+    - azata
+    - defense
+    - purity
+    - restoration
+    - souls
+  favored_weapon: Scorpion Whip
+- name: Set
+  alignment: neutral_evil
+  domains:
+    - darkness
+    - death
+    - evil
+    - madness
+    - weather
+  subdomains:
+    - daemon
+    - loss
+    - murder
+    - nightmare
+    - storms
+    - undead
+  favored_weapon: Spear
 - name: Shelyn
   alignment: neutral_good
   domains:
@@ -443,6 +714,22 @@
     - light
     - revelation
   favored_weapon: Katana
+- name: Sobek
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - scalykind
+    - strength
+    - war
+    - water
+  subdomains:
+    - blood
+    - ferocity
+    - protean
+    - resolve
+    - rivers
+    - saurian
+  favored_weapon: Falchion
 - name: Sun Wukong
   alignment: chaotic_neutral
   domains:
@@ -459,6 +746,22 @@
     - revolution
     - thievery
   favored_weapon: Quarterstaff
+- name: Thoth
+  alignment: lawful_neutral
+  domains:
+    - darkness
+    - knowledge
+    - law
+    - magic
+    - rune
+  subdomains:
+    - arcane
+    - language
+    - inevitable
+    - memory
+    - moon
+    - wards
+  favored_weapon: Sickle
 - name: Torag
   alignment: lawful_good
   domains:
@@ -508,6 +811,22 @@
     - murder
     - undead
   favored_weapon: Scythe
+- name: Wadjet
+  alignment: lawful_good
+  domains:
+    - good
+    - law
+    - protection
+    - travel
+    - water
+  subdomains:
+    - archon
+    - defense
+    - exploration
+    - purity
+    - rivers
+    - trade
+  favored_weapon: Light Mace
 - name: Yarzhing
   alignment: lawful_evil
   domains:
@@ -525,7 +844,7 @@
     - undead
   favored_weapon: Shuriken
 - name: Yamatsumi
-  alignment: neutral
+  alignment: true_neutral
   domains:
     - earth
     - fire
