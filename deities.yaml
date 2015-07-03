@@ -15,6 +15,35 @@
     - metal
     - trade
   favored_weapon: Light Crossbow
+- name: Achaekek
+  alignment: lawful_evil
+  domains:
+    - death
+    - evil
+    - law
+    - trickery
+    - war
+  subdomains:
+    - blood
+    - deception
+    - devil
+    - murder
+    - tactics
+    - thievery
+  favored_weapon: Sawtooth Sabre
+- name: Alseta
+  alignment: lawful_neutral
+  domains:
+    - community
+    - law
+    - magic
+    - protection
+  subdomains:
+    - arcane
+    - defense
+    - home
+    - inevitable
+  favored_weapon: Dagger
 - name: Anubis
   alignment: lawful_neutral
   domains:
@@ -111,6 +140,35 @@
     - home
     - imagination
   favored_weapon: Hunga Munga
+- name: Besmara
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - trickery
+    - war
+    - water
+    - weather
+  subdomains:
+    - deception
+    - oceans
+    - protean
+    - tactics
+    - thievery
+    - storms
+  favored_weapon: Rapier
+- name: Brigh
+  alignment: true_neutral
+  domains:
+    - artifice
+    - earth
+    - fire
+    - knowledge
+  subdomains:
+    - construct
+    - metal
+    - smoke
+    - thought
+  favored_weapon: Light Hammer
 - name: Calistria
   alignment: chaotic_neutral
   domains:
@@ -127,6 +185,22 @@
     - memory
     - thievery
   favored_weapon: Whip
+- name: Camazotz
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - darkness
+    - evil
+    - trickery
+  subdomains:
+    - deception
+    - demon
+    - fear
+    - fur
+    - moon
+    - night
+  favored_weapon: Javelin
 - name: Cayden Cailean
   alignment: chaotic_good
   domains:
@@ -177,6 +251,17 @@
     - imagination
     - revelry
     - revolution
+  favored_weapon: Starknife
+- name: Dhalavei
+  alignment: lawful_evil
+  domains:
+    - destruction
+    - evil
+    - knowledge
+    - law
+    - trickery
+  subdomains:
+  favored_weapon: Temple Sword
 - name: Erastil
   alignment: lawful_good
   domains:
@@ -257,6 +342,48 @@
     - oceans
     - seasons
     - wind
+  favored_weapon: Trident
+- name: Groetus
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - darkness
+    - destruction
+    - madness
+    - void
+  subdomains:
+    - catastrophe
+    - insanity
+    - loss
+    - night
+    - protean
+    - stars
+  favored_weapon: Heavy Flail
+- name: Gyronna
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - destruction
+    - evil
+    - madness
+  subdomains:
+    - demon
+    - insanity
+    - nightmare
+    - rage
+  favored_weapon: Dagger
+- name: Hanspur
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - death
+    - travel
+    - water
+  subdomains:
+    - exploration
+    - murder
+    - rivers
+    - trade
   favored_weapon: Trident
 - name: Hathor
   alignment: chaotic_good
@@ -372,6 +499,19 @@
     - freedom
     - revolution
   favored_weapon: Sling
+- name: Kitumu
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - evil
+    - war
+  subdomains:
+    - blood
+    - demon
+    - fear
+    - fur
+  favored_weapon: Dagger
 - name: Kofusachi
   alignment: chaotic_good
   domains:
@@ -438,6 +578,22 @@
     - night
     - thievery
   favored_weapon: Dagger
+- name: Lissala
+  alignment: lawful_evil
+  domains:
+    - evil
+    - knowledge
+    - law
+    - nobility
+    - rune
+  subdomains:
+    - devil
+    - language
+    - leadership
+    - memory
+    - thought
+    - wards
+  favored_weapon: Whip
 - name: Maat
   alignment: lawful_neutral
   domains:
@@ -454,6 +610,35 @@
     - stars
     - thought
   favored_weapon: Starknife
+- name: Milani
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - healing
+    - liberation
+    - protection
+  subdomains:
+    - azata
+    - defense
+    - freedom
+    - purity
+    - restoration
+    - revolution
+  favored_weapon: Morningstar
+- name: Naderi
+  alignment: true_neutral
+  domains:
+    - charm
+    - nobility
+    - repose
+    - water
+  subdomains:
+    - love
+    - lust
+    - martyr
+    - souls
+  favored_weapon: Dagger
 - name: Nalinivati
   alignment: true_neutral
   domains:
@@ -601,6 +786,19 @@
     - thought
     - trade
   favored_weapon: Quarterstaff
+- name: Pulura
+  alignment: chaotic_good
+  domains:
+    - air
+    - chaos
+    - good
+    - weather
+  subdomains:
+    - azata
+    - cloud
+    - seasons
+    - stars
+  favored_weapon: Sling
 - name: Qi Zhong
   alignment: neutral_good
   domains:
@@ -765,6 +963,22 @@
     - growth
     - stars
   favored_weapon: Dagger
+- name: Sivanah
+  alignment: true_neutral
+  domains:
+    - knowledge
+    - madness
+    - magic
+    - rune
+    - trickery
+  subdomains:
+    - deception
+    - insanity
+    - memory
+    - protean
+    - thought
+    - wards
+  favored_weapon: Bladed Scarf
 - name: Sobek
   alignment: chaotic_neutral
   domains:
@@ -878,6 +1092,32 @@
     - rivers
     - trade
   favored_weapon: Light Mace
+- name: Walkena
+  alignment: lawful_evil
+  domains:
+    - evil
+    - law
+    - sun
+  subdomains:
+    - devil
+    - light
+  favored_weapon: Spear
+- name: Zyphus
+  alignment: neutral_evil
+  domains:
+    - death
+    - destruction
+    - evil
+    - plant
+    - war
+  subdomains:
+    - blood
+    - catastrophe
+    - daemon
+    - decay
+    - murder
+    - undead
+  favored_weapon: Heavy Pick
 - name: Yarzhing
   alignment: lawful_evil
   domains:
