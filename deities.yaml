@@ -63,6 +63,22 @@
     - divine
     - smoke
   favored_weapon: Mace
+- name: Azathoth
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - madness
+    - sun
+    - void
+  subdomains:
+    - catastrophe
+    - dark tapestry
+    - entropy
+    - insanity
+    - nightmare
+    - stars
+  favored_weapon: Warhammer
 - name: Bastet
   alignment: chaotic_neutral
   domains:
@@ -518,6 +534,25 @@
     - thievery
     - thought
   favored_weapon: Short Sword
+- name: Nyarlathotep
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - knowledge
+    - magic
+    - trickery
+    - darkness
+  subdomains:
+    - arcane
+    - divine
+    - memory
+    - thought
+    - deception
+    - thievery
+    - loss
+    - night
+  favored_weapon: Quarterstaff
 - name: Osiris
   alignment: lawful_good
   domains:
@@ -714,6 +749,22 @@
     - light
     - revelation
   favored_weapon: Katana
+- name: Shub-Niggurath
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - evil
+    - plant
+    - void
+  subdomains:
+    - dark tapestry
+    - decay
+    - feather
+    - fur
+    - growth
+    - stars
+  favored_weapon: Dagger
 - name: Sobek
   alignment: chaotic_neutral
   domains:
@@ -859,6 +910,22 @@
     - resolve
     - smoke
   favored_weapon: Tetsubo
+- name: Yoh-Sothoth
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - darkness
+    - knowledge
+    - travel
+    - void
+  subdomains:
+    - dark tapestry
+    - exploration
+    - memory
+    - night
+    - stars
+    - thought
+  favored_weapon: Dagger
 - name: Zon-Kuthon
   alignment: lawful_evil
   domains:
