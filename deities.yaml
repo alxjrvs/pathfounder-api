@@ -156,6 +156,19 @@
     - thievery
     - storms
   favored_weapon: Rapier
+- name: Bokrug
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - water
+    - weather
+  subdomains:
+    - catastrophe
+    - oceans
+    - rage
+    - storms
+  favored_weapon: Ranseur
 - name: Brigh
   alignment: true_neutral
   domains:
@@ -218,6 +231,19 @@
     - resole
     - revelry
   favored_weapon: Rapier
+- name: Cthulhu
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - madness
+    - void
+  subdomains:
+    - dark tapestry
+    - insanity
+    - nightmare
+    - stars
+  favored_weapon: Dagger
 - name: Daikitsu
   alignment: neutral
   domains:
@@ -385,6 +411,19 @@
     - rivers
     - trade
   favored_weapon: Trident
+- name: Hastur
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - rune
+    - void
+  subdomains:
+    - dark tapestry
+    - language
+    - stars
+    - wards
+  favored_weapon: Rapier
 - name: Hathor
   alignment: chaotic_good
   domains:
@@ -610,6 +649,19 @@
     - stars
     - thought
   favored_weapon: Starknife
+- name: Mhar
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - earth
+    - fire
+  subdomains:
+    - ash
+    - catastrophe
+    - caves
+    - smoke
+  favored_weapon: Heavy Pick
 - name: Milani
   alignment: chaotic_good
   domains:
@@ -738,6 +790,19 @@
     - loss
     - night
   favored_weapon: Quarterstaff
+- name: Orgesh
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - earth
+    - evil
+    - water
+  subdomains:
+    - caves
+    - entropy
+    - fear
+    - ice
+  favored_weapon: Spear
 - name: Osiris
   alignment: lawful_good
   domains:
@@ -1102,22 +1167,19 @@
     - devil
     - light
   favored_weapon: Spear
-- name: Zyphus
+- name: Xhamen-Dor
   alignment: neutral_evil
   domains:
     - death
-    - destruction
     - evil
     - plant
-    - war
+    - trickery
   subdomains:
-    - blood
-    - catastrophe
-    - daemon
     - decay
+    - deception
     - murder
     - undead
-  favored_weapon: Heavy Pick
+  favored_weapon: Spear
 - name: Yarzhing
   alignment: lawful_evil
   domains:
@@ -1182,4 +1244,19 @@
     - night
     - undead
   favored_weapon: Spiked Chain
-
+- name: Zyphus
+  alignment: neutral_evil
+  domains:
+    - death
+    - destruction
+    - evil
+    - plant
+    - war
+  subdomains:
+    - blood
+    - catastrophe
+    - daemon
+    - decay
+    - murder
+    - undead
+  favored_weapon: Heavy Pick
