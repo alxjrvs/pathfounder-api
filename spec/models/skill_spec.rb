@@ -1,19 +1,20 @@
 require "rails_helper"
 
 describe Skill do
-  before do
-    @list = create :skill_list
-  end
+  let(:skill_list) { create :skill_list }
+  let(:stat_block) { create :stat_block, character: skill_list.character }
+  let(:stats) { StatCalculator.new stat_block: stat_block, mods: ModIndexer.new([]) }
+  let(:modifiers) { ModIndexer.new [] }
 
   describe 'Custom Skills' do
     before do
       options = Skills::DETAILS[:craft_1]
-      @skill = Skill.new(options, @list)
+      @skill = Skill.new(options, skill_list, stats, modifiers, 0, [])
     end
 
     describe ".name" do
       it "returns the custom name for the skill" do
-        expect(@skill.name).to eq @list.craft_1_name
+        expect(@skill.name).to eq skill_list.craft_1_name
       end
     end
 
@@ -25,7 +26,7 @@ describe Skill do
 
     describe ".point_value" do
       it "returns the value on the list for the given skill" do
-        expect(@skill.point_value).to eq @list.craft_1_val
+        expect(@skill.point_value).to eq skill_list.craft_1_val
       end
     end
   end
@@ -33,7 +34,7 @@ describe Skill do
   describe "Generic Skills" do
     before do
       options = Skills::DETAILS[:acrobatics]
-      @skill = Skill.new(options, @list)
+      @skill = Skill.new(options, skill_list, stats, modifiers, 0, [])
     end
     describe ".name" do
       it "returns the custom name for the skill" do
@@ -43,8 +44,7 @@ describe Skill do
 
     describe ".value" do
       it "returns the value on the list for the given skill" do
-        column = "#{@skill.skill_name}_val"
-        expect(@skill.value).to eq @list.send(column)
+        expect(@skill.value).to be_a Fixnum
       end
     end
   end

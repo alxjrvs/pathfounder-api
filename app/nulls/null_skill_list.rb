@@ -5,12 +5,4 @@ class NullSkillList
       NullSkill.new
     end
   end
-
-  def find(key)
-    NullSkill.new
-  end
-
-  def all_skills
-    []
-  end
 end

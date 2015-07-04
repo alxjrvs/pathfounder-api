@@ -1,10 +1,12 @@
 class NullPfClass
   include Null
 
-  Character::CLASS_DELEGATES.each do |m|
-    define_method m do
-      0
-    end
+  def base_attack_bonus
+    0
+  end
+
+  def hit_die
+    0
   end
 
   def alignment
@@ -15,7 +17,7 @@ class NullPfClass
     []
   end
 
-  def skill_ranks_per_level
+  def class_skill_ranks_per_level
     0
   end
 

@@ -1,18 +1,14 @@
 class AlignmentFilter
   attr_reader :alignment
 
-  ALIGNMENTS =
-    :true_neutral,
-    :neutral_good,
-    :neutral_evil,
-    :lawful_neutral,
-    :lawful_good,
-    :lawful_evil,
-    :chaotic_neutral,
-    :chaotic_good,
-    :chaotic_evil
+  ALIGNMENT_MATRIX = [
+    [:lawful_good, :lawful_neutral, :lawful_evil],
+    [:neutral_good, :true_neutral, :neutral_evil],
+    [:chaotic_good, :chaotic_neutral, :chaotic_evil]
+  ]
+  ALIGNMENTS = ALIGNMENT_MATRIX.flatten
 
-  def initialize(alignment, deity=nil)
+  def initialize(alignment, deity = nil)
     @alignment = alignment
     @deity = deity
   end

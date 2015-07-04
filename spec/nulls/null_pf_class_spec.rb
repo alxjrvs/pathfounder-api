@@ -21,11 +21,15 @@ describe NullPfClass do
     end
   end
 
-  Character::CLASS_DELEGATES.each do |cd|
-    describe ".#{cd}" do
-      it 'returns 1' do
-        expect(@class.send(cd)).to eq 0
-      end
+  describe "base_attack_bonus" do
+    it 'returns 0' do
+      expect(@class.base_attack_bonus).to eq 0
+    end
+  end
+
+  describe "hit_die" do
+    it 'returns 0' do
+      expect(@class.hit_die).to eq 0
     end
   end
 end

@@ -1,13 +1,17 @@
 class Skill
   include ActiveModel::SerializerSupport
-  attr_reader :skill_name, :untrained, :key_stat, :custom, :list
+  attr_reader :skill_name, :untrained, :key_stat, :custom, :list, :stats, :modifiers, :ac_penalty, :class_skills
 
-  def initialize(options, list)
+  def initialize(options, list, stats, modifiers, ac_penalty, class_skills)
     @skill_name = options[:name]
     @untrained = options[:untrained]
     @key_stat= options[:key_stat]
     @custom = options[:custom]
     @list = list
+    @stats = stats
+    @modifiers = modifiers
+    @ac_penalty = ac_penalty
+    @class_skills = class_skills
   end
 
   def name
@@ -28,20 +32,10 @@ class Skill
 
   private
 
-  def character
-    @_character ||= begin
-      if @list.character
-        @list.character
-      else
-        NullCharacter.new
-      end
-    end
-  end
-
   def modifier_calculator
     @_modifier_calculator ||= begin
       SkillModifierCalculator.new name: skill_name,
-        class_skills: character.class_skills,
+        class_skills: class_skills,
         bonuses: bonuses,
         value: point_value,
         penalty: penalty,
@@ -51,14 +45,14 @@ class Skill
 
   def penalty
     if penalty_applies
-      character.armor_check_penalty
+      ac_penalty
     else
       0
     end
   end
 
   def bonuses
-    character.total_modifier_for skill_name
+    modifiers.total_bonus_for skill_name
   end
 
   def penalty_applies
@@ -66,7 +60,7 @@ class Skill
   end
 
   def modifier
-    character.send(key_stat).modifier
+    stats.send(key_stat).modifier
   end
 
   def value_column
