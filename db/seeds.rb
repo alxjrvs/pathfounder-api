@@ -13,13 +13,3 @@ klass = Fighter.create
 Level.create character: ragnar, pf_class: klass
 ragnar.race = Human.create
 ragnar.save!
-
-gods = YAML.load_file('./deities.yaml')
-
-gods.each do |god|
-  Deity.create(name: god["name"],
-               alignment: god["alignment"].to_sym,
-               domains: god["domains"],
-               subdomains: god["subdomains"],
-               favored_weapon: god["favored_weapon"])
-end

@@ -4,7 +4,6 @@ class CharacterSerializer < ActiveModel::Serializer
   has_one :skill_list
   has_one :feat_list
   has_one :armory
-  has_one :deity
   attributes :id, :name,
     :favored_class, :race, :stat_block, :skill_list,
     :feat_list, :armory,
@@ -17,6 +16,6 @@ class CharacterSerializer < ActiveModel::Serializer
     :melee_attack_bonus, :weapon_proficiencies,
     :shield_proficiencies, :armor_proficiencies,
     :starting_language_options,
-    :high_intelligence_language_options
+    :high_intelligence_language_options, :deity
 
 end

@@ -1,5 +1,15 @@
-class Deity < ActiveRecord::Base
-  has_many :characters
+class Deity
+  DEITIES = YAML.load_file('./deities.yaml')
+
+  attr_accessor :name, :alignment, :domains, :subdomains, :favored_weapon
+  def initialize(name)
+    god = DEITIES.select { |god| god['name'] == name }.first
+    @name = god["name"]
+    @alignment = god["alignment"].to_sym
+    @domains = god["domains"]
+    @subdomains = god["subdomains"]
+    @favored_weapon = god["favored_weapon"]
+  end
 
   ALIGNMENT_MATRIX = [
     [:lawful_good, :lawful_neutral, :lawful_evil],
@@ -12,6 +22,8 @@ class Deity < ActiveRecord::Base
     second_index = ALIGNMENT_MATRIX[first_index].find_index(alignment.to_sym)
     neighboring_alignments(first_index, second_index)
   end
+
+  private
 
   def neighboring_alignments(a, b)
     alignments = []

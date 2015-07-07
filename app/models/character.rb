@@ -5,7 +5,6 @@ class Character < ActiveRecord::Base
   has_one :feat_list, dependent: :destroy
   has_one :armory, dependent: :destroy
 
-  belongs_to :deity
   belongs_to :race, polymorphic: true
 
   CLASS_DELEGATES = :hit_die, :base_attack_bonus
@@ -164,6 +163,10 @@ class Character < ActiveRecord::Base
 
   def find_mods_by_trait(trait)
     mod_indexer.find_by_trait trait
+  end
+
+  def deity
+    deity_name ? Deity.new(deity_name) : NullDeity.new
   end
 
   private
