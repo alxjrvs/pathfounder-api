@@ -16,6 +16,6 @@ class CharacterSerializer < ActiveModel::Serializer
     :melee_attack_bonus, :weapon_proficiencies,
     :shield_proficiencies, :armor_proficiencies,
     :starting_language_options,
-    :high_intelligence_language_options
+    :high_intelligence_language_options, :deity
 
 end

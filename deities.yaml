@@ -1,0 +1,1262 @@
+---
+- name: Keymaster
+  alignment: lawful_neutral
+  domains:
+    - earth
+    - law
+    - nobility
+    - protection
+    - travel
+  subdomains:
+    - defense
+    - inevitable
+    - leadership
+    - martyr
+    - metal
+    - trade
+  favored_weapon: Light Crossbow
+- name: Praying Mantis
+  alignment: lawful_evil
+  domains:
+    - death
+    - evil
+    - law
+    - trickery
+    - war
+  subdomains:
+    - blood
+    - deception
+    - devil
+    - murder
+    - tactics
+    - thievery
+  favored_weapon: Sawtooth Sabre
+- name: Smiling Mask
+  alignment: lawful_neutral
+  domains:
+    - community
+    - law
+    - magic
+    - protection
+  subdomains:
+    - arcane
+    - defense
+    - home
+    - inevitable
+  favored_weapon: Dagger
+- name: Anubis
+  alignment: lawful_neutral
+  domains:
+    - death
+    - earth
+    - law
+    - protection
+    - repose
+  subdomains:
+    - ancestors
+    - defense
+    - inevitable
+    - metal
+    - purity
+    - souls
+  favored_weapon: Flail
+- name: Apep
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - darkness
+    - destruction
+    - evil
+    - scalykind
+  subdomains:
+    - catastrophe
+    - demon
+    - dragon
+    - entropy
+    - fear
+    - night
+  favored_weapon: Dagger
+- name: Asmodius
+  alignment: lawful_evil
+  domains:
+    - evil
+    - fire
+    - law
+    - magic
+    - trickery
+  subdomains:
+    - arcane
+    - ash
+    - deception
+    - devil
+    - divine
+    - smoke
+  favored_weapon: Mace
+- name: Azathoth
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - madness
+    - sun
+    - void
+  subdomains:
+    - catastrophe
+    - dark tapestry
+    - entropy
+    - insanity
+    - nightmare
+    - stars
+  favored_weapon: Warhammer
+- name: Bastet
+  alignment: chaotic_neutral
+  domains:
+    - animal
+    - chaos
+    - charm
+    - protection
+    - trickery
+  subdomains:
+    - deception
+    - defense
+    - fur
+    - lust
+    - protean
+    - thievery
+  favored_weapon: Cat's Claws
+- name: Bes
+  alignment: neutral_good
+  domains:
+    - community
+    - earth
+    - good
+    - luck
+    - protection
+  subdomains:
+    - agathion
+    - caves
+    - defense
+    - family
+    - home
+    - imagination
+  favored_weapon: Hunga Munga
+- name: Pirate Queen
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - trickery
+    - war
+    - water
+    - weather
+  subdomains:
+    - deception
+    - oceans
+    - protean
+    - tactics
+    - thievery
+    - storms
+  favored_weapon: Rapier
+- name: Bokrug
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - water
+    - weather
+  subdomains:
+    - catastrophe
+    - oceans
+    - rage
+    - storms
+  favored_weapon: Ranseur
+- name: Clockwork Knight
+  alignment: true_neutral
+  domains:
+    - artifice
+    - earth
+    - fire
+    - knowledge
+  subdomains:
+    - construct
+    - metal
+    - smoke
+    - thought
+  favored_weapon: Light Hammer
+- name: Vengeful Wasp
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - charm
+    - knowledge
+    - luck
+    - trickery
+  subdomains:
+    - azata
+    - curse
+    - deception
+    - lust
+    - memory
+    - thievery
+  favored_weapon: Whip
+- name: Camazotz
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - darkness
+    - evil
+    - trickery
+  subdomains:
+    - deception
+    - demon
+    - fear
+    - fur
+    - moon
+    - night
+  favored_weapon: Javelin
+- name: Drunk God
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - charm
+    - good
+    - strength
+    - travel
+  subdomains:
+    - azata
+    - exploration
+    - ferocity
+    - love
+    - lust
+    - resole
+    - revelry
+  favored_weapon: Rapier
+- name: Cthulhu
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - madness
+    - void
+  subdomains:
+    - dark tapestry
+    - insanity
+    - nightmare
+    - stars
+  favored_weapon: Dagger
+- name: Nine Tail Fox
+  alignment: neutral
+  domains:
+    - animal
+    - artifice
+    - community
+    - plant
+    - weather
+  subdomains:
+    - construct
+    - family
+    - fur
+    - growth
+    - home
+    - seasons
+  favored_weapon: Flail
+- name: Butterfly
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - liberation
+    - luck
+    - travel
+  subdomains:
+    - azata
+    - curse
+    - exploration
+    - fate
+    - freedom
+    - imagination
+    - revelry
+    - revolution
+  favored_weapon: Starknife
+- name: Three Headed Woman
+  alignment: lawful_evil
+  domains:
+    - destruction
+    - evil
+    - knowledge
+    - law
+    - trickery
+  subdomains:
+  favored_weapon: Temple Sword
+- name: Stag-Horned Hunter
+  alignment: lawful_good
+  domains:
+    - animal
+    - community
+    - good
+    - law
+    - plant
+  subdomains:
+    - archon
+    - cooperation
+    - family
+    - feather
+    - fur
+    - growth
+    - home
+  favored_weapon: Longbow
+- name: Evil Oni
+  alignment: neutral_evil
+  domains:
+    - death
+    - destruction
+    - evil
+    - repose
+    - war
+  subdomains:
+    - blood
+    - daemon
+    - souls
+    - rage
+    - tactics
+    - undead
+  favored_weapon: Naginata
+- name: Black Daimyo
+  alignment: lawful_evil
+  domains:
+    - evil
+    - glory
+    - law
+    - nobility
+    - war
+  subdomains:
+    - blood
+    - devil
+    - heroism
+    - honor
+    - leadership
+    - tactics
+  favored_weapon: Longbow
+- name: Armored Giant
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - glory
+    - strength
+    - war
+  subdomains:
+    - blood
+    - ferocity
+    - protean
+    - rage
+    - resolve
+    - tactics
+  favored_weapon: Greatsword
+- name: Nature Twins
+  alignment: neutral
+  domains:
+    - air
+    - animal
+    - plant
+    - water
+    - weather
+  subdomains:
+    - cloud
+    - decay
+    - growth
+    - oceans
+    - seasons
+    - wind
+  favored_weapon: Trident
+- name: Boneyard Moon
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - darkness
+    - destruction
+    - madness
+    - void
+  subdomains:
+    - catastrophe
+    - insanity
+    - loss
+    - night
+    - protean
+    - stars
+  favored_weapon: Heavy Flail
+- name: Patriarchy Smasher
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - destruction
+    - evil
+    - madness
+  subdomains:
+    - demon
+    - insanity
+    - nightmare
+    - rage
+  favored_weapon: Dagger
+- name: River Rat
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - death
+    - travel
+    - water
+  subdomains:
+    - exploration
+    - murder
+    - rivers
+    - trade
+  favored_weapon: Trident
+- name: Hastur
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - rune
+    - void
+  subdomains:
+    - dark tapestry
+    - language
+    - stars
+    - wards
+  favored_weapon: Rapier
+- name: Hathor
+  alignment: chaotic_good
+  domains:
+    - air
+    - chaos
+    - charm
+    - good
+    - travel
+  subdomains:
+    - azata
+    - cloud
+    - exploration
+    - love
+    - revelry
+    - trade
+  favored_weapon: Short Sword
+- name: Tengu
+  alignment: chaotic_neutral
+  domains:
+    - air
+    - chaos
+    - destruction
+    - water
+    - weather
+  subdomains:
+    - catastrophe
+    - cloud
+    - ocean
+    - protean
+    - storms
+    - wind
+  favored_weapon: Nine-ring Broadsword
+- name: Horus
+  alignment: lawful_neutral
+  domains:
+    - air
+    - animal
+    - law
+    - nobility
+    - sun
+  subdomains:
+    - day
+    - feather
+    - inevitable
+    - leadership
+    - light
+    - wind
+  favored_weapon: Khopesh
+- name: Sword Mistress
+  alignment: lawful_good
+  domains:
+    - glory
+    - good
+    - law
+    - sun
+    - war
+  subdomains:
+    - archon
+    - day
+    - heroism
+    - honor
+    - judgment
+    - light
+    - redemption
+    - revelation
+    - tactics
+  favored_weapon: Longsword
+- name: Enlightened One
+  alignment: lawful_neutral
+  domains:
+    - healing
+    - knowledge
+    - law
+    - rune
+    - strength
+  subdomains:
+    - inevitable
+    - language
+    - memory
+    - restoration
+    - resolve
+    - thought
+  favored_weapon: Unarmed
+- name: Isis
+  alignment: neutral_good
+  domains:
+    - charm
+    - community
+    - good
+    - healing
+    - magic
+  subdomains:
+    - agathion
+    - arcane
+    - divine
+    - family
+    - love
+    - resurrection
+  favored_weapon: Quarterstaff
+- name: Khepri
+  alignment: neutral_good
+  domains:
+    - artifice
+    - good
+    - liberation
+    - sun
+    - trickery
+  subdomains:
+    - agathion
+    - day
+    - deception
+    - freedom
+    - revolution
+  favored_weapon: Sling
+- name: Carnivorous Firefly
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - evil
+    - war
+  subdomains:
+    - blood
+    - demon
+    - fear
+    - fur
+  favored_weapon: Dagger
+- name: Laughing God
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - charm
+    - good
+    - luck
+    - travel
+  subdomains:
+    - azata
+    - exploration
+    - fate
+    - imagination
+    - love
+    - lust
+    - revelry
+    - trade
+  favored_weapon: Bo Staff
+- name: Widow of Calamity
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - destruction
+    - evil
+    - fire
+    - plant
+  subdomains:
+    - ash
+    - catastrophe
+    - decay
+    - demon
+    - rage
+    - smoke
+  favored_weapon: Warhammer
+- name: Lamashtu
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - madness
+    - strength
+    - trickery
+  subdomains:
+    - deception
+    - demon
+    - ferocity
+    - insanity
+    - nightmare
+    - thievery
+  favored_weapon: Falchion
+- name: Rat Hag
+  alignment: neutral_evil
+  domains:
+    - animal
+    - darkness
+    - evil
+    - luck
+    - trickery
+  subdomains:
+    - curse
+    - daemon
+    - fur
+    - loss
+    - night
+    - thievery
+  favored_weapon: Dagger
+- name: No-Mouthed Woman
+  alignment: lawful_evil
+  domains:
+    - evil
+    - knowledge
+    - law
+    - nobility
+    - rune
+  subdomains:
+    - devil
+    - language
+    - leadership
+    - memory
+    - thought
+    - wards
+  favored_weapon: Whip
+- name: Maat
+  alignment: lawful_neutral
+  domains:
+    - knowledge
+    - law
+    - protection
+    - void
+    - weather
+  subdomains:
+    - inevitable
+    - judgment
+    - purity
+    - seasons
+    - stars
+    - thought
+  favored_weapon: Starknife
+- name: Stillborn Alien
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - earth
+    - fire
+  subdomains:
+    - ash
+    - catastrophe
+    - caves
+    - smoke
+  favored_weapon: Heavy Pick
+- name: Blood Rose
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - healing
+    - liberation
+    - protection
+  subdomains:
+    - azata
+    - defense
+    - freedom
+    - purity
+    - restoration
+    - revolution
+  favored_weapon: Morningstar
+- name: Soaking Maiden
+  alignment: true_neutral
+  domains:
+    - charm
+    - nobility
+    - repose
+    - water
+  subdomains:
+    - love
+    - lust
+    - martyr
+    - souls
+  favored_weapon: Dagger
+- name: Naga Goddess
+  alignment: true_neutral
+  domains:
+    - charm
+    - magic
+    - nobility
+    - rune
+    - scalykind
+  subdomains:
+    - arcane
+    - divine
+    - leadership
+    - love
+    - lust
+    - wards
+  favored_weapon: Urumi
+- name: Neith
+  alignment: neutral_good
+  domains:
+    - animal
+    - artifice
+    - good
+    - war
+    - water
+  subdomains:
+    - agathion
+    - construct
+    - feather
+    - fur
+    - oceans
+    - tactics
+  favored_weapon: Shortbow
+- name: Nephthys
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - charm
+    - community
+    - darkness
+    - protection
+  subdomains:
+    - cooperation
+    - defense
+    - lust
+    - night
+    - protean
+    - purity
+  favored_weapon: Light Mace
+- name: Dual-Faced God
+  alignment: true_neutral
+  domains:
+    - destruction
+    - knowledge
+    - magic
+    - protection
+    - rune
+  subdomains:
+    - arcane
+    - catastrophe
+    - divine
+    - defense
+    - thought
+    - wards
+  favored_weapon: Quarterstaff
+- name: Thief King
+  alignment: neutral_evil
+  domains:
+    - charm
+    - death
+    - evil
+    - knowledge
+    - trickery
+  subdomains:
+    - daemon
+    - deception
+    - memory
+    - murder
+    - thievery
+    - thought
+  favored_weapon: Short Sword
+- name: Nyarlathotep
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - knowledge
+    - magic
+    - trickery
+    - darkness
+  subdomains:
+    - arcane
+    - divine
+    - memory
+    - thought
+    - deception
+    - thievery
+    - loss
+    - night
+  favored_weapon: Quarterstaff
+- name: Faceless Hunger
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - earth
+    - evil
+    - water
+  subdomains:
+    - caves
+    - entropy
+    - fear
+    - ice
+  favored_weapon: Spear
+- name: Osiris
+  alignment: lawful_good
+  domains:
+    - good
+    - healing
+    - law
+    - plant
+    - repose
+  subdomains:
+    - ancestors
+    - archon
+    - growth
+    - restoration
+    - resurrection
+    - souls
+  favored_weapon: Flail
+- name: Lady of Graves
+  alignment: true_neutral
+  domains:
+    - death
+    - healing
+    - knowledge
+    - repose
+    - water
+  subdomains:
+    - ancestors
+    - ice
+    - memory
+    - resurrection
+    - souls
+    - thought
+  favored_weapon: Dagger
+- name: Ptah
+  alignment: true_neutral
+  domains:
+    - artifice
+    - earth
+    - fire
+    - knowledge
+    - travel
+  subdomains:
+    - ash
+    - construct
+    - metal
+    - smoke
+    - thought
+    - trade
+  favored_weapon: Quarterstaff
+- name: Mistress of Stars
+  alignment: chaotic_good
+  domains:
+    - air
+    - chaos
+    - good
+    - weather
+  subdomains:
+    - azata
+    - cloud
+    - seasons
+    - stars
+  favored_weapon: Sling
+- name: Medicine Wheel
+  alignment: neutral_good
+  domains:
+    - good
+    - healing
+    - knowledge
+    - magic
+    - protection
+  subdomains:
+    - agathion
+    - divine
+    - memory
+    - purity
+    - restoration
+    - resurrection
+  favored_weapon: Heavy Mace
+- name: Ra
+  alignment: lawful_neutral
+  domains:
+    - fire
+    - glory
+    - law
+    - nobility
+    - sun
+  subdomains:
+    - day
+    - heroism
+    - honor
+    - inevitable
+    - leadership
+    - light
+  favored_weapon: Spear
+- name: World Ending Worm
+  alignment: chaotic_evil
+  domains:
+    - chaos
+    - evil
+    - destruction
+    - weather
+    - war
+  subdomains:
+    - blood
+    - catastrophe
+    - demon
+    - protean
+    - rage
+    - storms
+  favored_weapon: Greataxe
+- name: Bronze Angel
+  alignment: neutral_good
+  domains:
+    - fire
+    - glory
+    - good
+    - healing
+    - sun
+  subdomains:
+    - agathion
+    - day
+    - heroism
+    - light
+    - redemption
+    - restoration
+    - resurrection
+    - revelation
+  favored_weapon: Scimitar
+- name: Sekhmet
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - destruction
+    - fire
+    - healing
+    - war
+  subdomains:
+    - ash
+    - blood
+    - protean
+    - rage
+    - restoration
+    - revelry
+  favored_weapon: Battleaxe
+- name: Selket
+  alignment: chaotic_good
+  domains:
+    - chaos
+    - good
+    - healing
+    - protection
+    - repose
+  subdomains:
+    - ancestors
+    - azata
+    - defense
+    - purity
+    - restoration
+    - souls
+  favored_weapon: Scorpion Whip
+- name: Set
+  alignment: neutral_evil
+  domains:
+    - darkness
+    - death
+    - evil
+    - madness
+    - weather
+  subdomains:
+    - daemon
+    - loss
+    - murder
+    - nightmare
+    - storms
+    - undead
+  favored_weapon: Spear
+- name: Lady of Chrysanthemums
+  alignment: neutral_good
+  domains:
+    - air
+    - charm
+    - good
+    - luck
+    - protection
+  subdomains:
+    - agathion
+    - cloud
+    - defense
+    - fate
+    - imagination
+    - love
+    - purity
+  favored_weapon: Glaive
+- name: Golden Samurai
+  alignment: lawful_good
+  domains:
+    - glory
+    - good
+    - law
+    - repose
+    - sun
+  subdomains:
+    - ancestors
+    - archon
+    - day
+    - heroism
+    - honor
+    - light
+    - revelation
+  favored_weapon: Katana
+- name: Shub-Niggurath
+  alignment: chaotic_evil
+  domains:
+    - animal
+    - chaos
+    - evil
+    - plant
+    - void
+  subdomains:
+    - dark tapestry
+    - decay
+    - feather
+    - fur
+    - growth
+    - stars
+  favored_weapon: Dagger
+- name: Seven-Veiled Woman
+  alignment: true_neutral
+  domains:
+    - knowledge
+    - madness
+    - magic
+    - rune
+    - trickery
+  subdomains:
+    - deception
+    - insanity
+    - memory
+    - protean
+    - thought
+    - wards
+  favored_weapon: Bladed Scarf
+- name: Sobek
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - scalykind
+    - strength
+    - war
+    - water
+  subdomains:
+    - blood
+    - ferocity
+    - protean
+    - resolve
+    - rivers
+    - saurian
+  favored_weapon: Falchion
+- name: Sun Wukong
+  alignment: chaotic_neutral
+  domains:
+    - animal
+    - chaos
+    - liberation
+    - travel
+    - trickery
+  subdomains:
+    - deception
+    - exploration
+    - freedom
+    - protean
+    - revolution
+    - thievery
+  favored_weapon: Quarterstaff
+- name: Thoth
+  alignment: lawful_neutral
+  domains:
+    - darkness
+    - knowledge
+    - law
+    - magic
+    - rune
+  subdomains:
+    - arcane
+    - language
+    - inevitable
+    - memory
+    - moon
+    - wards
+  favored_weapon: Sickle
+- name: Dwarven Smith
+  alignment: lawful_good
+  domains:
+    - artifice
+    - earth
+    - good
+    - law
+    - protection
+  subdomains:
+    - archon
+    - caves
+    - construct
+    - defense
+    - judgment
+    - metal
+    - toil
+  favored_weapon: Warhammer
+- name: Moon Prince
+  alignment: lawful_good
+  domains:
+    - darkness
+    - good
+    - law
+    - madness
+    - repose
+  subdomains:
+    - ancestors
+    - archon
+    - insanity
+    - moon
+    - night
+    - souls
+  favored_weapon: Longspear
+- name: Rotting Princess
+  alignment: neutral_evil
+  domains:
+    - death
+    - evil
+    - magic
+    - strength
+    - war
+  subdomains:
+    - blood
+    - daemon
+    - divine
+    - ferocity
+    - murder
+    - undead
+  favored_weapon: Scythe
+- name: Wadjet
+  alignment: lawful_good
+  domains:
+    - good
+    - law
+    - protection
+    - travel
+    - water
+  subdomains:
+    - archon
+    - defense
+    - exploration
+    - purity
+    - rivers
+    - trade
+  favored_weapon: Light Mace
+- name: Child God-King
+  alignment: lawful_evil
+  domains:
+    - evil
+    - law
+    - sun
+  subdomains:
+    - devil
+    - light
+  favored_weapon: Spear
+- name: Skeletal Reptilian
+  alignment: neutral_evil
+  domains:
+    - death
+    - evil
+    - plant
+    - trickery
+  subdomains:
+    - decay
+    - deception
+    - murder
+    - undead
+  favored_weapon: Spear
+- name: Red Ninja
+  alignment: lawful_evil
+  domains:
+    - artifice
+    - death
+    - evil
+    - law
+    - trickery
+  subdomains:
+    - construct
+    - deception
+    - devil
+    - murder
+    - toil
+    - undead
+  favored_weapon: Shuriken
+- name: Volcano Lord
+  alignment: true_neutral
+  domains:
+    - earth
+    - fire
+    - protection
+    - strength
+    - water
+  subdomains:
+    - ash
+    - caves
+    - defense
+    - ice
+    - resolve
+    - smoke
+  favored_weapon: Tetsubo
+- name: Yog-Sothoth
+  alignment: chaotic_neutral
+  domains:
+    - chaos
+    - darkness
+    - knowledge
+    - travel
+    - void
+  subdomains:
+    - dark tapestry
+    - exploration
+    - memory
+    - night
+    - stars
+    - thought
+  favored_weapon: Dagger
+- name: Prince of Pain
+  alignment: lawful_evil
+  domains:
+    - darkness
+    - death
+    - destruction
+    - evil
+    - law
+  subdomains:
+    - catastrophe
+    - devil
+    - loss
+    - murder
+    - night
+    - undead
+  favored_weapon: Spiked Chain
+- name: Malignant Reaper
+  alignment: neutral_evil
+  domains:
+    - death
+    - destruction
+    - evil
+    - plant
+    - war
+  subdomains:
+    - blood
+    - catastrophe
+    - daemon
+    - decay
+    - murder
+    - undead
+  favored_weapon: Heavy Pick

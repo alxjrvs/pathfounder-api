@@ -23,6 +23,6 @@ class Api::V1::CharactersController < ApplicationController
   end
 
   def character_params
-    params.require(:character).permit(:name)
+    params.require(:character).permit(:name, :deity_name)
   end
 end

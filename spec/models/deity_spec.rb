@@ -4,7 +4,7 @@ describe Deity do
   describe ".allowed_alignments" do
     describe "for :chaotic_neutral" do
       before do
-        @deity = create(:deity)
+        @deity = Deity.new("Tengu")
       end
 
       it "should return correct alignments" do
@@ -15,7 +15,7 @@ describe Deity do
 
     describe "for :true_neutral" do
       before do
-        @deity = create(:deity, name: "Pharasma", alignment: :true_neutral)
+        @deity = Deity.new("Lady of Graves")
       end
 
       it "should return all neutral alignments" do

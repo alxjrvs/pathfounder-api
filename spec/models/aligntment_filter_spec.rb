@@ -71,7 +71,7 @@ describe AlignmentFilter do
     describe "for cleric" do
       describe "with a chaotic_evil deity" do
         before do
-          @deity = create(:deity)
+          @deity = Deity.new("Azathoth")
           @filter = AlignmentFilter.new(:matches_deity, @deity)
         end
 

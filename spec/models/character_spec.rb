@@ -61,13 +61,25 @@ describe Character do
   describe ".allowed_alignments" do
     describe "for clerics" do
       before do
-        @deity = create :deity
-        @cleric = create :character, deity: @deity
+        @cleric = create :character
         @level = create :level, character: @cleric, pf_class: create(:cleric)
       end
 
       it "should match deity's alignments" do
-        expect(@cleric.allowed_alignments).to eq @deity.allowed_alignments
+        expect(@cleric.allowed_alignments).to eq @cleric.deity.allowed_alignments
+      end
+    end
+  end
+
+  describe ".weapon_proficiencies" do
+    describe "for clerics" do
+      before do
+        @cleric = create :character
+        @level = create :level, character: @cleric, pf_class: create(:cleric)
+      end
+
+      it "should match deity's alignments" do
+        expect(@cleric.weapon_proficiencies).to include @cleric.deity.favored_weapon
       end
     end
   end

@@ -13,6 +13,3 @@ klass = Fighter.create
 Level.create character: ragnar, pf_class: klass
 ragnar.race = Human.create
 ragnar.save!
-
-
-
