@@ -1,5 +1,5 @@
 ---
-- name: Abadar
+- name: Keymaster
   alignment: lawful_neutral
   domains:
     - earth
@@ -15,7 +15,7 @@
     - metal
     - trade
   favored_weapon: Light Crossbow
-- name: Achaekek
+- name: Praying Mantis
   alignment: lawful_evil
   domains:
     - death
@@ -31,7 +31,7 @@
     - tactics
     - thievery
   favored_weapon: Sawtooth Sabre
-- name: Alseta
+- name: Smiling Mask
   alignment: lawful_neutral
   domains:
     - community
@@ -140,7 +140,7 @@
     - home
     - imagination
   favored_weapon: Hunga Munga
-- name: Besmara
+- name: Pirate Queen
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -169,7 +169,7 @@
     - rage
     - storms
   favored_weapon: Ranseur
-- name: Brigh
+- name: Clockwork Knight
   alignment: true_neutral
   domains:
     - artifice
@@ -182,7 +182,7 @@
     - smoke
     - thought
   favored_weapon: Light Hammer
-- name: Calistria
+- name: Vengeful Wasp
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -214,7 +214,7 @@
     - moon
     - night
   favored_weapon: Javelin
-- name: Cayden Cailean
+- name: Drunk God
   alignment: chaotic_good
   domains:
     - chaos
@@ -244,7 +244,7 @@
     - nightmare
     - stars
   favored_weapon: Dagger
-- name: Daikitsu
+- name: Nine Tail Fox
   alignment: neutral
   domains:
     - animal
@@ -260,7 +260,7 @@
     - home
     - seasons
   favored_weapon: Flail
-- name: Desna
+- name: Butterfly
   alignment: chaotic_good
   domains:
     - chaos
@@ -278,7 +278,7 @@
     - revelry
     - revolution
   favored_weapon: Starknife
-- name: Dhalavei
+- name: Three Headed Woman
   alignment: lawful_evil
   domains:
     - destruction
@@ -288,7 +288,7 @@
     - trickery
   subdomains:
   favored_weapon: Temple Sword
-- name: Erastil
+- name: Stag-Horned Hunter
   alignment: lawful_good
   domains:
     - animal
@@ -305,7 +305,7 @@
     - growth
     - home
   favored_weapon: Longbow
-- name: Fumeiyoshi
+- name: Evil Oni
   alignment: neutral_evil
   domains:
     - death
@@ -321,7 +321,7 @@
     - tactics
     - undead
   favored_weapon: Naginata
-- name: General Susumu
+- name: Black Daimyo
   alignment: lawful_evil
   domains:
     - evil
@@ -337,7 +337,7 @@
     - leadership
     - tactics
   favored_weapon: Longbow
-- name: Gorum
+- name: Armored Giant
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -353,7 +353,7 @@
     - resolve
     - tactics
   favored_weapon: Greatsword
-- name: Gozreh
+- name: Nature Twins
   alignment: neutral
   domains:
     - air
@@ -369,7 +369,7 @@
     - seasons
     - wind
   favored_weapon: Trident
-- name: Groetus
+- name: Boneyard Moon
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -385,7 +385,7 @@
     - protean
     - stars
   favored_weapon: Heavy Flail
-- name: Gyronna
+- name: Patriarchy Smasher
   alignment: chaotic_evil
   domains:
     - chaos
@@ -398,7 +398,7 @@
     - nightmare
     - rage
   favored_weapon: Dagger
-- name: Hanspur
+- name: River Rat
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -440,7 +440,7 @@
     - revelry
     - trade
   favored_weapon: Short Sword
-- name: Hei Feng
+- name: Tengu
   alignment: chaotic_neutral
   domains:
     - air
@@ -472,7 +472,7 @@
     - light
     - wind
   favored_weapon: Khopesh
-- name: Iomedae
+- name: Sword Mistress
   alignment: lawful_good
   domains:
     - glory
@@ -491,7 +491,7 @@
     - revelation
     - tactics
   favored_weapon: Longsword
-- name: Irori
+- name: Enlightened One
   alignment: lawful_neutral
   domains:
     - healing
@@ -538,7 +538,7 @@
     - freedom
     - revolution
   favored_weapon: Sling
-- name: Kitumu
+- name: Carnivorous Firefly
   alignment: chaotic_evil
   domains:
     - animal
@@ -551,7 +551,7 @@
     - fear
     - fur
   favored_weapon: Dagger
-- name: Kofusachi
+- name: Laughing God
   alignment: chaotic_good
   domains:
     - chaos
@@ -569,7 +569,7 @@
     - revelry
     - trade
   favored_weapon: Bo Staff
-- name: Lady Nabyo
+- name: Widow of Calamity
   alignment: chaotic_evil
   domains:
     - chaos
@@ -601,7 +601,7 @@
     - nightmare
     - thievery
   favored_weapon: Falchion
-- name: Lao Shu Po
+- name: Rat Hag
   alignment: neutral_evil
   domains:
     - animal
@@ -617,7 +617,7 @@
     - night
     - thievery
   favored_weapon: Dagger
-- name: Lissala
+- name: No-Mouthed Woman
   alignment: lawful_evil
   domains:
     - evil
@@ -649,7 +649,7 @@
     - stars
     - thought
   favored_weapon: Starknife
-- name: Mhar
+- name: Stillborn Alien
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -662,7 +662,7 @@
     - caves
     - smoke
   favored_weapon: Heavy Pick
-- name: Milani
+- name: Blood Rose
   alignment: chaotic_good
   domains:
     - chaos
@@ -678,7 +678,7 @@
     - restoration
     - revolution
   favored_weapon: Morningstar
-- name: Naderi
+- name: Soaking Maiden
   alignment: true_neutral
   domains:
     - charm
@@ -691,7 +691,7 @@
     - martyr
     - souls
   favored_weapon: Dagger
-- name: Nalinivati
+- name: Naga Goddess
   alignment: true_neutral
   domains:
     - charm
@@ -739,7 +739,7 @@
     - protean
     - purity
   favored_weapon: Light Mace
-- name: Nethys
+- name: Dual-Faced God
   alignment: true_neutral
   domains:
     - destruction
@@ -755,7 +755,7 @@
     - thought
     - wards
   favored_weapon: Quarterstaff
-- name: Norgorber
+- name: Thief King
   alignment: neutral_evil
   domains:
     - charm
@@ -790,7 +790,7 @@
     - loss
     - night
   favored_weapon: Quarterstaff
-- name: Orgesh
+- name: Faceless Hunger
   alignment: chaotic_evil
   domains:
     - chaos
@@ -819,7 +819,7 @@
     - resurrection
     - souls
   favored_weapon: Flail
-- name: Pharasma
+- name: Lady of Graves
   alignment: true_neutral
   domains:
     - death
@@ -851,7 +851,7 @@
     - thought
     - trade
   favored_weapon: Quarterstaff
-- name: Pulura
+- name: Mistress of Stars
   alignment: chaotic_good
   domains:
     - air
@@ -864,7 +864,7 @@
     - seasons
     - stars
   favored_weapon: Sling
-- name: Qi Zhong
+- name: Medicine Wheel
   alignment: neutral_good
   domains:
     - good
@@ -896,7 +896,7 @@
     - leadership
     - light
   favored_weapon: Spear
-- name: Rovagug
+- name: World Ending Worm
   alignment: chaotic_evil
   domains:
     - chaos
@@ -912,7 +912,7 @@
     - rage
     - storms
   favored_weapon: Greataxe
-- name: Sarenrae
+- name: Bronze Angel
   alignment: neutral_good
   domains:
     - fire
@@ -978,7 +978,7 @@
     - storms
     - undead
   favored_weapon: Spear
-- name: Shelyn
+- name: Lady of Chrysanthemums
   alignment: neutral_good
   domains:
     - air
@@ -995,7 +995,7 @@
     - love
     - purity
   favored_weapon: Glaive
-- name: Shizuru
+- name: Golden Samurai
   alignment: lawful_good
   domains:
     - glory
@@ -1028,7 +1028,7 @@
     - growth
     - stars
   favored_weapon: Dagger
-- name: Sivanah
+- name: Seven-Veiled Woman
   alignment: true_neutral
   domains:
     - knowledge
@@ -1092,7 +1092,7 @@
     - moon
     - wards
   favored_weapon: Sickle
-- name: Torag
+- name: Dwarven Smith
   alignment: lawful_good
   domains:
     - artifice
@@ -1109,7 +1109,7 @@
     - metal
     - toil
   favored_weapon: Warhammer
-- name: Tsukiyo
+- name: Moon Prince
   alignment: lawful_good
   domains:
     - darkness
@@ -1125,7 +1125,7 @@
     - night
     - souls
   favored_weapon: Longspear
-- name: Urgathoa
+- name: Rotting Princess
   alignment: neutral_evil
   domains:
     - death
@@ -1157,7 +1157,7 @@
     - rivers
     - trade
   favored_weapon: Light Mace
-- name: Walkena
+- name: Child God-King
   alignment: lawful_evil
   domains:
     - evil
@@ -1167,7 +1167,7 @@
     - devil
     - light
   favored_weapon: Spear
-- name: Xhamen-Dor
+- name: Skeletal Reptilian
   alignment: neutral_evil
   domains:
     - death
@@ -1180,7 +1180,7 @@
     - murder
     - undead
   favored_weapon: Spear
-- name: Yarzhing
+- name: Red Ninja
   alignment: lawful_evil
   domains:
     - artifice
@@ -1196,7 +1196,7 @@
     - toil
     - undead
   favored_weapon: Shuriken
-- name: Yamatsumi
+- name: Volcano Lord
   alignment: true_neutral
   domains:
     - earth
@@ -1212,7 +1212,7 @@
     - resolve
     - smoke
   favored_weapon: Tetsubo
-- name: Yoh-Sothoth
+- name: Yog-Sothoth
   alignment: chaotic_neutral
   domains:
     - chaos
@@ -1228,7 +1228,7 @@
     - stars
     - thought
   favored_weapon: Dagger
-- name: Zon-Kuthon
+- name: Prince of Pain
   alignment: lawful_evil
   domains:
     - darkness
@@ -1244,7 +1244,7 @@
     - night
     - undead
   favored_weapon: Spiked Chain
-- name: Zyphus
+- name: Malignant Reaper
   alignment: neutral_evil
   domains:
     - death

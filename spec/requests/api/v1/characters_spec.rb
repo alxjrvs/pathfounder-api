@@ -4,7 +4,7 @@ describe Api::V1::CharactersController, type: :controller do
   context "create" do
     before do
       @name = "Ragnar"
-      post :create, {character: {name: @name, deity_name: "Erastil" }}
+      post :create, {character: {name: @name, deity_name: "Stag-Horned Hunter" }}
     end
 
     it "returns successful" do
@@ -15,7 +15,7 @@ describe Api::V1::CharactersController, type: :controller do
       character = Character.where(name: @name)
       expect(character.count).to eql 1
       expect(character.first.name).to eql @name
-      expect(character.first.deity.name).to eq "Erastil"
+      expect(character.first.deity.name).to eq "Stag-Horned Hunter"
     end
   end
 
