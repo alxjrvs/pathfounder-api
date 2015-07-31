@@ -6,4 +6,6 @@ class Character < ActiveRecord::Base
   has_one :armory, dependent: :destroy
 
   belongs_to :race, polymorphic: true
+
+  validates :alignment, inclusion: { in: AlignmentFilter::PLAINTEXT, allow_nil: true }
 end

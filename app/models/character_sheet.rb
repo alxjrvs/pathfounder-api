@@ -15,6 +15,10 @@ class CharacterSheet
     character.name
   end
 
+  def alignment
+    character.alignment
+  end
+
   #Race
   def race
     return character.race if character.race.present?

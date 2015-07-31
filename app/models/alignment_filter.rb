@@ -7,6 +7,10 @@ class AlignmentFilter
     [:chaotic_good, :chaotic_neutral, :chaotic_evil]
   ]
   ALIGNMENTS = ALIGNMENT_MATRIX.flatten
+  
+  PLAINTEXT = ALIGNMENTS.map do |a|
+    a.to_s.split("_").join(" ").titleize
+  end
 
   def initialize(alignment, deity = nil)
     @alignment = alignment

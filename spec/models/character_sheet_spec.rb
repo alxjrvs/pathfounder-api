@@ -22,7 +22,6 @@ describe CharacterSheet do
       end
 
       it "has an alignment" do
-        pending
         expect(sheet.alignment).to eql "Chaotic Good"
       end
 
