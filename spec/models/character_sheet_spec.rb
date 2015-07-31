@@ -130,14 +130,14 @@ describe CharacterSheet do
 
     describe "Skills" do
       it "has correctly calculated skill values" do
-        expect(sheet.skills.acrobatics.value).to eq 4
+        expect(sheet.skills.acrobatics.value).to eq 3
         expect(sheet.skills.craft_1.value).to eq 4
       end
     end
 
     describe "Combat" do
       it "has an AC" do
-        expect(sheet.combat.armor_class).to eq 11
+        expect(sheet.combat.armor_class).to eq 13
       end
 
       it "has an initiative bonus" do
@@ -154,10 +154,17 @@ describe CharacterSheet do
     end
 
     describe "Armory" do
-      it "has weapons and armor" do
-        expect(sheet.armory.melee_weapon).to eq "dogslicer"
-        expect(sheet.armory.ranged_weapon).to eq "sling"
-        expect(sheet.armory.armor).to eq "padded"
+      it "has weapons" do
+        expect(sheet.weapons.count).to eq 1
+        expect(sheet.weapons.first.name).to eq "Guisarme"
+      end
+
+      it "has armor" do
+        expect(sheet.armor.name).to eq "Padded"
+      end
+
+      it "has a shield" do
+        expect(sheet.shield.name).to eq "Buckler"
       end
     end
   end

@@ -4,8 +4,6 @@ class CharacterSheet
     @character = character
   end
 
-  #TODO: Figure out a better way of seperating these.
-
   #Cosmetic
   def level
     levels.count
@@ -73,6 +71,32 @@ class CharacterSheet
       shield_bonus: shield_bonus,
       size_modifier: size_modifier
     )
+  end
+
+  def weapons
+    if armory.weapon_list.empty?
+      []
+    else
+      armory.weapon_list.map do |w|
+        equipment.construct(w)
+      end
+    end
+  end
+
+  def armor
+    if armory.armor.nil?
+      NullArmor.new
+    else
+      equipment.construct(armory.armor)
+    end
+  end
+
+  def shield
+    if armory.shield.nil?
+      NullShield.new
+    else
+      equipment.construct(armory.shield)
+    end
   end
 
   #Armory
@@ -149,15 +173,21 @@ class CharacterSheet
   end
 
   def armor_bonus
-    0
+    armor.armor_shield_bonus.to_i
   end
 
   def shield_bonus
-    0
+    shield.armor_shield_bonus.to_i
   end
 
   def armor_check_penalty
-    0
+    armor_pen = armor.armor_check_penalty.to_i
+    shield_pen = shield.armor_check_penalty.to_i
+    armor_pen + shield_pen
+  end
+
+  def equipment
+    Equipment.new
   end
 
   def class_skills
@@ -185,7 +215,6 @@ class CharacterSheet
     return character.skill_list if character.skill_list.present?
     NullSkillList.new
   end
-
 
   def stat_block
     return character.stat_block if character.stat_block.present?

@@ -12,4 +12,5 @@ SkillList.create character: ragnar
 klass = Fighter.create
 Level.create character: ragnar, pf_class: klass
 ragnar.race = Human.create
+Armory.create character: ragnar
 ragnar.save!

@@ -1,12 +1,8 @@
 class NullArmory
   include Null
 
-  def melee_weapon
-    ""
-  end
-
-  def ranged_weapon
-    ""
+  def weapon_list
+    []
   end
 
   def armor

@@ -8,4 +8,8 @@ class Character < ActiveRecord::Base
   belongs_to :race, polymorphic: true
 
   validates :alignment, inclusion: { in: AlignmentFilter::PLAINTEXT, allow_nil: true }
+
+  def sheet
+    @_sheet ||= CharacterSheet.new(self)
+  end
 end

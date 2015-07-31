@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :armory do
     character
-
-    melee_weapon "dogslicer"
-    ranged_weapon "sling"
-    armor "padded"
+    weapon_list ["Guisarme"]
+    armor "Padded"
+    shield "Buckler"
   end
 end
