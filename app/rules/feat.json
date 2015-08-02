@@ -36,6 +36,9 @@
       "description":"You've learned to use your quickness in place of brute force when performing combat maneuvers.",
       "bonus":[
          {
+            "benefit":" You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus (see Combat) instead of your Strength bonus."
+         },
+         {
             "normal":" You add your Strength bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus."
          }
       ]
@@ -59,6 +62,9 @@
       ],
       "description":"Choose chaos, evil, good, or law. You can channel divine energy to affect outsiders that possess this subtype.",
       "bonus":[
+         {
+            "benefit":" Instead of its normal effect, you can choose to have your ability to channel energy heal or harm outsiders of the chosen alignment subtype. You must make this choice each time you channel energy. If you choose to heal or harm creatures of the chosen alignment subtype, your channel energy has no effect on other creatures. The amount of damage healed or dealt and the DC to halve the damage is otherwise unchanged."
+         },
          {
             "special":" You can gain this feat multiple times. Its effects do not stack. Each time you take this feat, it applies to a new alignment subtype. Whenever you channel energy, you must choose which type to effect."
          }
@@ -111,6 +117,9 @@
       "description":"You draw upon your arcane power to enhance your weapons with magical energy.",
       "bonus":[
          {
+            "prerequisite":" Ability to cast arcane spells."
+         },
+         {
             "benefit":" As a swift action, you can imbue your weapons with a fraction of your power. For 1 round, your weapons deal +1 damage and are treated as magic for the purpose of overcoming damage reduction. For every five caster levels you possess, this bonus increases by +1, to a maximum of +5 at 20th level."
          }
       ]
@@ -122,6 +131,12 @@
       ],
       "description":"You are skilled at wearing heavy armor.",
       "bonus":[
+         {
+            "benefit":" See Armor Proficiency, Light."
+         },
+         {
+            "normal":" See Armor Proficiency, Light."
+         },
          {
             "special":" Fighters and paladins automatically have Heavy Armor Proficiency as a bonus feat. They need not select it."
          }
@@ -136,6 +151,12 @@
       "description":"You are skilled at wearing light armor.",
       "bonus":[
          {
+            "benefit":" When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Dexterity- and Strength-based skill checks."
+         },
+         {
+            "normal":" A character who is wearing armor with which he is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving."
+         },
+         {
             "special":" All characters except monks, sorcerers, and wizards automatically have Light Armor Proficiency as a bonus feat. They need not select it."
          }
       ]
@@ -147,6 +168,15 @@
       ],
       "description":"You are skilled at wearing medium armor.",
       "bonus":[
+         {
+            "prerequisite":" Light Armor Proficiency."
+         },
+         {
+            "benefit":" See Armor Proficiency, Light."
+         },
+         {
+            "normal":" See Armor Proficiency, Light."
+         },
          {
             "special":" Barbarians, clerics, druids, fighters, paladins, and rangers automatically have Medium Armor Proficiency as a bonus feat. They need not select it."
          }
@@ -172,6 +202,9 @@
       "description":"Your summoned creatures are more powerful and robust.",
       "bonus":[
          {
+            "prerequisite":" Spell Focus (conjuration)."
+         },
+         {
             "benefit":" Each creature you conjure with any summon spell gains a +4 enhancement bonus to Strength and Constitution for the duration of the spell that summoned it."
          }
       ]
@@ -184,6 +217,9 @@
       ],
       "description":"Your critical hits cause opponents to bleed profusely.",
       "bonus":[
+         {
+            "benefit":" Whenever you score a critical hit with a slashing or piercing weapon, your opponent takes 2d6 points of bleed damage (see Conditions) each round on his turn, in addition to the damage dealt by the critical hit. Bleed damage can be stopped by a DC 15 Heal skill check or through any magical healing. The effects of this feat stack."
+         },
          {
             "special":" You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery."
          }
@@ -198,6 +234,18 @@
       "description":"You are skilled at attacking opponents that you cannot clearly perceive.",
       "bonus":[
          {
+            "benefit":" In melee, every time you miss because of concealment (see Combat), you can reroll your miss chance percentile roll one time to see if you actually hit."
+         },
+         {
+            "text":"an invisible attacker gets no advantages related to hitting you in melee. that is, you don't lose your dexterity bonus to armor class, and the attacker doesn't get the usual +2 bonus for being invisible. the invisible attacker's bonuses do still apply for ranged attacks, however."
+         },
+         {
+            "text":"you do not need to make acrobatics skill checks to move at full speed while blinded."
+         },
+         {
+            "normal":" Regular attack roll modifiers for invisible attackers trying to hit you apply, and you lose your Dexterity bonus to AC. The speed reduction for darkness and poor visibility also applies."
+         },
+         {
             "special":" The Blind-Fight feat is of no use against a character who is the subject of a blink spell."
          }
       ]
@@ -210,6 +258,9 @@
       ],
       "description":"Your critical hits blind your opponents.",
       "bonus":[
+         {
+            "benefit":" Whenever you score a critical hit, your opponent is permanently blinded. A successful Fortitude save reduces this to dazzled for 1d4 rounds. The DC of this Fortitude save is equal to 10 + your base attack bonus. This feat has no effect on creatures that do not rely on eyes for sight or creatures with more than two eyes (although multiple critical hits might cause blindness, at the GM's discretion). Blindness can be cured by heal, regeneration, remove blindness, or similar abilities."
+         },
          {
             "special":" You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery."
          }
@@ -224,7 +275,13 @@
       "description":"You can create magic potions.",
       "bonus":[
          {
-            "when you create a potion, you make any choices that you would normally make when casting the spell. whoever drinks the potion is the target of the spell.":null
+            "prerequisite":" Caster level 3rd."
+         },
+         {
+            "benefit":" You can create a potion of any 3rd-level or lower spell that you know and that targets one or more creatures or objects. Brewing a potion takes 2 hours if its base price is 250 gp or less, otherwise brewing a potion takes 1 day for each 1,000 gp in its base price. When you create a potion, you set the caster level, which must be sufficient to cast the spell in question and no higher than your own level. To brew a potion, you must use up raw materials costing one half this base price. See the magic item creation rules in Magic Items for more information."
+         },
+         {
+            "text":"when you create a potion, you make any choices that you would normally make when casting the spell. whoever drinks the potion is the target of the spell."
          }
       ]
    },
@@ -235,6 +292,9 @@
       ],
       "description":"Foes are surprised by your skilled use of unorthodox and improvised weapons.",
       "bonus":[
+         {
+            "benefit":" You do not suffer any penalties for using an improvised melee weapon. Unarmed opponents are flat-footed against any attacks you make with an improvised melee weapon."
+         },
          {
             "normal":" You take a –4 penalty on attack rolls made with an improvised weapon."
          }
@@ -247,6 +307,9 @@
       ],
       "description":"You can channel your divine energy through a melee weapon you wield.",
       "bonus":[
+         {
+            "prerequisite":" Channel energy class feature."
+         },
          {
             "benefit":" Before you make a melee attack roll, you can choose to spend one use of your channel energy ability as a swift action. If you channel positive energy and you hit an undead creature, that creature takes an amount of additional damage equal to the damage dealt by your channel positive energy ability. If you channel negative energy and you hit a living creature, that creature takes an amount of additional damage equal to the damage dealt by your channel negative energy ability. Your target can make a Will save, as normal, to halve this additional damage. If your attack misses, the channel energy ability is still expended with no effect."
          }
@@ -285,6 +348,9 @@
       "description":"You can increase your defense at the expense of your accuracy.",
       "bonus":[
          {
+            "prerequisite":" Int 13."
+         },
+         {
             "benefit":" You can choose to take a –1 penalty on melee attack rolls and combat maneuver checks to gain a +1 dodge bonus to your Armor Class. When your base attack bonus reaches +4, and every +4 thereafter, the penalty increases by –1 and the dodge bonus increases by +1. You can only choose to use this feat when you declare that you are making an attack or a full-attack action with a melee weapon. The effects of this feat last until your next turn."
          }
       ]
@@ -296,6 +362,12 @@
       ],
       "description":"You can make additional attacks of opportunity.",
       "bonus":[
+         {
+            "benefit":" You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed."
+         },
+         {
+            "normal":" A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed."
+         },
          {
             "special":" The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round."
          }
@@ -322,7 +394,16 @@
       "description":"You can create magic armor, shields, and weapons.",
       "bonus":[
          {
-            "you can also mend a broken magic weapon, suit of armor, or shield if it is one that you could make. doing so costs half the raw materials and half the time it would take to craft that item in the first place.":null
+            "prerequisite":" Caster level 5th."
+         },
+         {
+            "benefit":" You can create magic weapons, armor, or shields. Enhancing a weapon, suit of armor, or shield takes 1 day for each 1,000 gp in the price of its magical features. To enhance a weapon, suit of armor, or shield, you must use up raw materials costing half of this total price. See the magic item creation rules in Magic Items for more information."
+         },
+         {
+            "text":"the weapon, armor, or shield to be enhanced must be a masterwork item that you provide. its cost is not included in the above cost."
+         },
+         {
+            "text":"you can also mend a broken magic weapon, suit of armor, or shield if it is one that you could make. doing so costs half the raw materials and half the time it would take to craft that item in the first place."
          }
       ]
    },
@@ -333,6 +414,9 @@
       ],
       "description":"You can create magic rods.",
       "bonus":[
+         {
+            "prerequisite":" Caster level 9th."
+         },
          {
             "benefit":" You can create magic rods. Crafting a rod takes 1 day for each 1,000 gp in its base price. To craft a rod, you must use up raw materials costing half of its base price. See the magic item creation rules in Magic Items for more information."
          }
@@ -346,6 +430,9 @@
       "description":"You can create magic staves.",
       "bonus":[
          {
+            "prerequisite":" Caster level 11th."
+         },
+         {
             "benefit":" You can create any staff whose prerequisites you meet. Crafting a staff takes 1 day for each 1,000 gp in its base price. To craft a staff, you must use up raw materials costing half of its base price. A newly created staff has 10 charges. See the magic item creation rules in Magic Items for more information."
          }
       ]
@@ -357,6 +444,9 @@
       ],
       "description":"You can create magic wands.",
       "bonus":[
+         {
+            "prerequisite":" Caster level 5th."
+         },
          {
             "benefit":" You can create a wand of any 4th-level or lower spell that you know. Crafting a wand takes 1 day for each 1,000 gp in its base price. To craft a wand, you must use up raw materials costing half of this base price. A newly created wand has 50 charges. See the magic item creation rules in Magic Items for more information."
          }
@@ -370,7 +460,13 @@
       "description":"You can create wondrous items, a type of magic item.",
       "bonus":[
          {
-            "you can also mend a broken wondrous item if it is one that you could make. doing so costs half the raw materials and half the time it would take to craft that item.":null
+            "prerequisite":" Caster level 3rd."
+         },
+         {
+            "benefit":" You can create a wide variety of magic wondrous items. Crafting a wondrous item takes 1 day for each 1,000 gp in its price. To create a wondrous item, you must use up raw materials costing half of its base price. See the magic item creation rules in Magic Items for more information."
+         },
+         {
+            "text":"you can also mend a broken wondrous item if it is one that you could make. doing so costs half the raw materials and half the time it would take to craft that item."
          }
       ]
    },
@@ -395,6 +491,9 @@
       "description":"Your critical hits cause two additional effects.",
       "bonus":[
          {
+            "benefit":" When you score a critical hit, you can apply the effects of two critical feats in addition to the damage dealt."
+         },
+         {
             "normal":" You can only apply the effects of one critical feat to a given critical hit in addition to the damage dealt."
          }
       ],
@@ -407,6 +506,9 @@
       ],
       "description":"Your skill with your favored weapon can frighten enemies.",
       "bonus":[
+         {
+            "prerequisite":" Weapon Focus, proficiency with the selected weapon."
+         },
          {
             "benefit":" While wielding the weapon in which you have Weapon Focus, you can perform a bewildering show of prowess as a full-round action. Make an Intimidate check to demoralize all foes within 30 feet who can see your display."
          }
@@ -446,6 +548,9 @@
       ],
       "description":"Your critical hits cause enemies to lose their hearing.",
       "bonus":[
+         {
+            "benefit":" Whenever you score a critical hit against an opponent, the victim is permanently deafened. A successful Fortitude save reduces the deafness to 1 round. The DC of this Fortitude save is equal to 10 + your base attack bonus. This feat has no effect on deaf creatures. This deafness can be cured by heal, regeneration, remove deafness, or a similar ability."
+         },
          {
             "special":" You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery."
          }
@@ -509,6 +614,15 @@
       "description":"You are especially hard to kill. Not only do your wounds automatically stabilize when grievously injured, but you can remain conscious and continue to act even at death's door.",
       "bonus":[
          {
+            "prerequisite":" Endurance."
+         },
+         {
+            "benefit":" When your hit point total is below 0, but you are not dead, you automatically stabilize. You do not need to make a Constitution check each round to avoid losing additional hit points. You may choose to act as if you were disabled, rather than dying. You must make this decision as soon as you are reduced to negative hit points (even if it isn't your turn). If you do not choose to act as if you were disabled, you immediately fall unconscious."
+         },
+         {
+            "text":"when using this feat, you are staggered. you can take a move action without further injuring yourself, but if you perform any standard action (or any other action deemed as strenuous, including some swift actions, such as casting a quickened spell) you take 1 point of damage after completing the act. if your negative hit points are equal to or greater than your constitution score, you immediately die."
+         },
+         {
             "normal":" A character without this feat who is reduced to negative hit points is unconscious and dying."
          }
       ]
@@ -534,6 +648,9 @@
       "description":"Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.",
       "bonus":[
          {
+            "prerequisite":" Dex 13."
+         },
+         {
             "benefit":" You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat."
          }
       ]
@@ -546,6 +663,12 @@
       "description":"Your off-hand weapon while dual-wielding strikes with greater power.",
       "bonus":[
          {
+            "prerequisite":" Dex 15, Two-Weapon Fighting."
+         },
+         {
+            "benefit":" Add your Strength bonus to damage rolls made with your off-hand weapon."
+         },
+         {
             "normal":" You normally add only half of your Strength modifier to damage rolls made with a weapon wielded in your off-hand."
          }
       ]
@@ -557,6 +680,9 @@
       ],
       "description":"Choose one elemental subtype, such as air, earth, fire, or water. You can channel your divine energy to harm or heal outsiders that possess your chosen elemental subtype.",
       "bonus":[
+         {
+            "benefit":" Instead of its normal effect, you can choose to have your ability to channel energy heal or harm outsiders of your chosen elemental subtype. You must make this choice each time you channel energy. If you choose to heal or harm creatures of your elemental subtype, your channel energy has no effect on other creatures. The amount of damage healed or dealt and the DC to halve the damage is otherwise unchanged."
+         },
          {
             "special":" You can gain this feat multiple times. Its effects do not stack. Each time you take this feat, it applies to a new elemental subtype."
          }
@@ -571,7 +697,10 @@
       "description":"You can increase the power of your spells, causing them to deal more damage.",
       "bonus":[
          {
-            "saving throws and opposed rolls are not affected, nor are spells without random variables. an empowered spell uses up a spell slot two levels higher than the spell's actual level.":null
+            "benefit":" All variable, numeric effects of an empowered spell are increased by half, including bonuses to those dice rolls."
+         },
+         {
+            "text":"saving throws and opposed rolls are not affected, nor are spells without random variables. an empowered spell uses up a spell slot two levels higher than the spell's actual level."
          }
       ]
    },
@@ -582,6 +711,12 @@
       ],
       "description":"Harsh conditions or long exertions do not easily tire you.",
       "bonus":[
+         {
+            "benefit":" You gain a +4 bonus on the following checks and saves"
+         },
+         {
+            "text":"you may sleep in light or medium armor without becoming fatigued."
+         },
          {
             "normal":" A character without this feat who sleeps in medium or heavier armor is fatigued the next day."
          }
@@ -595,7 +730,10 @@
       "description":"You can increase the range of your spells.",
       "bonus":[
          {
-            "spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not benefit from this feat.":null
+            "benefit":" You can alter a spell with a range of close, medium, or long to increase its range by 100%. An enlarged spell with a range of close now has a range of 50 ft. + 5 ft./level, while medium-range spells have a range of 200 ft. + 20 ft./level and long-range spells have a range of 800 ft. + 80 ft./level. An enlarged spell uses up a spell slot one level higher than the spell's actual level."
+         },
+         {
+            "text":"spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not benefit from this feat."
          }
       ]
    },
@@ -620,6 +758,9 @@
       "description":"Your critical hits cause opponents to become exhausted.",
       "bonus":[
          {
+            "benefit":" When you score a critical hit on a foe, your target immediately becomes exhausted. This feat has no effect on exhausted creatures."
+         },
+         {
             "special":" You can only apply the effects of one critical feat to a given critical hit unless you possess the Critical Mastery feat."
          }
       ],
@@ -632,6 +773,15 @@
       ],
       "description":"Choose one type of exotic weapon, such as the spiked chain or whip. You understand how to use that type of exotic weapon in combat, and can utilize any special tricks or qualities that exotic weapon might allow.",
       "bonus":[
+         {
+            "prerequisite":" Base attack bonus +1."
+         },
+         {
+            "benefit":" You make attack rolls with the weapon normally."
+         },
+         {
+            "normal":" A character who uses a weapon with which he is not proficient takes a –4 penalty on attack rolls."
+         },
          {
             "special":" You can gain Exotic Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of exotic weapon."
          }
@@ -657,6 +807,12 @@
       "description":"You can channel divine energy more often.",
       "bonus":[
          {
+            "prerequisite":" Channel energy class feature."
+         },
+         {
+            "benefit":" You can channel energy two additional times per day."
+         },
+         {
             "special":" If a paladin with the ability to channel positive energy takes this feat, she can use lay on hands four additional times a day, but only to channel positive energy."
          }
       ]
@@ -668,6 +824,12 @@
       ],
       "description":"You can use your ki pool more times per day than most.",
       "bonus":[
+         {
+            "prerequisite":" Ki pool class feature."
+         },
+         {
+            "benefit":" Your ki pool increases by 2."
+         },
          {
             "special":" You can gain Extra Ki multiple times. Its effects stack."
          }
@@ -681,6 +843,12 @@
       "description":"You can use your lay on hands ability more often.",
       "bonus":[
          {
+            "prerequisite":" Lay on hands class feature."
+         },
+         {
+            "benefit":" You can use your lay on hands ability two additional times per day."
+         },
+         {
             "special":" You can gain Extra Lay On Hands multiple times. Its effects stack."
          }
       ]
@@ -692,6 +860,9 @@
       ],
       "description":"Your lay on hands ability adds an additional mercy.",
       "bonus":[
+         {
+            "benefit":" Select one additional mercy for which you qualify. When you use lay on hands to heal damage to one target, it also receives the additional effects of this mercy."
+         },
          {
             "special":" You can gain this feat multiple times. Its effects do not stack. Each time you take this feat, select a new mercy."
          }
@@ -706,6 +877,12 @@
       "description":"You can use your bardic performance ability more often than normal.",
       "bonus":[
          {
+            "prerequisite":" Bardic performance class feature."
+         },
+         {
+            "benefit":" You can use bardic performance for 6 additional rounds per day."
+         },
+         {
             "special":" You can gain Extra Performance multiple times. Its effects stack."
          }
       ]
@@ -718,6 +895,12 @@
       "description":"You can use your rage ability more than normal.",
       "bonus":[
          {
+            "prerequisite":" Rage class feature."
+         },
+         {
+            "benefit":" You can rage for 6 additional rounds per day."
+         },
+         {
             "special":" You can gain Extra Rage multiple times. Its effects stack."
          }
       ]
@@ -729,6 +912,9 @@
       ],
       "description":"You are more accurate at longer ranges.",
       "bonus":[
+         {
+            "benefit":" You only suffer a –1 penalty per full range increment between you and your target when using a ranged weapon."
+         },
          {
             "normal":" You suffer a –2 penalty per full range increment between you and your target."
          }
@@ -743,6 +929,9 @@
       "description":"You are faster than most.",
       "bonus":[
          {
+            "benefit":" While you are wearing light or no armor, your base speed increases by 5 feet. You lose the benefits of this feat if you carry a medium or heavy load."
+         },
+         {
             "special":" You can take this feat multiple times. The effects stack."
          }
       ]
@@ -755,7 +944,13 @@
       "description":"You can create magic rings.",
       "bonus":[
          {
-            "you can also mend a broken ring if it is one that you could make. doing so costs half the raw materials and half the time it would take to forge that ring in the first place.":null
+            "prerequisite":" Caster level 7th."
+         },
+         {
+            "benefit":" You can create magic rings. Crafting a ring takes 1 day for each 1,000 gp in its base price. To craft a ring, you must use up raw materials costing half of the base price. See the magic item creation rules in Magic Items for more information."
+         },
+         {
+            "text":"you can also mend a broken ring if it is one that you could make. doing so costs half the raw materials and half the time it would take to forge that ring in the first place."
          }
       ]
    },
@@ -805,6 +1000,9 @@
       "description":"Your bull rush attacks throw enemies off balance.",
       "bonus":[
          {
+            "benefit":" You receive a +2 bonus on checks made to bull rush a foe. This bonus stacks with the bonus granted by Improved Bull Rush. Whenever you bull rush an opponent, his movement provokes attacks of opportunity from all of your allies (but not you)."
+         },
+         {
             "normal":" Creatures moved by bull rush do not provoke attacks of opportunity."
          }
       ],
@@ -817,6 +1015,9 @@
       ],
       "description":"You can knock weapons far from an enemy's grasp.",
       "bonus":[
+         {
+            "benefit":" You receive a +2 bonus on checks made to disarm a foe. This bonus stacks with the bonus granted by Improved Disarm. Whenever you successfully disarm an opponent, the weapon lands 15 feet away from its previous wielder, in a random direction."
+         },
          {
             "normal":" Disarmed weapons and gear land at the feet of the disarmed creature."
          }
@@ -831,6 +1032,9 @@
       "description":"You are skilled at making foes overreact to your attacks.",
       "bonus":[
          {
+            "benefit":" Whenever you use feint to cause an opponent to lose his Dexterity bonus, he loses that bonus until the beginning of your next turn, in addition to losing his Dexterity bonus against your next attack."
+         },
+         {
             "normal":" A creature you feint loses its Dexterity bonus against your next attack."
          }
       ],
@@ -844,6 +1048,9 @@
       "description":"Maintaining a grapple is second nature to you.",
       "bonus":[
          {
+            "benefit":" You receive a +2 bonus on checks made to grapple a foe. This bonus stacks with the bonus granted by Improved Grapple. Once you have grappled a creature, maintaining the grapple is a move action. This feat allows you to make two grapple checks each round (to move, harm, or pin your opponent), but you are not required to make two checks. You only need to succeed at one of these checks to maintain the grapple."
+         },
+         {
             "normal":" Maintaining a grapple is a standard action."
          }
       ],
@@ -856,6 +1063,9 @@
       ],
       "description":"Enemies must dive to avoid your dangerous move.",
       "bonus":[
+         {
+            "benefit":" You receive a +2 bonus on checks made to overrun a foe. This bonus stacks with the bonus granted by Improved Overrun. Whenever you overrun opponents, they provoke attacks of opportunity if they are knocked prone by your overrun."
+         },
          {
             "normal":" Creatures knocked prone by your overrun do not provoke an attack of opportunity."
          }
@@ -896,6 +1106,12 @@
       "description":"Choose a school of magic to which you have already applied the Spell Focus feat. Any spells you cast of this school are very hard to resist.",
       "bonus":[
          {
+            "prerequisite":" Spell Focus."
+         },
+         {
+            "benefit":" Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus."
+         },
+         {
             "special":" You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new school to which you already have applied the Spell Focus feat."
          }
       ]
@@ -907,6 +1123,9 @@
       ],
       "description":"Your spells break through spell resistance much more easily than most.",
       "bonus":[
+         {
+            "prerequisite":" Spell Penetration."
+         },
          {
             "benefit":" You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature's spell resistance. This bonus stacks with the one from Spell Penetration."
          }
@@ -932,6 +1151,9 @@
       ],
       "description":"You can make free attacks on foes that you knock down.",
       "bonus":[
+         {
+            "benefit":" You receive a +2 bonus on checks made to trip a foe. This bonus stacks with the bonus granted by Improved Trip. Whenever you successfully trip an opponent, that opponent provokes attacks of opportunity."
+         },
          {
             "normal":" Creatures do not provoke attacks of opportunity from being tripped."
          }
@@ -972,6 +1194,9 @@
       "description":"Choose one type of weapon (including unarmed strike or grapple) for which you have already selected Weapon Focus. You are a master at your chosen weapon.",
       "bonus":[
          {
+            "benefit":" You gain a +1 bonus on attack rolls you make using the selected weapon. This bonus stacks with other bonuses on attack rolls, including those from Weapon Focus."
+         },
+         {
             "special":" You can gain Greater Weapon Focus multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon."
          }
       ],
@@ -984,6 +1209,9 @@
       ],
       "description":"Choose one type of weapon (including unarmed strike or grapple) for which you possess the Weapon Specialization feat. Your attacks with the chosen weapon are more devastating than normal.",
       "bonus":[
+         {
+            "benefit":" You gain a +2 bonus on all damage rolls you make using the selected weapon. This bonus to damage stacks with other damage roll bonuses, including any you gain from Weapon Specialization."
+         },
          {
             "special":" You can gain Greater Weapon Specialization multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon."
          }
@@ -1010,6 +1238,12 @@
       "description":"You are skilled at pushing your foes around.",
       "bonus":[
          {
+            "prerequisite":" Str 13, Power Attack, base attack bonus +1."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you."
+         },
+         {
             "normal":" You provoke an attack of opportunity when performing a bull rush combat maneuver."
          }
       ]
@@ -1021,6 +1255,9 @@
       ],
       "description":"Your channeled energy is harder to resist.",
       "bonus":[
+         {
+            "prerequisite":" Channel energy class feature."
+         },
          {
             "benefit":" Add 2 to the DC of saving throws made to resist the effects of your channel energy ability."
          }
@@ -1034,6 +1271,9 @@
       "description":"You are skilled at countering the spells of others using similar spells.",
       "bonus":[
          {
+            "benefit":" When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell."
+         },
+         {
             "normal":" Without this feat, you may counter a spell only with the same spell or with a spell specifically designated as countering the target spell."
          }
       ]
@@ -1046,7 +1286,16 @@
       "description":"Attacks made with your chosen weapon are quite deadly.",
       "bonus":[
          {
-            "this effect doesn't stack with any other effect that expands the threat range of a weapon.":null
+            "prerequisite":" Proficient with weapon, base attack bonus +8."
+         },
+         {
+            "benefit":" When using the weapon you selected, your threat range is doubled."
+         },
+         {
+            "special":" You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon."
+         },
+         {
+            "text":"this effect doesn't stack with any other effect that expands the threat range of a weapon."
          }
       ]
    },
@@ -1057,6 +1306,12 @@
       ],
       "description":"You are skilled at knocking weapons from a foe's grasp.",
       "bonus":[
+         {
+            "prerequisite":" Int 13, Combat Expertise."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing a disarm combat maneuver. In addition, you receive a +2 bonus on checks made to disarm a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to disarm you."
+         },
          {
             "normal":" You provoke an attack of opportunity when performing a disarm combat maneuver."
          }
@@ -1069,6 +1324,12 @@
       ],
       "description":"This feat allows you to acquire a powerful familiar, but only when you could normally acquire a new familiar.",
       "bonus":[
+         {
+            "benefit":" When choosing a familiar, the creatures listed below are also available to you. You may choose a familiar with an alignment up to one step away on each alignment axis (lawful through chaotic, good through evil)."
+         },
+         {
+            "text":"familiaralignmentarcane spellcaster level\ncelestial hawk1neutral good3rd\ndire ratneutral3rd\nfiendish viper2neutral evil3rd\nelemental, small (any type)neutral5th\nstirgeneutral5th\nhomunculus3any7th\nimplawful evil7th\nmephit (any type)neutral7th\npseudodragonneutral good7th\nquasitchaotic evil7th\n1 or other celestial animal from the standard familiar list.\n2 or other fiendish animal from the standard familiar list.\n3 the master must first create the homunculus."
+         },
          {
             "improved familiars otherwise use the rules for regular familiars, with two exceptions":" if the creature's type is something other than animal, its type does not change; and improved familiars do not gain the ability to speak with other creatures of their kind (although many of them already have the ability to communicate)."
          }
@@ -1083,6 +1344,9 @@
       "description":"You are skilled at fooling your opponents in combat.",
       "bonus":[
          {
+            "benefit":" You can make a Bluff check to feint in combat as a move action."
+         },
+         {
             "normal":" Feinting in combat is a standard action."
          }
       ],
@@ -1095,6 +1359,12 @@
       ],
       "description":"You are skilled at grappling opponents.",
       "bonus":[
+         {
+            "prerequisite":" Dex 13, Improved Unarmed Strike."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing a grapple combat maneuver. In addition, you receive a +2 bonus on checks made to grapple a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to grapple you."
+         },
          {
             "normal":" You provoke an attack of opportunity when performing a grapple combat maneuver."
          }
@@ -1159,6 +1429,12 @@
       "description":"You are skilled at running down your foes.",
       "bonus":[
          {
+            "prerequisite":" Str 13, Power Attack, base attack bonus +1."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing an overrun combat maneuver. In addition, you receive a +2 bonus on checks made to overrun a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to overrun you. Targets of your overrun attempt may not chose to avoid you."
+         },
+         {
             "normal":" You provoke an attack of opportunity when performing an overrun combat maneuver."
          }
       ]
@@ -1170,6 +1446,9 @@
       ],
       "description":"Your ranged attacks ignore anything but total concealment and cover.",
       "bonus":[
+         {
+            "benefit":" Your ranged attacks ignore the AC bonus granted to targets by anything less than total cover, and the miss chance granted to targets by anything less than total concealment. Total cover and total concealment provide their normal benefits against your ranged attacks."
+         },
          {
             "normal":" See the normal rules on the effects of cover and concealment in Combat."
          }
@@ -1184,6 +1463,12 @@
       "description":"You can protect yourself with your shield, even if you use it to attack.",
       "bonus":[
          {
+            "prerequisite":" Shield Proficiency."
+         },
+         {
+            "benefit":" When you perform a shield bash, you may still apply the shield's shield bonus to your AC."
+         },
+         {
             "normal":" Without this feat, a character that performs a shield bash loses the shield's shield bonus to AC until his next turn (see Equipment)."
          }
       ]
@@ -1195,6 +1480,12 @@
       ],
       "description":"You are skilled at damaging your foes' weapons and armor.",
       "bonus":[
+         {
+            "prerequisite":" Str 13, Power Attack, base attack bonus +1."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing a sunder combat maneuver. In addition, you receive a +2 bonus on checks made to sunder an item. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to sunder your gear."
+         },
          {
             "normal":" You provoke an attack of opportunity when performing a sunder combat maneuver."
          }
@@ -1208,6 +1499,12 @@
       "description":"You are skilled at sending your opponents to the ground.",
       "bonus":[
          {
+            "prerequisite":" Int 13, Combat Expertise."
+         },
+         {
+            "benefit":" You do not provoke an attack of opportunity when performing a trip combat maneuver. In addition, you receive a +2 bonus on checks made to trip a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to trip you."
+         },
+         {
             "normal":" You provoke an attack of opportunity when performing a trip combat maneuver."
          }
       ]
@@ -1219,6 +1516,9 @@
       ],
       "description":"You are skilled at fighting with two weapons.",
       "bonus":[
+         {
+            "benefit":" In addition to the standard single extra attack you get with an off-hand weapon, you get a second attack with it, albeit at a –5 penalty."
+         },
          {
             "normal":" Without this feat, you can only get a single extra attack with an off-hand weapon."
          }
@@ -1232,6 +1532,9 @@
       ],
       "description":"You are skilled at fighting while unarmed.",
       "bonus":[
+         {
+            "benefit":" You are considered to be armed even when unarmed—you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice."
+         },
          {
             "normal":" Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack."
          }
