@@ -2,6 +2,6 @@ FactoryGirl.define do
   factory :feat_list do
     character
 
-    feat_1 "acrobatics"
+    list ["Acrobatic"]
     end
 end

@@ -195,11 +195,15 @@ class CharacterSheet
   end
 
   def mods
-    favored_class.mods + race.mods + feat_list.mods
+    favored_class.mods + race.mods + feats.map(&:mods).flatten
   end
 
   def additions
     race.additions + favored_class.additions
+  end
+
+  def feats
+    feat_list.list.map { |f| Feats.new.construct(f) }.compact
   end
 
   def levels

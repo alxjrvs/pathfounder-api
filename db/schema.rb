@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731042448) do
+ActiveRecord::Schema.define(version: 20150802214323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150731042448) do
     t.integer "character_id"
     t.string  "shield"
     t.string  "armor"
-    t.text    "weapon_list",      default: [], array: true
+    t.text    "weapon_list",  default: [], array: true
   end
 
   add_index "armories", ["character_id"], name: "index_armories_on_character_id", using: :btree
@@ -40,10 +40,8 @@ ActiveRecord::Schema.define(version: 20150731042448) do
   end
 
   create_table "feat_lists", force: true do |t|
-    t.string  "feat_1"
-    t.string  "feat_2"
-    t.string  "feat_3"
     t.integer "character_id"
+    t.text    "list",         default: [], array: true
   end
 
   add_index "feat_lists", ["character_id"], name: "index_feat_lists_on_character_id", using: :btree
