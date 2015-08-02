@@ -41,6 +41,9 @@
          {
             "normal":" You add your Strength bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus."
          }
+      ],
+      "mods":[
+        { "combat_maneuver_bonus_math":"use_dex" }
       ]
    },
    {
@@ -53,6 +56,10 @@
          {
             "benefit":" You get a +2 bonus on Perception and Sense Motive skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
          }
+      ],
+      "mods":[
+        { "perception":2 },
+        { "sense_motive":2 }
       ]
    },
    {
@@ -81,6 +88,10 @@
          {
             "benefit":" You get a +2 bonus on all Handle Animal and Ride skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
          }
+      ],
+      "mods":[
+        { "handle_animal":2 },
+        { "ride":2 }
       ]
    },
    {
@@ -192,6 +203,10 @@
          {
             "benefit":" You get a +2 bonus on Climb and Swim skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
          }
+      ],
+      "mods":[
+        { "climb":2 },
+        { "swim":2 }
       ]
    },
    {
@@ -567,6 +582,10 @@
          {
             "benefit":" You get a +2 bonus on all Bluff and Disguise skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
          }
+      ],
+      "mods":[
+        { "bluff":2 },
+        { "disguise":2 }
       ]
    },
    {
@@ -604,6 +623,10 @@
          {
             "benefit":" You get a +2 bonus on Disable Device and Sleight of Hand skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
          }
+      ],
+      "mods":[
+        { "disable_device":2 },
+        { "sleight_of_hand":2 }
       ]
    },
    {
